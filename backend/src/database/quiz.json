@@ -32,14 +32,6 @@
         "imagem": "",
         "resposta": "A)",
         "descricao": "A oxitocina é um hormônio secretado pela hipófise que provoca as contrações uterinas durante o parto e promove a liberação do leite no período da lactação."
-      },
-      {
-        "id": 5,
-        "pergunta": "Os menores ossos do corpo humano são martelo, bigorna e estribo, localizados no ouvido médio. A função desses ossos é...",
-        "alternativas": ["A) promover o equilíbrio.", "B) sustentar o canal auditivo.", "C) regular a altura do pavilhão auditivo.", "D) transmitir o som do tímpano para a orelha interna.", "E) rotacionar o pavilhão auditivo para melhor receber o som vindo do ambiente externo."],
-        "imagem": "",
-        "resposta": "D)",
-        "descricao": "A principal função desses ossos é transmitir o som da membrana do tímpano para a orelha interna: as ondas sonoras movem a membrana timpânica que, por sua vez, move os ossículos (martelo, bigorna e estribo, nessa ordem), conduzindo as vibrações sonoras para a orelha interna."
       }
     ],
     "Curiosidades": [
@@ -74,14 +66,6 @@
         "imagem": "",
         "resposta": "A",
         "descricao": "252 é o número de dentes do golfinho."
-      },
-      {
-        "id": 5,
-        "pergunta": "Qual o primeiro brasileiro a ter um telefone em casa?",
-        "alternativas": ["A) Tiradentes", "B) Dom João VI", "C) Dom Pedro II", "D) Santos Dumont", "E) Dom Pedro I"],
-        "imagem": "",
-        "resposta": "C",
-        "descricao": "O telefone chegou no Brasil no ano de 1877. O primeiro aparelho foi fabricado para Dom Pedro II e instalado no Palácio Imperial de São Cristovão, localizado na Quinta da Boa Vista, hoje o Museu Nacional no Rio de Janeiro."
       }
     ],
     "Geografia": [
@@ -118,14 +102,6 @@
         "imagem": "",
         "resposta": "D",
         "descricao": "Conforme o Ministério da Integração, o conceito de cidades-gêmeas foi definido em 2014 e vincula a termologia aos municípios situados na linha de fronteira, seja seca ou fluvial, integrada ou não por obras de infraestrutura, que apresentem grande potencial de integração econômica e cultural. A definição só é válida para as cidades que tenham, individualmente, uma população superior a dois mil habitantes."
-      },
-      {
-        "id": 5,
-        "pergunta": "A área hachurada na cor verde representa a:",
-        "alternativas": ["A) Região Norte.", "B) Amazônia Internacional.", "C) Amazônia Legal.", "D) Amazônia Ocidental.", "E) Amazônia marítima."],
-        "imagem": "",
-        "resposta": "C",
-        "descricao": "A área representa a Amazônia Legal que é constituída da seguinte forma: Região N, TO, MT e partes do MA."
       }
     ],
     "Química": [
@@ -164,20 +140,19 @@
         "imagem": "",
         "resposta": "A",
         "descricao": "FENOL É UMA FUNÇÃO ORGÂNICA ESPECIAL. NELA, HÁ A PRESENÇA DE UM ANEL AROMÁTICO COM UMA OU MAIS HIDROXILAS (OH) LIGADAS A ELE."
-      },
-      {
-        "id": 5,
-        "pergunta": "Considere as seguintes transformações que ocorrem em uma vela acesa:\nI. Solidificação da parafina que escorre da vela.\nII. Queima da parafina.\nVaporização da parafina.\nDessas transformações, APENAS:",
-        "alternativas": ["A) I é endotérmica.", "B) II é endotérmica.", "C) III é endotérmica.", "D) I e II ѕãо endotérmica.", "E) II e II ѕãо endotérmica."
-        ],
-        "imagem": "",
-        "resposta": "C",
-        "descricao": "AS REAÇÕES OU MUDANÇAS DE ESTADO FÍSICO QUE ABSORVEM CALOR SÃO DENOMINADAS DE PROCESSOS ENDOTÉRMICOS. A VAPORIZAÇÃO DA PARAFINA É UM PROCESSO ENDOTÉRMICO."
       }
     ]    
   },
   "media":{
     "Biologia": [
+      {
+        "id": 5,
+        "pergunta": "Os menores ossos do corpo humano são martelo, bigorna e estribo, localizados no ouvido médio. A função desses ossos é...",
+        "alternativas": ["A) promover o equilíbrio.", "B) sustentar o canal auditivo.", "C) regular a altura do pavilhão auditivo.", "D) transmitir o som do tímpano para a orelha interna.", "E) rotacionar o pavilhão auditivo para melhor receber o som vindo do ambiente externo."],
+        "imagem": "",
+        "resposta": "D)",
+        "descricao": "A principal função desses ossos é transmitir o som da membrana do tímpano para a orelha interna: as ondas sonoras movem a membrana timpânica que, por sua vez, move os ossículos (martelo, bigorna e estribo, nessa ordem), conduzindo as vibrações sonoras para a orelha interna."
+      },
       {
         "id": 6,
         "pergunta": "Um processo bastante conhecido para amadurecer bananas verdes rapidamente é colocá-las embrulhadas em um jornal ou dentro de uma sacola. Isso se dá porque aumenta a concentração do(a)...",
@@ -257,9 +232,25 @@
         "imagem": "",
         "resposta": "A",
         "descricao": "Potencial Biótico é um termo que se refere à capacidade reprodutiva dos organismos, sendo eles animais, plantas, fungos, dentre outros, além de estar relacionado com as condições necessárias para o desenvolvimento das espécies."
+      },
+      {
+        "id": 16,
+        "pergunta": "A passagem dos leucócitos através da parede dos capilares sanguíneos, vênulas e até arteríolas, penetrando através das junções entre as células endoteliais é chamado de...",
+        "alternativas": ["A) permissividade", "B) seletividade", "C) diapedese", "D) transferência", "E) osmose"],
+        "imagem": "",
+        "resposta": "C",
+        "descricao": "A diapedese é o processo da passagem dos leucócitos do sangue, nos capilares sanguíneos, para o tecido conjuntivo devido a uma inflamação que é causada por algum agente externo, como um corte no dedo. Ou seja, do meio intracelular para o extracelular."
       }
     ],
     "Curiosidades": [
+      {
+        "id": 5,
+        "pergunta": "Qual o primeiro brasileiro a ter um telefone em casa?",
+        "alternativas": ["A) Tiradentes", "B) Dom João VI", "C) Dom Pedro II", "D) Santos Dumont", "E) Dom Pedro I"],
+        "imagem": "",
+        "resposta": "C",
+        "descricao": "O telefone chegou no Brasil no ano de 1877. O primeiro aparelho foi fabricado para Dom Pedro II e instalado no Palácio Imperial de São Cristovão, localizado na Quinta da Boa Vista, hoje o Museu Nacional no Rio de Janeiro."
+      },
       {
         "id": 6,
         "pergunta": "Complete: O 'sangue' (hemolinfa) das aranhas é da cor...",
@@ -339,9 +330,25 @@
         "imagem": "",
         "resposta": "E",
         "descricao": "Está escrito na Bandeira do Rio Grande do Sul: Liberdade Igualdade - Humanidade."
+      },
+      {
+        "id": 16,
+        "pergunta": "Dos estados brasileiros banhados pelo Oceano Atlântico, qual deles tem a menor extensão litorânea?",
+        "alternativas": ["A) Paraná.", "B) Piauí", "C) Pernambuco", "D) Bahia", "E) Brasília"],
+        "imagem": "",
+        "resposta": "B",
+        "descricao": "Piauí tem apenas 66 km de litoral."
       }
     ],
     "Geografia": [
+      {
+        "id": 5,
+        "pergunta": "A área hachurada na cor verde representa a:",
+        "alternativas": ["A) Região Norte.", "B) Amazônia Internacional.", "C) Amazônia Legal.", "D) Amazônia Ocidental.", "E) Amazônia marítima."],
+        "imagem": "",
+        "resposta": "C",
+        "descricao": "A área representa a Amazônia Legal que é constituída da seguinte forma: Região N, TO, MT e partes do MA."
+      },
       {
         "id": 6,
         "pergunta": "A Amazônia Azul é a faixa oceânica que o Brasil tem direito de exploração. Sobre sua extensão, podemos dizer:",
@@ -430,9 +437,27 @@
         "imagem": "",
         "resposta": "D",
         "descricao": "O climograma possui temperaturas altas no verão e baixas no inverno e na dinâmica pluviométrica possui verão chuvoso e inverno com poucas chuvas."
+      },
+      {
+        "id": 16,
+        "pergunta": "Observe o mapa-múndi a seguir e selecione a alternativa que aponta as semelhanças entre os países pintados em verde.",
+        "alternativas": ["A) NAFTA", "B) ALCA", "C) MERCOSUL", "D) G8", "E) BRICS"
+        ],
+        "imagem": "",
+        "resposta": "E",
+        "descricao": "Grupo de países com economias emergentes criado em 2006, formado inicialmente por Brasil, Rússia, Índia, China e posteriormente, em 2011, a África do Sul passa a integrar o grupo."
       }
     ],
     "Química": [
+      {
+        "id": 5,
+        "pergunta": "Considere as seguintes transformações que ocorrem em uma vela acesa:\nI. Solidificação da parafina que escorre da vela.\nII. Queima da parafina.\nVaporização da parafina.\nDessas transformações, APENAS:",
+        "alternativas": ["A) I é endotérmica.", "B) II é endotérmica.", "C) III é endotérmica.", "D) I e II ѕãо endotérmica.", "E) II e II ѕãо endotérmica."
+        ],
+        "imagem": "",
+        "resposta": "C",
+        "descricao": "AS REAÇÕES OU MUDANÇAS DE ESTADO FÍSICO QUE ABSORVEM CALOR SÃO DENOMINADAS DE PROCESSOS ENDOTÉRMICOS. A VAPORIZAÇÃO DA PARAFINA É UM PROCESSO ENDOTÉRMICO."
+      },
       {
         "id": 6,
         "pergunta": "Reação exotérmica é aquela na qual:\n1 - há liberação de calor.\n2 - há diminuição de energia.\n3 - a entalpia dos reagentes é maior que a dos produtos.\n4 - a variação de entalpia é negativa.\nEstão corretos os seguintes complementos:",
@@ -522,19 +547,20 @@
         "imagem": "",
         "resposta": "B",
         "descricao": "O FOSGÊNIO APRESENTA UMA LIGAÇÃO DUPLA E DUAS SIMPLES."
+      },
+      {
+        "id": 16,
+        "pergunta": "A camada mais externa de um elemento X possui 3 elétrons, enquanto a camada mais externa de outro elemento Y tem 7 elétrons. Uma provável fórmula de um composto, formado por esses elementos é:",
+        "alternativas": ["A) XY3", "B) X5Y", "C) X3Y", "D) X7Y3", "E) XY"
+        ],
+        "imagem": "",
+        "resposta": "A",
+        "descricao": "UM ELEMENTO COM 3 ELÉTRONS NA ÚLTIMA CAMADA FAZ LIGAÇÃO IÔNICA COM 3 ELEMENTOS DE 7 ELÉTRONS NA ÚLTIMA CAMADA, FORMANDO UM COMPOSTO DO TIPO XY3."
       }
     ]    
   },
   "dificil": {
     "Biologia": [
-      {
-        "id": 16,
-        "pergunta": "A passagem dos leucócitos através da parede dos capilares sanguíneos, vênulas e até arteríolas, penetrando através das junções entre as células endoteliais é chamado de...",
-        "alternativas": ["A) permissividade", "B) seletividade", "C) diapedese", "D) transferência", "E) osmose"],
-        "imagem": "",
-        "resposta": "C",
-        "descricao": "A diapedese é o processo da passagem dos leucócitos do sangue, nos capilares sanguíneos, para o tecido conjuntivo devido a uma inflamação que é causada por algum agente externo, como um corte no dedo. Ou seja, do meio intracelular para o extracelular."
-      },
       {
         "id": 17,
         "pergunta": "O personagem Jeca-Tatu foi criado por Monteiro Lobato e, na visão do escritor, representava o trabalhador rural brasileiro. A doença que Jeca-Tatu tinha era amarelão, causada por um verme chamado...",
@@ -570,14 +596,6 @@
     ],
     "Curiosidades": [
       {
-        "id": 16,
-        "pergunta": "Dos estados brasileiros banhados pelo Oceano Atlântico, qual deles tem a menor extensão litorânea?",
-        "alternativas": ["A) Paraná.", "B) Piauí", "C) Pernambuco", "D) Bahia", "E) Brasília"],
-        "imagem": "",
-        "resposta": "B",
-        "descricao": "Piauí tem apenas 66 km de litoral."
-      },
-      {
         "id": 17,
         "pergunta": "Auto da Compadecida é uma peça teatral em forma de auto, em três atos, escrita por qual autor brasileiro?",
         "alternativas": ["A) Ariano Suassuna em 1955.", "B) Fernanda Montenegro em 1990.", "C) José Paulo Cavalcanti em 1980.", "D) Paulo Coelho em 1965.", "E) Nélida Piñon em 1955."],
@@ -611,15 +629,6 @@
       }
     ],
     "Geografia": [
-      {
-        "id": 16,
-        "pergunta": "Observe o mapa-múndi a seguir e selecione a alternativa que aponta as semelhanças entre os países pintados em verde.",
-        "alternativas": ["A) NAFTA", "B) ALCA", "C) MERCOSUL", "D) G8", "E) BRICS"
-        ],
-        "imagem": "",
-        "resposta": "E",
-        "descricao": "Grupo de países com economias emergentes criado em 2006, formado inicialmente por Brasil, Rússia, Índia, China e posteriormente, em 2011, a África do Sul passa a integrar o grupo."
-      },
       {
         "id": 17,
         "pergunta": "Observe o esquema seguinte que mostra a atuação das massas de ar no Brasil:",
@@ -658,15 +667,6 @@
       }
     ],
     "Química": [
-      {
-        "id": 16,
-        "pergunta": "A camada mais externa de um elemento X possui 3 elétrons, enquanto a camada mais externa de outro elemento Y tem 7 elétrons. Uma provável fórmula de um composto, formado por esses elementos é:",
-        "alternativas": ["A) XY3", "B) X5Y", "C) X3Y", "D) X7Y3", "E) XY"
-        ],
-        "imagem": "",
-        "resposta": "A",
-        "descricao": "UM ELEMENTO COM 3 ELÉTRONS NA ÚLTIMA CAMADA FAZ LIGAÇÃO IÔNICA COM 3 ELEMENTOS DE 7 ELÉTRONS NA ÚLTIMA CAMADA, FORMANDO UM COMPOSTO DO TIPO XY3."
-      },
       {
         "id": 17,
         "pergunta": "Dois jovens adicionaram os seguintes compostos em uma solução aquosa: KOH, HCl, CH4 e HBr. Sofrerá(ão) ionização:",
