@@ -17,6 +17,7 @@ app.use((req, res, next) => {
 });
 
 const database = 'src/database/users.json';
+const quiz = 'src/database/quiz.json';
 
 // 1) USERS
 // 1.a) Login
@@ -153,7 +154,22 @@ app.patch('/users/:id', (req, res) => {
 });
 
 // 2) QUIZ
+app.get('/quiz', (_req, res) => {
+  // Confere a lista de usuários (talvez separa em outro arquivo)
+  const data = fs.readFileSync(quiz, 'utf8', (err, data) => {
+    if (err) {
+      // erro de leitura
+      console.error('Erro ao ler o arquivo:', err);
+      return res.status(404).json({ message: `Erro ao ler o arquivo: ${err}`});  
+    }
 
+    return data;
+  });
+
+  const jsonData = JSON.parse(data);
+
+  return res.status(200).json(jsonData);
+});
 
 
 // ...
