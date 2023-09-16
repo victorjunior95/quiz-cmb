@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <input type="text" id="textInput">
-  <button id="sendButton">Enviar</button>
-  <script src="index.js"></script>
+  <div class="main-login">
+    <h1 class="logo-login">Quiz!</h1>
+    <div class="painel-login">
+      <input type="text" id="textInput" maxlength="4" placeholder="Escola" class="textInput">
+      <button id="sendButton" class="sendButton">Entrar</button>
+      <script src="script.js"></script>
+    </div>
+  </div>
 </body>
 </html>

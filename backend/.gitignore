@@ -1,2 +1,5 @@
 node_modules
 coverage
+src/database/fisica.json
+src/database/historia.json
+src/database/portugues.json
