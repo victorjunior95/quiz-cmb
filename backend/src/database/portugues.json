@@ -1,0 +1,309 @@
+{
+  "português": [
+        {
+                "id": "1",
+                "pergunta": "O autor do poema I-Juca-Pirama é:",
+                "alternativas": [
+                "a) José de Alencar",
+                "b) Castro Alves",
+                "c) Gonçalves Dias",
+                "d) Álvares de Azevedo",
+                "e) Sousândrade"
+                ],
+                "resposta": "b) Castro Alves",
+                "descrição": "O poema I-Juca Pirama, de Gonçalves Dias, é um ícone do romantismo brasileiro. A obra, indianista, está dividida em dez cantos. Publicado em 1851, no livro Últimos cantos, o poema é composto por 484 versos protagonizados pelos índios tupis e timbiras.",
+                "imagem": "",
+	            "nível": "Fácil"
+
+            },
+            {
+                "id": "2",
+                "pergunta": "Assinale a alternativa em que se encontra um poema histórico.",
+                "alternativas": [
+                "a)Senhora",
+                "b) O Cortiço",
+                "c) Memórias Póstumas de Brás Cubas",
+                "d) O Gaúcho",
+                "e) A Moreninha"
+
+                ],
+                "resposta": "d) O Gaúcho",
+                "descrição": "O Gaúcho é um dos romances do escritor brasileiro José de Alencar. Essa obra foi publicada em 1870.",
+                "imagem": "",
+                "nível": "Fácil"
+            },
+            {
+                "id": "3",
+                "pergunta": "Assinale a alternativa que completa adequadamente a lacuna da frase seguinte: Aquele é o professor __________ ideias sobre literatura não concordamos.",
+                "alternativas": [
+                "a) que",
+                "b) de que",
+                "c) a que",
+                "d) a cujas",
+                "e) com cujas"
+                ],
+                "resposta": "e) com cujas",
+                "descrição": "O verbo CONCORDAR desdobra-se com a preposição COM, bem como o pronome relativo CUJAS faz alusão ao termo que lhe é consequente (IDEIAS).",
+                "imagem": "",
+                "nível": "Fácil"
+            },
+            {
+                "id": "4",
+                "pergunta": "Assinale a opção em que ocorre um dífono.",
+                "alternativas": [
+                "a) Exército",
+                "b) Correio",
+                "c) Planta",
+                "d) Abscissa",
+                "e) Inoxidável"
+                ],
+                "resposta": "e) Inoxidável",
+                "descrição": "Dífono é um fenômeno fonético no qual uma letra representa, simultaneamente, dois fonemas. No caso, a letra X, representa, simultaneamente, os fonemas K e S.",
+                "imagem": "",
+                "nível": "Fácil"
+            },
+            {
+                "id": "5",
+                "pergunta": "Assinale a opção em que a acentuação gráfica da palavra  pode ser justificada, simultaneamente, por duas regras de acentuação.",
+                "alternativas": [
+                "a) Veículo.",
+                "b) Saída.",
+                "c) Baú.",
+                "d) Dói.",
+                "e) Também."
+                ],
+                "resposta": "a) Veículo.",
+                "descrição": "A acentuação gráfica de veículo pode ser justificada  tanto por ser proparoxítona  quanto por ser um hiato (acentua-se o “i” tônico dos hiatos, seguidos ou não de “s”.)",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "6",
+                "pergunta": "Assinale a alternativa cuja frase apresenta concordância verbal correta.",
+                "alternativas": [
+                "a) As estrelas parece brilharem.",
+                "b) Foi eu quem fiz isso.",
+                "c) Cada um de nós faremos o que nos pediram.",
+                "d) Quais de nós fez o exercício de Matemática?",
+                "e) Quem de nós fizemos a tarefa?"
+                ],
+                "resposta": "a) As estrelas parece brilharem.",
+                "descrição": "Embora a concordância mais comum seja As estrelas parecem brilhar, o verbo “parecer”, seguido de infinitivo, pode assumir a forma flexionada ou a não flexionada. ",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "7",
+                "pergunta": "Assinale a alternativa cuja frase apresenta ambiguidade.",
+                "alternativas": [
+                "a) Eu sei que estou lendo esta frase.",
+                "b) O menino viu o incêndio do prédio.",
+                "c) Ela escorregou e não caiu.",
+                "d) Quanto são dois mais dois?",
+                "e) Leia com muita atenção as frases acima."
+                ],
+                "resposta": "b) O menino viu o incêndio do prédio.",
+                "descrição": "Em o menino viu o incêndio do prédio,  o duplo sentido está na possibilidade de o menino ter visto o prédio incendiar-se ou de ter visto um incêndio estando ele, o menino, no prédio.",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "8",
+                "pergunta": "Assinale a alternativa em que a figura de linguagem denominada sinestesia.",
+                "alternativas": [
+                "a) A noite acalma as emoções cansadas.",
+                "b) Meu coração se partiu com essa notícia.",
+                "c) Aquele homem tem uma voz áspera.",
+                "d) Há pessoas que não têm um teto para morar.",
+                "e) Chorei rios de lágrimas de saudades dela."
+                    
+                ],
+                "resposta": "b) Meu coração se partiu com essa notícia.",
+                "descrição": "Sabendo que Sinestesia é associação de palavras ou expressões em que ocorre combinação de sensações diferentes, em Aquele homem tem a voz áspera há a mistura de dois sentidos, quais sejam, voz (audição) e áspera (tato).",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "9",
+                "pergunta": "Assinale a alternativa em que a supressão da(s) vírgula(s) não altera o significado da frase:",
+                "alternativas": [
+                "a) O deputado, que se mudou para a casa ao lado, tem sete filhos.",
+                "b) A mãe da menina, histérica, pedia que alguém a ajudasse.",
+                "c) “Maria, vem cá mais tarde”.",
+                "d) Perdi a paciência com a secretária, que costuma me desmentir.",
+                "e) Ontem, a rua estava muito barulhenta." 
+                ],
+                "resposta": "e) Ontem, a rua estava muito barulhenta.",
+                "descrição": "A supressão da vírgula não altera o significado da oração indicada.  Nas demais, o sentido muda completamente. Na (A), de adjetiva explicativa passa para adjetiva restritiva; na (B), histérica deixa de se referir à mãe para se referir  à menina; em (C), Maria deixa de ser vocativo, para ser sujeito; em (D), a supressão da vírgula transforma a oração adjetiva explicativa em adjetiva restritiva.",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "10",
+                "pergunta": "Assinale a alternativa em que o “se” é uma partícula expletiva ou de realce.",
+                "alternativas": [
+                "a) Não sei se ela vai voltar.",
+                "b) Se chover, pode esfriar.",
+                "c) Vão-se embora daqui, rapazes!",
+                "d) Alugam-se apartamentos.",
+                "e) Precisa-se de empregadas."
+                ],
+                "resposta": "c) Vão-se embora daqui, rapazes!",
+                "descrição": "Partícula expletiva ou de realce nunca exerce função sintática. Pode ser retirada da frase sem prejuízo sintático ou semântico. É o que ocorre na frase (C), na qual o “se” pode ser retirado sem que haja prejuízo sintático ou semântico. Nas demais, o “se” tem função sintática. Na (A), é conjunção integrante. Na (B), é conjunção subordinativa condicional. Na (D), é partícula apassivadora. Na (E), é índice de indeterminação do sujeito.",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "11",
+                "pergunta": "Assinale a alternativa em que a oração destacada exerce a função de sujeito:",
+                "alternativas": [
+                "a) É possível que a prova seja adiada.",
+                "b) Consta que a prova foi adiada.",
+                "c) Não acredito que haja adiamento da prova.",
+                "d) Se a prova for adiada, ficaremos decepcionados.",
+                "e) Só irei embora quando se confirmar o adiamento da prova."
+                ],
+                "resposta":"b) Consta que a prova foi adiada. ",
+                "descrição": "Em Consta que a prova foi adiada, a oração “que a prova foi adiada” exerce a função de sujeito do verbo CONSTAR (Consta isto ou Isto consta.)",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "12",
+                "pergunta": "Assinale a opção em que o pronome oblíquo destacado tem valor possessivo.",
+                "alternativas": [
+                "a) Disseram-me a verdade sobre o ocorrido.",
+                "b) Entregaram-lhe o livro de Física?",
+                "c) Deixei-o na minha casa.",
+                "d) A lama sujou-me a roupa.",
+                "e) Eu lhe peço apenas mais um favor."
+                ],
+                "resposta": "d) A lama sujou-me a roupa.",
+                "descrição": "Em A lama sujou-me a roupa, o pronome me tem valor de “minha”, ou seja, A lama sujou a minha roupa.",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "13",
+                "pergunta": "Assinale  a alternativa na qual o pronome que exerce a função de predicativo do sujeito.",
+                "alternativas": [
+                "a) O carro que comprei é usado.",
+                "b) A mulher com que me casei é esta.",
+                "c) O aluno curioso que fui não existe mais.",
+                "d) Os livros de que o professor falou são muito bons.",
+                "e) O filme a que assisti era lento."
+                ],
+                "resposta": "c) O aluno curioso que fui não existe mais.",
+                "descrição": "O pronome que refere-se a “curioso” que é o predicativo do sujeito  na oração “fui curioso”, na qual o verbo é de ligação (“ser”).",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "14",
+                "pergunta": "Assinale a única alternativa que completa corretamente as lacunas da frase abaixo. O rapaz tinha _________ a condição: a luz só seria _________ depois que tudo estivesse _________ e devidamente ___________.",
+                "alternativas": [
+                "a) aceito – acendida – limpo – enxugado",
+                "b) aceitado – acendida – limpado – enxugado",
+                "c) aceitado – acesa – limpo – enxugado",
+                "d) aceitado – acesa – limpo – enxuto",
+                "e) aceitado – acendida – limpo – enxuto"
+                ],
+                "resposta": "d) aceitado – acesa – limpo – enxuto",
+                "descrição": "A formas regulares de particípio são usadas com os verbos TER e HAVER, enquanto as irregulares são empregadas com os verbos SER e ESTAR, razão pela qual a única resposta certa é a alternativa (D).",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "15",
+                "pergunta": "Assinale a alternativa em que há um verbo defectivo:",
+                "alternativas": [
+                "a) Demoliram vários prédios naquele local.",
+                "b) Eu adiro a essa campanha.",
+                "c) Estampava no rosto um sorriso, um sorriso de criança.",
+                "d) Compramos muitas mercadorias remarcadas.",
+                "e) Coube ao juiz julgar o réu."
+                ],
+                "resposta": "a) Demoliram vários prédios naquele local.",
+                "descrição": "Verbos defectivos são aqueles que possuem conjugação incompleta, ou seja, não se conjugam em todos os modos, tempos e pessoas, o que é o caso do verbo demolir, que não tem a 1ª pessoa do singular do presente do indicativo, o que acarretará a inexistência de todo o presente do subjuntivo, por exemplo.",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "16",
+                "pergunta": "Movimento poético surgido na década de 1950, revela-se um fruto legítimo da civilização audiovisual, em que à noção de poesia se incorpora, fundamentalmente, o elemento visual. É o:",
+                "alternativas": [
+                "a) Verde-amarelismo.",
+                "b) Grupo da Anta.",
+                "c) Grupo Marajás.",
+                "d) Concretismo.",
+                ")e Pau-brasil."
+                ],
+                "resposta": "d) Concretismo.",
+                "descrição": "Movimento artístico no qual  se privilegiou a valorização do conteúdo visual e sonoro, enfatizando-se uma estrutura visual em detrimento da discursiva.",
+                "imagem": "",
+                "nível": "Médio"
+            },
+            {
+                "id": "17",
+                "pergunta": "A crítica constata, nas metáforas simbolistas de Cruz e Sousa, a obsessão pela cor:",
+                "alnativas": [
+                "a) branca.",
+                "b) negra.",
+                "c) rubra.",
+                "d) roxa.",
+                "e) azul."
+                ],
+                "resposta": "a) branca.",
+                "descrição": "Suas obras são marcadas pela musicalidade (uso de aliterações), pelo individualismo, pelo sensualismo, ora pelo desespero, ora pelo apaziguamento, além de uma obsessão pela cor branca - manifestada por sua condição racial e a tentativa de superá-la.",
+                "imagem": "",
+                "nível": "Díficil"
+            },
+            {
+                "id": "18",
+                "pergunta": "Interesse pelas zonas profundas da mente e pela loucura; desejo de transcendência e integração cósmica; linguagem vaga, fluida que busca sugerir em vez de nomear. Essas são características que identificam as obras de autores ",
+                "alternativas": [
+                "a) naturalistas.",
+                "b) parnasianistas.",
+                "c) simbolistas.",
+                "d) quinhentistas.",
+                "e) realistas."
+                ],
+                "resposta": "c) simbolistas.",
+                "descrição": "O enunciado da questão  apresenta as características norteadoras dos poetas simbolistas, dentre os quais e o mais notável foi Cruz e Souza.",
+                "imagem": "",
+                "nível": "Díficil"
+            },
+            {
+                "id": "19",
+                "pergunta": "Em 1880, Zola publicou suas teorias sobre o romance experimental em que expunha ideias como esta: “o romance experimental substitui o estudo do homem abstrato e metafísico pelo do homem natural, sujeito a leis físico-químicas e determinado pela influência do meio”.",
+                "alternativas": [
+                "a) Arcadismo.",
+                "b) Classicismo.",
+                "c) Realismo.",
+                "d) Naturalismo.",
+                "e) Barroco."
+                ],
+                "resposta": "d) Naturalismo.",
+                "descrição": "O Naturalismo ancorava-se na  ideia de que as ações do homem eram determinadas pelo meio, ou seja, as condições materiais influenciariam decisivamente o comportamento humano.",
+                "imagem": "",
+                "nível": "Díficil"
+            },
+            {
+                "id": "20",
+                "pergunta": "O romance realista brasileiro, tal como o conhecemos, focaliza principalmente:",
+                "alternativas": [
+                "a) as camadas marginalizadas da sociedade.",
+                "b) aspectos sociais e psicológicos nas relações humanas.",
+                "c) o preconceito racial.",
+                "d) a defesa das instituições, como o casamento, por exemplo.",
+                "e) a formação da nacionalidade."
+                ],
+                "resposta": "b) aspectos sociais e psicológicos nas relações humanas.",
+                "descrição": "O Realismo explorou as relações humanas em seus aspectos psicológicos e o comportamento do homem na sociedade, motivado por interesses nem sempre louváveis.",
+                "imagem": "",
+                "nível": "Díficil"
+            }
+
+    ]
+
+}
