@@ -1678,8 +1678,8 @@
 {
   "id": "137",
   "tema": "portugues",
-  "pergunta": "A crítica constata, nas metáforas simbolistas de Cruz e Sousa, a obsessão pela cor:",
-  "alnativas": [
+  "perguntas": "A crítica constata, nas metáforas simbolistas de Cruz e Sousa, a obsessão pela cor:",
+  "alternativas": [
   "A) branca.",
   "B) negra.",
   "C) rubra.",
@@ -1694,7 +1694,7 @@
 {
   "id": "138",
   "tema": "portugues",
-  "pergunta": "Interesse pelas zonas profundas da mente e pela loucura; desejo de transcendência e integração cósmica; linguagem vaga, fluida que busca sugerir em vez de nomear. Essas são características que identificam as obras de autores ",
+  "perguntas": "Interesse pelas zonas profundas da mente e pela loucura; desejo de transcendência e integração cósmica; linguagem vaga, fluida que busca sugerir em vez de nomear. Essas são características que identificam as obras de autores ",
   "alternativas": [
   "A) naturalistas.",
   "B) parnasianistas.",
@@ -1705,7 +1705,7 @@
   "resposta": "C",
   "descrição": "O enunciado da questão  apresenta as características norteadoras dos poetas simbolistas, dentre os quais e o mais notável foi Cruz e Souza.",
   "img-resposta": "",
-  "img-perguntas": ""
+  "img-pergunta": ""
 },
 {
   "id": "139",
