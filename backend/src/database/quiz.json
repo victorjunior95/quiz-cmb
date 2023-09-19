@@ -5,8 +5,8 @@
       "tema": "Biologia",
       "pergunta": "Que nome se dá à condição em que os olhos do paciente apresentam uma alteração e cada olho possui uma cor ou um dos olhos possui duas cores?",
       "alternativas": ["A) Heteronomia", "B) Heterocromia", "C) Heterologia", "D) Heterozigose", "E) Heteropatia"],
-      "imagem": "",
-      "resposta": "B)",
+      "imagem": "https://i.pinimg.com/474x/cc/e4/b7/cce4b74b7efb7f0f0182984767141e81--amazing-eyes-beautiful-eyes.jpg",
+      "resposta": "B",
       "descricao": "Heterocromia é o nome que se dá à condição em que a parte colorida de um olho (íris) é diferente do outro."
     },
     {
@@ -15,7 +15,7 @@
       "pergunta": "Quando colocamos uma fatia de batata em água salgada, espera-se que ela...",
       "alternativas": ["A) ... fique dura.", "B) ... permaneça igual.", "C) ... se dissolva.", "D) ... murche.", "E) ... se quebre ao toque."],
       "imagem": "",
-      "resposta": "D)",
+      "resposta": "D",
       "descricao": "Quando colocamos uma fatia de batata no meio hipertônico (água salgada), a água que estava contida no interior da célula da batata atravessa a membrana semipermeável, indo para o lado mais concentrado, ou seja, onde foi colocado o sal. Com isso, a batata ficou mais “mole”, pois sofreu a plasmólise, ou seja, perdeu água."
     },
     {
@@ -24,7 +24,7 @@
       "pergunta": "A série pós-apocalíptica da HBO, The Last of Us, tem como tema um surto causado por um fungo do gênero Cordyceps, que transforma seus hospedeiros humanos em monstros canibais, conhecidos como infectados. O fungo Cordyceps é do tipo...",
       "alternativas": ["A) basidiomiceto.", "B) zigomiceto.", "C) levedura.", "D) micomiceto.", "E) ascomiceto."],
       "imagem": "",
-      "resposta": "E)",
+      "resposta": "E",
       "descricao": "O fungo Cordyceps é um gênero de fungos ascomicetos que parasita principalmente insetos e outros artrópodes. Com aproximadamente 400 espécies, cada uma é especializada em um tipo específico de inseto. Esse tipo de fungo não atinge humanos."
     },
     {
@@ -33,7 +33,7 @@
       "pergunta": "Uma das funções da oxitocina, também conhecido como hormônio do amor, é",
       "alternativas": ["A) promover a contração do útero no momento do parto.", "B) acelerar o coração em um momento de perigo.", "C) liberar a glicose que está armazenada no fígado para o sangue.", "D) controlar o metabolismo a nível basal durante o sono.", "E) promover a ovulação durante o período fértil da mulher."],
       "imagem": "",
-      "resposta": "A)",
+      "resposta": "A",
       "descricao": "A oxitocina é um hormônio secretado pela hipófise que provoca as contrações uterinas durante o parto e promove a liberação do leite no período da lactação."
     },
     {
@@ -149,7 +149,248 @@
       "imagem": "",
       "resposta": "A",
       "descricao": "FENOL É UMA FUNÇÃO ORGÂNICA ESPECIAL. NELA, HÁ A PRESENÇA DE UM ANEL AROMÁTICO COM UMA OU MAIS HIDROXILAS (OH) LIGADAS A ELE."
-    }
+    },
+    {
+      "id": "81",
+      "tema": "física",
+      "pergunta": "De acordo com a figura, se o centro de massa do brinquedo, conhecido como João bobo, estiver acima da cintura da criança seu equilíbrio será:",
+      "alternativas": [
+      "A) Instável",
+      "B) Estável",
+      "C) Indiferente",
+      "D) Invariável ",
+      "E) Oscilatório"
+      ],
+      "resposta": "A",
+      "descrição": "O Equilíbrio será instável, se o brinquedo oscilar, não voltará mais para a posição de equílibrio.",
+      "img-resposta":"",
+      "img-pergunta": "https://http2.mlstatic.com/D_NQ_NP_613305-MLB25007777049_082016-O.jpg"
+  },
+  {
+      "id": "82",
+      "tema": "física",
+      "pergunta": "Os ciclistas de bicicleta de estrada descobriram uma nova manobra, a do Super Homem, para poderem atingirem velocidades maiores em descidas. Isso se deve à (ao):",
+      "alternativas": [
+      "A) distribuição homogênea da massa do ciclista.",
+      "B) menor peso da bicicleta nessa condição.",
+      "C) redução do arrasto aerodinâmico.",
+      "D) aumento da pressão do ar nas costas do ciclista.",
+      "E) maior potência."
+      ],
+      "resposta": "C",
+      "descrição": "Nessa posição, o ciclista reduz sua área, reduzindo assim a resistência do ar.",
+      "img-resposta":"",
+      "img-pergunta": "https://hypescience.com/wp-content/uploads/2016/08/ciclista-gif-768x348.gif"
+  },
+  {
+      "id": "83",
+      "tema": "física",
+      "pergunta": "Em lagos ou mares, onde o nível de salinidade é muito elevpara as pessoas boiarem. Esse fato se deve à (ao):",
+      "alternativas": [
+      "A) redução do peso da pessoa.",
+      "B) aumento da pressão abaixo da pessoa.",
+      "C) aumento da densidade da pessoa.",
+      "D) aumento da pressão do ar nas costas do ciclista.",
+      "E) redução da densidade da pessoa."
+      ],
+      "resposta": "D",
+      "descrição": "O empuxo aumenta devido ao aumento da densidade da água com uma maior concentração de sal.",
+      "img-resposta":"",
+      "img-pergunta": "https://turismo.ig.com.br/imagens/186/186/85/3369411.mar_morto_educacao_224_299.jpg"
+  },
+  {
+      "id": "84",
+      "tema": "física",
+      "pergunta": "Segundo o paradoxo dos gêmeos, se um dos irmãos viaja quase com a velocidade da luz para uma estrela distante e volta à Terra, quando retornar estará mais jovem que seu gêmeo idêntico que aqui permaneceu. Este fato é explicado pela:",
+      "alternativas": [
+      "A) Teoria da Simetria.",
+      "B) Teoria da Simultaneidade.",
+      "C) Teoria Quântica.",
+      "D) Teoria das cordas.",
+      "E) Teoria da Relatividade."
+      ],
+      "resposta": "E",
+      "descrição": "Teoria da relatividade",
+      "img-resposta":"",
+      "img-pergunta": "https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo_legenda/22625ba02e898a8d48593756b54f93c0.jpg"
+  },
+  {
+      "id": "85",
+      "tema": "física",
+      "pergunta": "De acordo com a placa de trânsito abaixo, em frente à uma escola nos EUA, qual é a velocidade máxima nessa rua?",
+      "alternativas": [
+      "A) 15 km/h",
+      "B) 54 km/h",
+      "C) 24 km/h",
+      "D) 30 km/h",
+      "E) 48 km/h"
+      ],
+      "resposta": "C",
+      "descrição": "Pois como a placa está em Milhas/hora , 15 x 1,6 = 24 km/h.",
+      "img-resposta":"",
+      "img-pergunta": "http://www.hayatgibi.com/wp-content/uploads/2018/05/Speed-limit-15.jpg" 
+},
+{
+  "id": "101",
+  "tema": "história",
+  "pergunta": "Alexandre, o Grande, construiu um grande império e defendeu que os povos nele incluídos fundissem suas culturas  o que deu origem à Cultura Helenística.  Esta cultura foi caracterizada por:",
+  "alternativas": [
+  "a) A abolição da escravidão negra e a liberdade religiosa.",
+  "b) Favorecer difundir a religião egípcia.",
+  "c) Ter como sua língua de difusão o latim.",
+  "d) Ignorar as contribuições dos povos da Mesopotâmia.",
+  "e) Acolher contribuições de vários povos e ter no grego sua língua de difusão."
+  ],
+  "resposta": "E",
+  "descrição":"A cultura helenística foi fruto da fusão do pensamento de vários povos (gregos, persas, egípcios, indianos etc.) e se expressou nas artes, na religião, na política e na filosofia.  A língua de transmissão desta cultura era o grego e foi um fator importante na estabilidade do Mediterrâneo oriental por vários séculos.",
+  "img-resposta": "https://s1.static.brasilescola.uol.com.br/be/e/alexander.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "102",
+  "tema": "história",
+  "pergunta": "Das guerras a seguir, quais estão em ordem cronológica correta (da mais antiga para a mais atual)?",
+  "alternativas": [
+  "a) Guerra do Peloponeso – Guerra de Secessão – Guerra da Criméia.",
+  "b) Guerra dos Trinta Anos – Guerra Franco-Prussiana – Primeira Guerra Mundial.",
+  "c) Guerra dos Cem Anos – Guerra de Sucessão ao Trono de Espanha – Guerra dos Trinta Anos.",
+  "d) Ignorar as contribuições dos povos da Mesopotâmia.",
+  "e) Guerra dos Cem Anos – Guerra da Tríplice Aliança – Guerra do Paraguai."
+  ],
+  "resposta": "B",
+  "descrição": "Guerra dos Trinta Anos (1618-1648) – Guerra Franco-Prussiana (1870-1871) – Primeira Guerra Mundial (1814-1818).",
+  "img-resposta": "https://escolaeducacao.com.br/wp-content/uploads/2020/07/guerra-franco-prussiana-1.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "103",
+  "tema": "história",
+  "pergunta": "A 1ª Guerra Mundial foi o túmulo dos impérios europeus, pois e todos os estados imperiais que participaram do conflito, somente um deles sobreviveu.  Este império foi a/o: ",
+  "alternativas": [
+  "a) Império Russo.",
+  "b) Favorecer difundir a religião egípcia.",
+  "c) Império Britânico.",
+  "d) Ignorar as contribuições dos povos da Mesopotâmia.",
+  "e) Império Austríaco."
+  ],
+  "resposta": "C",
+  "descrição": "O Império Britânico foi o único que sobreviveu à 1ª Guerra, ainda assim, saiu abalado do conflito e começou a ter dificuldades em manter algumas de suas possessões.  Os demais impérios (alemão, austro-húngaro, otomano) foram desmembrados.  Já o Império Russo, manteve seu território, mas a revolução socialista derrubou a monarquia.",
+  "img-resposta": "https://1.bp.blogspot.com/-fVD6OrkhI2M/VQSk-cjGWoI/AAAAAAAACbk/Tubq4BZjhqA/s1600/george%2BV.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "104",
+  "tema": "história",
+  "pergunta": "A 2ª Guerra Mundial foi um conflito sem precedentes e que criou um novo concerto mundial marcado pela polarização entre duas super-potências, ocasionando a Guerra Fria, além de desencadear o processo de:",
+  "alternativas": [
+  "a) Descolonização da Ásia e da África.",
+  "b) Repartição da África.",
+  "c) Industrialização dos países da América Latina.",
+  "d) Imperialismo cultural norte-americano.",
+  "e) Dissolução do bloco soviético."
+  ],
+  "resposta": "A",
+  "descrição": "Com o fim da 2ª Guerra e o enfraquecimento das potências europeias, várias e suas colônias conseguiram sua independência.  Alguns desses movimentos eram apoiados por Estados Unidos e URSS dentro do princípio da autodeterminação dos povos e com o intuito de ampliar as suas áreas de influência.",
+  "img-resposta": "https://www.grupoescolar.com/wp-content/uploads/2021/03/C1FB6.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "105",
+  "tema": "história",
+  "pergunta": "Cleópatra, a última faraó do Egito, desperta até nossos dias grande fascínio e curiosidade.  Sobre a última faraó é possível afirmar que:",
+  "alternativas": [
+  "a) Era uma mulher negra, como a maioria dos egípcios da época.",
+  "b) Tentou garantir a autonomia do Egito frente o avanço dos romanos.",
+  "c) Era descendente direta de Alexandre, o Grande.",
+  "d) Casou-se simultaneamente com César e Marco Antônio.",
+  "e) Foi capturada por Otávio e levada cativa para Roma."
+  ],
+  "resposta": "B",
+  "descrição": "Cleópatra VII (69-30 a.C.) era descendente de Ptolomeu, um dos generais de Alexandre, o Grande.  Reinou no Egito do ano 51 a.C. até a sua morte, casou-se sucessivamente com dois de seus irmãos, conforme tradição de sua família, e foi companheira de César e, mais tarde, Marco Antônio.  Tentou garantir a autonomia do Egito e foi derrotada por Otávio.",
+  "img-resposta": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kleopatra-VII.-Altes-Museum-Berlin1.jpg/800px-Kleopatra-VII.-Altes-Museum-Berlin1.jpg",
+  "img-pergunta": ""
+},
+{
+    "id": "121",
+      "tema": "portugues",
+      "pergunta": "O autor do poema I-Juca-Pirama é:",
+      "alternativas": [
+      "a) José de Alencar",
+      "b) Castro Alves",
+      "c) Gonçalves Dias",
+      "d) Álvares de Azevedo",
+      "e) Sousândrade"
+      ],
+      "resposta": "B",
+      "descrição": "O poema I-Juca Pirama, de Gonçalves Dias, é um ícone do romantismo brasileiro. A obra, indianista, está dividida em dez cantos. Publicado em 1851, no livro Últimos cantos, o poema é composto por 484 versos protagonizados pelos índios tupis e timbiras.",
+      "img-resposta": "",
+      "img-perguntas": ""
+  },
+  {
+      "id": "122",
+      "tema": "portugues",
+      "pergunta": "Assinale a alternativa em que se encontra um poema histórico.",
+      "alternativas": [
+      "a)Senhora",
+      "b) O Cortiço",
+      "c) Memórias Póstumas de Brás Cubas",
+      "d) O Gaúcho",
+      "e) A Moreninha"
+
+      ],
+      "resposta": "D",
+      "descrição": "O Gaúcho é um dos romances do escritor brasileiro José de Alencar. Essa obra foi publicada em 1870.",
+      "img-resposta": "",
+      "img-perguntas": ""
+  },
+  {
+      "id": "123",
+      "tema": "portugues",
+      "pergunta": "Assinale a alternativa que completa adequadamente a lacuna da frase seguinte: Aquele é o professor __________ ideias sobre literatura não concordamos.",
+      "alternativas": [
+      "a) que",
+      "b) de que",
+      "c) a que",
+      "d) a cujas",
+      "e) com cujas"
+      ],
+      "resposta": "E",
+      "descrição": "O verbo CONCORDAR desdobra-se com a preposição COM, bem como o pronome relativo CUJAS faz alusão ao termo que lhe é consequente (IDEIAS).",
+      "img-resposta": "",
+      "img-perguntas": ""
+  },
+  {
+      "id": "124",
+      "tema": "portugues",
+      "pergunta": "Assinale a opção em que ocorre um dífono.",
+      "alternativas": [
+      "a) Exército",
+      "b) Correio",
+      "c) Planta",
+      "d) Abscissa",
+      "e) Inoxidável"
+      ],
+      "resposta": "E",
+      "descrição": "Dífono é um fenômeno fonético no qual uma letra representa, simultaneamente, dois fonemas. No caso, a letra X, representa, simultaneamente, os fonemas K e S.",
+      "img-resposta": "",
+      "img-perguntas": "" 
+  },
+  {
+      "id": "125",
+      "tema": "portugues",
+      "pergunta": "Assinale a opção em que a acentuação gráfica da palavra  pode ser justificada, simultaneamente, por duas regras de acentuação.",
+      "alternativas": [
+      "a) Veículo.",
+      "b) Saída.",
+      "c) Baú.",
+      "d) Dói.",
+      "e) Também."
+      ],
+      "resposta": "A",
+      "descrição": "A acentuação gráfica de veículo pode ser justificada  tanto por ser proparoxítona  quanto por ser um hiato (acentua-se o “i” tônico dos hiatos, seguidos ou não de “s”.)",
+      "img-resposta": "",
+      "img-perguntas": ""  
+  }
   ],
   "media":[
     {
@@ -605,7 +846,495 @@
       "imagem": "",
       "resposta": "A",
       "descricao": "UM ELEMENTO COM 3 ELÉTRONS NA ÚLTIMA CAMADA FAZ LIGAÇÃO IÔNICA COM 3 ELEMENTOS DE 7 ELÉTRONS NA ÚLTIMA CAMADA, FORMANDO UM COMPOSTO DO TIPO XY3."
-    }
+    },
+    {
+      "id": "86",
+      "tema": "física",
+      "pergunta": "Um gerador elétrico, de f.e.m igual a 48V e resistência elétrica interna igual a 30Ω, entrega para um aparelho uma potência elétrica máxima. Nessas condições o rendimento desse gerador é de: ",
+      "alternativas": [
+      "A)20 %",
+      "B)50 %",
+      "C)60 %",
+      "D)96% ",
+      "E)100%"
+      ],
+      "resposta": "B",
+      "descrição": "Todo gerador que opera na potência máxima, ou seja, percorrido por uma corrente igual a metade da corrente de curto circuito, terá rendimento igual a 50%.",
+      "img-resposta":"",
+      "img-pergunta": "https://static.preparaenem.com/conteudo_legenda/16418f701885e28927a1254c6e0ea25d.jpg"
+
+  },
+  {
+      "id": "87",
+      "tema": "física",
+      "pergunta": "A temperatura e pressão nas quais podemos encontrar o carbono nos três estados físicos são aproximadamente:",
+      "alternativas": [
+      "A) 4000 K e 10 GPa.",
+      "B) 4400 K e 0,01 GPa.",
+      "C) 8000 K e 0,01 GPa.",
+      "D) 4400 K e 10 GPa.",
+      "E) 6000 K e 0,1 GPa."
+      ],
+      "resposta": "B",
+      "descrição": "De acordo com o diagrama de fases, os valores aproximados para o ponto triplo do carbono são 4400 K e 0,01 GPa.",
+      "img-resposta":"",
+      "img-pergunta": "https://2img.net/h/oi65.tinypic.com/2946l29.jpg"
+  },
+  {
+      "id": "88",
+      "tema": "física",
+      "pergunta": "Qual dos pesquisadores abaixo teve uma grande contribuição, sob o ponto de vista experimental,  na explicação do efeito fotoelétrico?",
+      "alternativas": [
+      "A) R. A. Milikan",
+      "B) E. R. Rutherford",
+      "C) M. Crookes",
+      "D) J.J. Thomson",
+      "E) A. Einstein"
+      ],
+      "resposta": "A",
+      "descrição": "Apesar de Einstein ter ganho um Nobel pela explicação do efeito foto elétrico, o experimento foi realizado por R.A. Millikan.",
+      "img-resposta":"",
+      "img-pergunta": "https://www.colegioweb.com.br/wp-content/uploads/2014/04/Efeito-Fotoel%C3%A9trico.jpg"
+  },
+  {
+      "id": "89",
+      "tema": "física",
+      "pergunta": "O Titanic foi o maior navio já construído em sua época, e naufragou em 1912 em sua primeira viagem, no norte do Oceano Atlântico. Hoje, seus destroços encontram-se a uma profundidade de 3840 m, assim podemos dizer que a pressão que o navio está sujeito é de aproximadamente ?",
+      "alternativas": [
+      ") 7680 atm",
+      ") 3850 atm",
+      ") 1000 atm",
+      ") 385 atm",
+      ") 39 atm"
+      ],
+      "resposta": "D",
+      "descrição": "Na água, a cada 10 m de profundidade, a pressão aumenta em 1 atm. Logo, para 3840 m, o aumento de pressão será de 384 atm. Adicionando a pressão atmosférica, a pressão total será de 385 atm.",
+      "img-resposta":"",
+      "img-pergunta": "https://veja.abril.com.br/wp-content/uploads/2020/12/TITANIC-FUNDO-DO-MAR-CAPSULA-TITAN-1.jpg"
+
+  },
+  {
+      "id": "90",
+      "tema": "física",
+      "pergunta": "Tem sido recorrente os acidentes domésticos envolvendo panelas de pressão. Uma das recomendações para evitar esses acidentes é diminuir o fogo quando a panela começar a soltar vapor, isso porque:",
+      "alternativas": [
+      "A) o aumento da temperatura da água no interior da panela continuará.",
+      "B) reduzirá a pressão no interior da panela.",
+      "C) diminuirá a pressão externa.",
+      "D) diminuirá a temperatura da água no interior da panela.",
+      "E) se a água em seu interior já está fervendo o fogo alto não vai mais alterar a temperatura em seu interior."
+      ],
+      "resposta": "E",
+      "descrição": " Um líquido em ebulição não varia sua temperatura durante a transição de fases.",
+      "img-resposta":"",
+      "img-pergunta": ""
+
+  },
+  {
+      "id": "91",
+      "tema": "física",
+      "pergunta": "No início do século XX tivemos uma grande disputa entre dois grandes cientistas, Thomas Edison e Nikola Tesla. Essa disputa ficou conhecida como Guerra das Correntes, para saber qual sistema seria usado para a distribuição de energia elétrica. O modelo de Tesla foi o sistema que acabou sendo usado para a transmissão de energia elétrica, isso devido à(ao):",
+      "alternativas": [
+      "A) Correntes alternadas podem ser transmitidas melhor para grandes distâncias.",
+      "B) Correntes contínuas podem ser transmitidas melhor para grandes distâncias.",
+      "C) Correntes alternadas não geram perdas na transmissão.",
+      "D) Correntes contínuas não geram perdas na transmissão.",
+      "E) Correntes alternadas naõ geram acidentes."
+      ],
+      "resposta": "A",
+      "descrição": "Em um sistema de corrente alternada, transformadores são utilizados o que gera uma menor perda na transmissão da energia elétrica. ",
+      "img-resposta":"",
+      "img-pergunta": ""
+  },
+  {
+      "id": "92",
+      "tema": "física",
+      "pergunta": "Na flauta Andina, conhecida como Zapona, o som mais grave é emitido pelo tubo:",
+      "alternativas": [
+      "A) Maior, pois quanto maior o comprimento do tubo, menor a frequência da onda sonora emitida",
+      "B) Menor, pois quanto menor o comprimento do tubo, menor a frequência da onda sonora emitida",
+      "C)  Menor, pois quanto menor o comprimento do tubo, maior a frequência da onda sonora emitida",
+      "D) Maior, pois quanto maior o comprimento do tubo, maior a frequência da onda sonora emitida.", 
+      "E) Maior, pois quanto maior o comprimento do tubo, maior a velocidade da onda emitida."
+      ],
+      "resposta": "A",
+      "descrição": "A frequência dos estados estacionários em tubos sonoros é inversamente proporcional ao comprimento do tubo. ",
+      "img-resposta":"",
+      "img-pergunta": "https://flauta.top/wp-content/uploads/2020/12/Flauta-andina-Gewa-700285-en-Do-300x300.jpg"
+  },
+  {
+      "id": "93",
+      "tema": "física",
+      "pergunta": "Em uma lente divergente, quando o objeto é colocado além da distância focal, a imagem formada será:",
+      "alternativas": [
+      "A) Maior, invertida e real.",
+      "B) Menor, direita e real.",
+      "C) Maior, invertida e virtual.",
+      "D) Menor, invertida e real.",
+      "E) Menor, direita e virtual."
+      ],
+      "resposta": "E",
+      "descrição": "Como mostra a imagem, uma lente divergente de um óculos para a miopia,  a imagem é menor, direita e virtual. ",
+      "img-resposta":"",
+      "img-pergunta": "https://opticastacna.cl/wp-content/uploads/2021/05/caracteristicas-de-los-lentes-divergentes.jpg"
+
+  },
+  {
+      "id": "94",
+      "tema": "física",
+      "pergunta": "No fim do século passado, tínhamos que os motores movidos à gasolina apresentavam um rendimento por volta de 20%, enquanto nos motores movidos à diesel o rendimento aumentava para 30%. Isso significa que: ",
+      "alternativas": [
+      "A) os motores à diesel eram mais potentes.",
+      "B) os motores à gasolina eram mais econômicos.",
+      "C) nos motores à diesel uma maior fração da energia do combustível era transformada em energia mecânica.",
+      "D) nos motores à gasolina uma maior fração da energia do combustível era transformada em energia mecânica.",
+      "E)  os motores à gasolina eram menos potentes que os motores à diesel."
+      ],
+      "resposta": "C",
+      "descrição": "Um maior rendimento de uma máquina térmica implica uma maior fração da sua potência útil produzida.",
+      "img-resposta": "",
+      "img-pergunta": ""
+
+  },
+  {
+      "id": "95",
+      "tema": "física",
+      "pergunta": "As estrelas que estão no estágio final da evolução estelar são  conhecidas como Gigantes Vermelhas. Por que elas tem uma cor avermelhada?",
+      "alternativas": [
+      "A) É uma influência de nossa atmosfera.",
+      "B) Por serem mais quentes, irradiam luz com comprimento de onda menor.",
+      "C) por serem mais frias, irradiam luz com comprimento de onda maior.",
+      "D) Por serem mais quentes, irradiam luz com comprimento de onda maior.",
+      "E) por serem mais frias, irradiam luz com comprimento de onda menor. "
+      ],
+      "resposta": "C",
+      "descrição": "Como seu combustível está acabando, essas estrelas apresentam uma temperatura menor e emitem luz em comprimentos de onda maiores.",
+      "img-resposta":"",
+      "img-pergunta": "https://2.bp.blogspot.com/-nVc37tmwxcQ/VzvIlbN6L3I/AAAAAAAAZP0/h2gcFXf3nG41mr5RnNmx25liKDCcYZS_ACLcB/s1600/Tamanho%2Bdo%2BSol%2Bquando%2Bestiver%2Bgigante%2Bvermelha.jpg"
+
+  },
+  {
+  "id": "106",
+  "tema": "história",
+  "pergunta": "No século III, Roma enfrentou uma crise sem precedentes e que colocou em risco a unidade do Império.  São características dessa crise:",
+  "alternativas": [
+  "a) A anarquia militar e a ameaça de vizinhos poderosos.",
+  "b) As invasões bárbaras e o êxodo rural.",
+  "c) O reconhecimento do cristianismo como religião oficial e submissão do imperador ao papa.",
+  "d) A anarquia militar e a transferência da capital para Constantinopla.",
+  "e) O fim da escravidão e o êxodo urbano."
+  ],
+  "resposta": "A",
+  "descrição": "No século III, Roma passou por uma crise sem precedentes.  A expansão territorial terminara e havia a ameaça das tribos bárbaras e do império persa em suas fronteiras.  Além disso, a estrutura do estado começou a ruir por excessos de gastos e corrupção, era o fim da Pax Romana, havia caos em algumas legiões e falta de mão-de-obra.",
+  "img-resposta": "https://media.istockphoto.com/id/477898271/photo/detail-from-trajans-column-in-rome.jpg?s=612x612&w=0&k=20&c=LlkELecpIhw9QQ_rjP0zAXYs4MhE3Jz3JHqdK8y6_XM=",
+  "img-pergunta": ""
+},
+{
+  "id": "107",
+  "tema": "história",
+  "pergunta": "As ordens de cavalaria foram fundadas no contexto das cruzadas com o intuito de garantir a conquista de Jerusalém e proteger os peregrinos.  Uma das mais importantes ordens de cavalaria foi a:",
+  "alternativas": [
+  "a) Dos Dominicanos.",
+  "b) Dos Cistercienses.",
+  "c) De Cristo.",
+  "d) Dos Templários.",
+  "e) Dos Mercedários."
+  ],
+  "resposta": "D",
+  "descrição": "A Ordem dos Pobres Cavaleiros de Cristo e do Templo de Salomão, conhecida como Cavaleiros Templários, Ordem do Templo ou simplesmente como Templários, foi uma ordem militar de cavalaria fundada durante a a primeira Cruzada, no ano de 1118.  A ordem foi dissolvida sob acusação de heresia no ano de 1312.",
+  "img-resposta": "https://images.uncyc.org/pt/6/66/Templariofod%C3%A3o.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "108",
+  "tema": "história",
+  "pergunta": "O Humanismo está diretamente ligado ao chamado Renascimento Cultural do final da Idade Média e início da Idade Moderna.  Um dos maiores nomes do Humanismo europeu foi:",
+  "alternativas": [
+  "a) William Shakespeare.",
+  "b) Martinho Lutero.",
+  "c) Elizabeth I.",
+  "d) Erasmo de Roterdã.",
+  "e) Maquiavel."
+  ],
+  "resposta": "D",
+  "descrição": "Os humanistas se preocupavam com o ensino das línguas clássicas, buscando uma tradução mais rigorosa de textos antigos, como a Bíblia, e que fosse permitido o seu acesso nas línguas vernáculas.  Um dos seus maiores expoentes foi Erasmo, nascido em Roterdã, atual Holanda, autor de vários escritos, ele defendia a reforma interna da Igreja Católica.",
+  "img-resposta": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Holbein-erasmus.jpg/640px-Holbein-erasmus.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "109",
+  "tema": "história",
+  "pergunta": "No século XVII, autores como Thomas Hobbes e John Locke inauguraram o contratualismo que defendia:",
+  "alternativas": [
+  "a) O Direito Divino dos reis.",
+  "b) O fim do Absolutismo Monárquico e a o ideal republicano.",
+  "c) A ideia de um pacto social como o momento de surgimento da sociedade civil.",
+  "d) Os direitos naturais, a vida, a liberdade e a propriedade.",
+  "e) Que o governo se dava por um pacto entre o rei e a igreja."
+  ],
+  "resposta": "C",
+  "descrição": "O contatualismo é uma corrente de pensamento político e filosófico que rompe com a ideia de que a sociedade civil ou o estado é estabalecido por forças externas, dando ao ser humano a responsabilidade na organização do governo e da sociedade.",
+  "img-resposta": "https://pt-static.z-dn.net/files/d44/30942b343e40846f427db593e0fe8e36.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "110",
+  "tema": "história",
+  "pergunta": "A Revolução Francesa, em 1789, abalou a Europa e influenciou todo o mundo.  Dentre os princípios consagrados por esta revolução estão:",
+  "alternativas": [
+  "a) A igualdade entre homens e mulheres e o fim da propriedade privada.",
+  "b) A abolição dos privilégios feudais e o sufrágio universal.",
+  "c) Igualdade jurídica entre os cidadãos e o direito à propriedade privada.",
+  "d) A abolição da monarquia e a consagração do parlamentarismo.",
+  "e) A abolição da escravidão negra e a liberdade religiosa."
+  ],
+  "resposta": "C",
+  "descrição": "A Revolução Francesa, em todas as suas fases, buscou garantir alguns direitos defendidos pela burguesia, sendo que a igualdade jurídica entre todos os cidadãos do sexo masculino e o direito à propriedade privada.",
+  "img-resposta": "https://nanquim.com.br/wp-content/uploads/2021/12/Declaracoes-direitos-homem-cidadao-Le_Barbier_Jean-Jacques_1789-1020x1250.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "111",
+  "tema": "história",
+  "pergunta": "A chegada da Família Real ao Brasil, em 1808, provocou uma série de transformações na colônia, trasformada em centro do império português.  Era necessário modernizar e embelezar a colônia, são inovações do período:",
+  "alternativas": [
+  "a) As primeiras universidades e o Banco do Brasil.",
+  "b) O Jardim Botânico e a eletrificação do Rio de Janeiro.",
+  "c) As primeiras escolas superiores e a Biblioteca Nacional.",
+  "d) As primeiras ferrovias e o porto de Santos.",
+  "e) A introdução o plantio de café no Vale do Paraíba e as primeiras escolas superiores."
+  ],
+  "resposta": "C",
+  "descrição": "A Real Biblioteca, antigo nome da Biblioteca Nacional, foi fundada em 1810, no Rio de Janeiro, com livros que foram transferidos de Portugal para o Brasil.  Já as primeiras escolas superiores, a Faculdade de Cirurgia da Bahia e a de Medicina do Rio de Janeiro foram fundadas em 1808. ",
+  "img-resposta": "https://miro.medium.com/v2/resize:fit:640/1*vR6edgpSg_4SZHc11YHDzA.jpeg",
+  "img-pergunta": ""
+},
+{
+  "id": "112",
+  "tema": "história",
+  "pergunta": "No dia 7 de setembro de 1822, foi proclamada a independência do Brasil, no entanto, nem todas as regiões da antiga colônia aceitaram a ruptura com Portugal e houve guerra.  A resistência foi particularmente forte no/na/em:",
+  "alternativas": [
+      
+  "a) São Paulo, Minas Gerais e Cisplatina (atual Uruguai).",
+  "b) Pará, Bahia, Pernambuco e Cisplatina (atual Uruguai).",
+  "c) Amazonas, Santa Catarina, Rio Grande do Sul e Bahia.",
+  "d) Rio de Janeiro, Pará e Bahia.",
+  "e) Pará, Bahia e Cisplatina (atual Uruguai)."
+  ],
+  "resposta": "E",
+  "descrição": "No senso comum, a independência do Brasil foi um evento pacífico, um negócio de pai para filho, no entanto, houve resistência em várias regiões da colônia.  Na Bahia, a luta foi sangrenta, no Pará, houve a tragédia do brigue Palhaço e na Cisplatina, as guarnições portuguesas entraram em combate com a recém criada Marinha brasileira.",
+  "img-resposta": "https://atlas.fgv.br/sites/atlas.fgv.br/files/03-05-a-full.png",
+  "img-pergunta": ""
+},
+{
+  "id": "113",
+  "tema": "história",
+  "pergunta": "A luta pelo voto feminino começou no final do século XIX e foi reconhecido em 1932 e incorporado à Constituição de 1934.  Este voto, no entanto, era:",
+  "alternativas": [
+  "a) Obrigatório para mulheres maiores de 18 anos.",
+  "b) Facultativo e somente mulheres com trabalho remunerado eram obrigadas a se alistar.",
+  "c) Obrigatório para todas as mulheres alfabetizadas",
+  "d) Obrigatório para as mulheres solteiras e facultativo para as casadas.",
+  "e) Obrigatório para as mulheres que tivessem função remunerada."
+  ],
+  "resposta": "B",
+  "descrição": "Após intensa campanha feita pelas organizações femininas, as mulheres conseguiram o direito de voto no Código Eleitoral de 1932, sendo o Brasil o pioneiro na América Latina.  No entanto, para as mulheres que não exercessem função remunerada ele permaneceu facultativo até o Código Eleitoral de 1965, quando o voto feminino e o masculino foi equiparado e todas as mulheres passaram a ter o dever de se alistar.",
+  "img-resposta": "https://www.tre-sp.jus.br/imagens/fotos/dia-da-conquista-do-voto-feminino/@@images/6c540caf-34ca-4c8f-8ff6-81169d2a6f8c.jpeg",
+  "img-pergunta": ""
+},
+{
+  "id": "114",
+  "tema": "história",
+  "pergunta": "Antes da abolição com a Lei Áurea de 1988, houve uma série e leis que anteciparam o fim da escravidão.  Qual a sequência temporal correta das leis abolicionistas brasileiras?",
+  "alternativas": [
+  "a) Lei Feijó – Lei do Ventre Livre – Lei dos Sexagenários.",
+  "b) Lei Eusébio de Queiroz – Lei do Ventre Livre – Lei Feijó.",
+  "c) Lei dos Sexagenários – Lei Feijó – Lei o Ventre Livre.",
+  "d) Lei Feijó – Lei do Ventre Livre – Lei Eusébio de Queiroz.",
+  "e) Lei Eusébio de Queiroz – Lei dos Sexagenários – Lei Feijó."
+  ],
+  "resposta": "A",
+  "descrição": "A sequência correta é Lei Feijó (1831) – Lei do Ventre Livre (1871) – Lei dos Sexagenários (1885).",
+  "img-resposta": "https://static.preparaenem.com/2021/08/revista-lei-sexagenarios.jpg",
+  "img-pergunta": ""
+},
+{
+  "id": "115",
+  "tema": "história",
+  "pergunta": "O final do século XVIII e o século XIX foi marcado pelo processo de independência dos países da América.  A maioria das independências foi liderada pelas elites coloniais, sendo a única exceção: ",
+  "alternativas": [
+  "a) O México.",
+  "b)  Uruguai.",
+  "c) O Brasil.",
+  "d) O Haiti.",
+  "e) Porto Rico."
+  ],
+  "resposta": "D",
+  "descrição": "A independência do Haiti foi singular, porque foi liderada por negros e mestiços, escravizados e livres.  A revolução haitiana (1791-1804) despertou o terror nas colônias e nações escravistas do continente, que temiam que a república negra pudesse inspirar movimentos semelhantes entre os escravizados e outras regiões da América.",
+  "img-resposta": "https://cliohistoriaeliteratura.files.wordpress.com/2019/10/jean-jacques-dessalines.jpg?w=446",
+  "img-pergunta": ""
+},
+{
+  "id": "126",
+  "tema": "portugues",
+  "pergunta": "Assinale a alternativa cuja frase apresenta concordância verbal correta.",
+  "alternativas": [
+  "a) As estrelas parece brilharem.",
+  "b) Foi eu quem fiz isso.",
+  "c) Cada um de nós faremos o que nos pediram.",
+  "d) Quais de nós fez o exercício de Matemática?",
+  "e) Quem de nós fizemos a tarefa?"
+  ],
+  "resposta": "A",
+  "descrição": "Embora a concordância mais comum seja As estrelas parecem brilhar, o verbo “parecer”, seguido de infinitivo, pode assumir a forma flexionada ou a não flexionada. ",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "127",
+  "tema": "portugues",
+  "pergunta": "Assinale a alternativa cuja frase apresenta ambiguidade.",
+  "alternativas": [
+  "a) Eu sei que estou lendo esta frase.",
+  "b) O menino viu o incêndio do prédio.",
+  "c) Ela escorregou e não caiu.",
+  "d) Quanto são dois mais dois?",
+  "e) Leia com muita atenção as frases acima."
+  ],
+  "resposta": "B",
+  "descrição": "Em o menino viu o incêndio do prédio,  o duplo sentido está na possibilidade de o menino ter visto o prédio incendiar-se ou de ter visto um incêndio estando ele, o menino, no prédio.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "128",
+  "tema": "portugues",
+  "pergunta": "Assinale a alternativa em que a figura de linguagem denominada sinestesia.",
+  "alternativas": [
+  "a) A noite acalma as emoções cansadas.",
+  "b) Meu coração se partiu com essa notícia.",
+  "c) Aquele homem tem uma voz áspera.",
+  "d) Há pessoas que não têm um teto para morar.",
+  "e) Chorei rios de lágrimas de saudades dela."
+      
+  ],
+  "resposta": "B",
+  "descrição": "Sabendo que Sinestesia é associação de palavras ou expressões em que ocorre combinação de sensações diferentes, em Aquele homem tem a voz áspera há a mistura de dois sentidos, quais sejam, voz (audição) e áspera (tato).",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "129",
+  "tema": "portugues",
+  "pergunta": "Assinale a alternativa em que a supressão da(s) vírgula(s) não altera o significado da frase:",
+  "alternativas": [
+  "a) O deputado, que se mudou para a casa ao lado, tem sete filhos.",
+  "b) A mãe da menina, histérica, pedia que alguém a ajudasse.",
+  "c) “Maria, vem cá mais tarde”.",
+  "d) Perdi a paciência com a secretária, que costuma me desmentir.",
+  "e) Ontem, a rua estava muito barulhenta." 
+  ],
+  "resposta": "E",
+  "descrição": "A supressão da vírgula não altera o significado da oração indicada.  Nas demais, o sentido muda completamente. Na (A), de adjetiva explicativa passa para adjetiva restritiva; na (B), histérica deixa de se referir à mãe para se referir  à menina; em (C), Maria deixa de ser vocativo, para ser sujeito; em (D), a supressão da vírgula transforma a oração adjetiva explicativa em adjetiva restritiva.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "130",
+  "tema": "portugues",
+  "pergunta": "Assinale a alternativa em que o “se” é uma partícula expletiva ou de realce.",
+  "alternativas": [
+  "a) Não sei se ela vai voltar.",
+  "b) Se chover, pode esfriar.",
+  "c) Vão-se embora daqui, rapazes!",
+  "d) Alugam-se apartamentos.",
+  "e) Precisa-se de empregadas."
+  ],
+  "resposta": "C",
+  "descrição": "Partícula expletiva ou de realce nunca exerce função sintática. Pode ser retirada da frase sem prejuízo sintático ou semântico. É o que ocorre na frase (C), na qual o “se” pode ser retirado sem que haja prejuízo sintático ou semântico. Nas demais, o “se” tem função sintática. Na (A), é conjunção integrante. Na (B), é conjunção subordinativa condicional. Na (D), é partícula apassivadora. Na (E), é índice de indeterminação do sujeito.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "131",
+  "tema": "portugues",
+  "pergunta": "Assinale a alternativa em que a oração destacada exerce a função de sujeito:",
+  "alternativas": [
+  "a) É possível que a prova seja adiada.",
+  "b) Consta que a prova foi adiada.",
+  "c) Não acredito que haja adiamento da prova.",
+  "d) Se a prova for adiada, ficaremos decepcionados.",
+  "e) Só irei embora quando se confirmar o adiamento da prova."
+  ],
+  "resposta":"B",
+  "descrição": "Em Consta que a prova foi adiada, a oração “que a prova foi adiada” exerce a função de sujeito do verbo CONSTAR (Consta isto ou Isto consta.)",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "132",
+  "tema": "portugues",
+  "pergunta": "Assinale a opção em que o pronome oblíquo destacado tem valor possessivo.",
+  "alternativas": [
+  "a) Disseram-me a verdade sobre o ocorrido.",
+  "b) Entregaram-lhe o livro de Física?",
+  "c) Deixei-o na minha casa.",
+  "d) A lama sujou-me a roupa.",
+  "e) Eu lhe peço apenas mais um favor."
+  ],
+  "resposta": "D",
+  "descrição": "Em A lama sujou-me a roupa, o pronome me tem valor de “minha”, ou seja, A lama sujou a minha roupa.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "133",
+  "tema": "portugues",
+  "pergunta": "Assinale  a alternativa na qual o pronome que exerce a função de predicativo do sujeito.",
+  "alternativas": [
+  "a) O carro que comprei é usado.",
+  "b) A mulher com que me casei é esta.",
+  "c) O aluno curioso que fui não existe mais.",
+  "d) Os livros de que o professor falou são muito bons.",
+  "e) O filme a que assisti era lento."
+  ],
+  "resposta": "C",
+  "descrição": "O pronome que refere-se a “curioso” que é o predicativo do sujeito  na oração “fui curioso”, na qual o verbo é de ligação (“ser”).",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "134",
+  "tema": "portugues",
+  "pergunta": "Assinale a única alternativa que completa corretamente as lacunas da frase abaixo. O rapaz tinha _________ a condição: a luz só seria _________ depois que tudo estivesse _________ e devidamente ___________.",
+  "alternativas": [
+  "a) aceito – acendida – limpo – enxugado",
+  "b) aceitado – acendida – limpado – enxugado",
+  "c) aceitado – acesa – limpo – enxugado",
+  "d) aceitado – acesa – limpo – enxuto",
+  "e) aceitado – acendida – limpo – enxuto"
+  ],
+  "resposta": "D",
+  "descrição": "A formas regulares de particípio são usadas com os verbos TER e HAVER, enquanto as irregulares são empregadas com os verbos SER e ESTAR, razão pela qual a única resposta certa é a alternativa (D).",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "135",
+  "tema": "portugues",
+  "pergunta": "Assinale a alternativa em que há um verbo defectivo:",
+  "alternativas": [
+  "a) Demoliram vários prédios naquele local.",
+  "b) Eu adiro a essa campanha.",
+  "c) Estampava no rosto um sorriso, um sorriso de criança.",
+  "d) Compramos muitas mercadorias remarcadas.",
+  "e) Coube ao juiz julgar o réu."
+  ],
+  "resposta": "A",
+  "descrição": "Verbos defectivos são aqueles que possuem conjugação incompleta, ou seja, não se conjugam em todos os modos, tempos e pessoas, o que é o caso do verbo demolir, que não tem a 1ª pessoa do singular do presente do indicativo, o que acarretará a inexistência de todo o presente do subjuntivo, por exemplo.",
+  "img-resposta": "",
+  "img-perguntas": ""
+}
   ],
   "dificil": [
     {
@@ -759,6 +1488,257 @@
       "imagem": "",
       "resposta": "D",
       "descricao": "PARA COMBATER A ACIDEZ UM REMÉDIO DEVE TER PROPRIEDADES DE UMA BASE."
+    },
+    {
+      "id": "96",
+      "tema": "física",
+      "pergunta": "Um experimento muito simples sobre hidrodinâmica consiste em soprar a parte de cima de um papel, como mostra a figura. Quando o homem assopra, o que acontece e por que?",
+      "alternativas": [
+      "A) O papel sobe pois a pressão em cima é maior",
+      "B) O papel desce pois a pressão em cima é maior.",
+      "C) O papel sobe pois a pressão em cima é menor.",
+      "D) O papel desce pois a pressão em cima é menor.",
+      "E) Não acontece nada, pois o papel está em equilíbrio."
+      ],
+      "resposta": "C",
+      "descrição": "O papel sobe pois em cima a velocidade do ar será maior que em baixo, logo a pressão será menor.",
+      "img-resposta":"",
+      "img-pergunta": "https://www.ciensacao.org/fotografia_experimento_mao_na_massa/5049p_flying_2.jpg",
+      "nível": "Difícil"
+  },
+  {
+      "id": "97",
+      "tema": "física",
+      "pergunta": "Se o coeficiente de atrito estático entre os grãos de areia de um monte vale 0,60 e o diâmetro (D) desse monte é igual a 10 m, a altura máxima (h) que esse pode atingir é de:",
+      "alternativas": [
+      "A) 6,00 m.",
+      "B) 3,00 m.",
+      "C) 1,50 m.",
+      "D) 5,00 m.",
+      "E) 8,33 m."
+      ],
+      "resposta": "B",
+      "descrição": "No equílibrio μe = tg Θ = h/R ,  logo  0,60 = h/5     h = 3,00 m",
+      "img-resposta":"",
+      "img-pergunta": "https://ibb.co/PcQvW6W",
+      "nível": "Difícil"
+  },
+  {
+      "id": "98",
+      "tema": "física",
+      "pergunta": "Uma fonte de calor de 100 W foi utilizada para aquecer 100g de uma substância. De acordo com a sua curva de aquecimento, o calor específico no estado de MENOR agregação das moléculas é:",
+      "alternativas": [
+      "A) 2,0 J/goC.",
+      "B) 1,5 J/goC.",
+      "C) 1,0 J/goC.",
+      "D) 0,5 J/goC.",
+      "E) 4,0 J/goC."
+      ],
+      "resposta": "A",
+      "descrição": "No caso, seria no estado gasoso (terceira rampa no gráfico) Como Q = m.c.ΔT e Q = Pot x tempo   100 (J/s).60(s) = 100(g).c.30(oC)    c =  2,0 J/goC",
+      "img-resposta":"",
+      "img-pergunta": "https://ibb.co/RPNx3y9",
+      "nível": "Difícil"
+  },
+  {
+      "id": "99",
+      "tema": "física",
+      "pergunta": "A energia elétrica dissipada pelos resistores no circuito abaixo, em 1 segundo, é igual a:",
+      "alternativas": [
+      "A)12,50 J",
+      "B)25 J",
+      "C)0,25 J",
+      "D)2,5 J",
+      "E)6,25 J"
+      ],
+      "resposta": "E",
+      "descrição": "Potência = V2 / Req = 252/100 = 6,25 W    Energia = P.Δt = (6,25 J/s) . (1s) = 6,25 J",
+      "img-resposta":"",
+      "img-pergunta": "https://ibb.co/cFqFy6C",
+      "nível": "Difícil"
+  },
+  {
+      "id": "100",
+      "tema": "física",
+      "pergunta": "Um recarregador de celular consegue fornecer uma corrente elétrica de 3,0 A para uma bateria, inicialmente descarregada, que tem capacidade de 2100 mAh. Desconsiderando as perdas, essa bateria será carregada, aproximadamente, em quanto tempo?",
+      "alternativas": [
+      "a) 11 min",
+      "b) 105 min",
+      "c) 42 min",
+      "d) 30 min",
+      "e) 21 min"
+      ],
+      "resposta": "C",
+      "descrição": "Como a carga é dada por i = ΔQ/Δt  Teremos, Δt = (2,1 Ah)/ (3 A) = 0,7 h ou 42 min",
+      "img-resposta":"",
+      "img-pergunta": "https://api.netshopinformatica.com.br/uploads/content_manager/contents/161/image/celular-carregando-pode-conduzir-descarga-eletrica-em-tempestades.jpg",
+      "nível": "Difícil"
+  },
+  {
+    "id": "116",
+    "tema": "história",
+    "pergunta": "O Governo Getúlio Vargas, em especial durante o Estado Novo (1937-1945), percebeu a potencialidade do rádio e criou um programa diário cujo objetivo era fazer propaganda do governo e educar a propulação, seu nome era:",
+    "alternativas": [
+    "a) A Voz do Brasil.",
+    "b) A Voz da Democracia.",
+    "c) A Hora do Presidente.",
+    "d) A Hora do Brasil.",
+    "e) Brasil Vere-Amarelo."
+    ],
+    "resposta": "D",
+    "descrição": "Em 1935, Getúlio Vargas criou o programa A Hora do Brasil que deveria ser transmitido por todas as estações de rádio, de segunda à sexta-feira (exceto feriado), das 19h às 20h. Todas as quintas-feiras eram transmitidas palestras de 10 minutos dirigidas aos trabalhadores. A partir de 1946, o programa passou a se chamar A Voz do Brasil, nome que mantém até hoje.",
+    "img-resposta": "https://1.bp.blogspot.com/-XXWhD17yBC4/Wq2gVMgHl9I/AAAAAAAAEGw/wo0_Ru4LO1sLhYZTycNaW_4ZarjWfcjOgCLcBGAs/s1600/getulio%2Bvargas%2Bno%2Bmicrofofone%2Bdo%2BDIP.jpg",
+    "img-pergunta": "",
+    "nível": "Difícil"
+},
+{
+    "id": "117",
+    "tema": "história",
+    "pergunta": "O teatro nasceu na Grécia e os helenos se destacaram na tragédia e na comédia.  Qual alternativa apresenta corretamente o nome de três autores de teatro da Grécia Antiga:  ",
+    "alternativas": [
+    "a) Aristófanes, Sófocles e Eurípedes.",
+    "b) Heródoto, Eurípedes e Políbio.",
+    "c) Sófocles, Ésquilo e Ptolomeu.",
+    "d) Aristófanes, Ésquilo e Aristóteles.",
+    "e) Heródoto, Aristófanes e Plutarco."
+    ],
+    "resposta": "A",
+    "descrição": "O teatro nasceu em Atenas, no séc. VI a.C., e estava ligado às celebrações aos deuses, em especial Dionísio.  Os atores usavam máscaras (personas) e havia premiações para os melhores autores.  Os mais lembrados até nossos dias são Sófocles, Ésquilo, Eurípedes e Aristófanes.",
+    "img-resposta": "https://i0.wp.com/descobrindoasicilia.com/wp-content/uploads/2016/11/Teatro-Grego-de-Taormina.jpg?fit=1440%2C1080&ssl=1",
+    "img-pergunta": "",
+    "nível": "Difícil"
+},
+{
+    "id": "118",
+    "tema": "história",
+    "pergunta": "O século XVI foi marcado pelas reformas religiosas e os conflitos decorrentes delas.  No Sacro Império um acordo foi travado em 1555 estabelecendo uma paz momentânea entre católicos e luteranos.  O nome deste acordo é: ",
+    "alternativas": [
+    "a) Paz de Augsburgo." ,
+    "b) Tratado de Latrão.",
+    "c) Ato de Supremacia.",
+    "d) Paz de Vestfália.",
+    "e) Tratado de Nantes."
+    ],
+    "resposta": "A",
+    "descrição": "A Paz de Augsburgo reconheceu a divisão do império em territórios católicos e luteranos, a partir do princípio “cuius regio, eius religio”, que significa literalmente “De quem (É) a região, dele (se siga) a religião, ou seja, os súditos deveriam seguir a religião do governante.",
+    "img-resposta": "https://martinttipia.files.wordpress.com/2019/08/augsburg.jpg?w=584&h=979",
+    "img-pergunta": "",
+    "nível": "Difícil"
+},
+{
+    "id": "119",
+    "tema": "história",
+    "pergunta": "O território que é hoje o Brasil abrigou no século XVI e XVII as primeiras comunidades protestantes (huguenotes franceses) e judaicas das Américas.  Os grupos se estabeleceram respectivamente:",
+    "alternativas": [
+    "a) Huguenotes/Bahia e Judeus/Pernambuco.",
+    "b) Huguenotes/Espírito Santo e Judeus/Bahia.",
+    "c) Huguenotes/Rio de Janeiro e Judeus/Maranhão.",
+    "d) Huguenotes/Rio de Janeiro e Judeus/Pernambuco.",
+    "e) Huguenotes/Maranhão e Judeus/Minas Gerais."
+    ],
+    "resposta": "D",
+    "descrição": "Os franceses criaram a chamada França Antártica na região da Baía do Rio de Janeiro (hoje, Baía de Guanabara), entre 1555-1570, para abrigar os huguenotes.  Já os holandeses, ao dominarem o nordeste, deram liberdade religiosa aos judeus e a primeira sinagoga das Américas foi fundada em nosso território.",
+    "img-resposta": "https://miro.medium.com/v2/resize:fit:750/1*wXTDbJBJZOzevh1F2nul6Q.jpeg",
+    "img-pergunta": "",
+    "nível": "Difícil"
+},
+{
+    "id": "120",
+    "tema": "história",
+    "pergunta": "Com o fim da ditadura do Estado Novo, em 1945, a democracia foi restaurada em nosso país e foi convocada uma assembleia constituinte.  Esta constituição: ",
+    "alternativas": [
+    "a) Restabeleceu o voto secreto.",
+    "b) Garantiu os direitos individuais.",
+    "c) Aboliu o direito de greve.",
+    "d) Estabeleceu o direito à reeleição presidencial.",
+    "e) Tornou o voto feminino obrigatório."
+    ],
+    "resposta": "B",
+    "descrição": "A constituição de 1946 foi uma carta magna democrática e liberal.  Manteve os direitos trabalhistas da Era Vargas e  buscou salvaguardar os direitos dos individuais dos cidadãos tais como, a liberdade de expressão, livre reunião, propriedade privada e à privacidade.",
+    "img-resposta": "https://www.unifal-mg.edu.br/remadih/wp-content/uploads/sites/11/2018/09/082FolhaDeJornal-1.jpg",
+    "img-pergunta": "",
+    "nível": "Difícil"
+},
+{
+  "id": "136",
+  "tema": "portugues",
+  "pergunta": "Movimento poético surgido na década de 1950, revela-se um fruto legítimo da civilização audiovisual, em que à noção de poesia se incorpora, fundamentalmente, o elemento visual. É o:",
+  "alternativas": [
+  "a) Verde-amarelismo.",
+  "b) Grupo da Anta.",
+  "c) Grupo Marajás.",
+  "d) Concretismo.",
+  ")e Pau-brasil."
+  ],
+  "resposta": "D",
+  "descrição": "Movimento artístico no qual  se privilegiou a valorização do conteúdo visual e sonoro, enfatizando-se uma estrutura visual em detrimento da discursiva.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "137",
+  "tema": "portugues",
+  "pergunta": "A crítica constata, nas metáforas simbolistas de Cruz e Sousa, a obsessão pela cor:",
+  "alnativas": [
+  "a) branca.",
+  "b) negra.",
+  "c) rubra.",
+  "d) roxa.",
+  "e) azul."
+  ],
+  "resposta": "A",
+  "descrição": "Suas obras são marcadas pela musicalidade (uso de aliterações), pelo individualismo, pelo sensualismo, ora pelo desespero, ora pelo apaziguamento, além de uma obsessão pela cor branca - manifestada por sua condição racial e a tentativa de superá-la.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "138",
+  "tema": "portugues",
+  "pergunta": "Interesse pelas zonas profundas da mente e pela loucura; desejo de transcendência e integração cósmica; linguagem vaga, fluida que busca sugerir em vez de nomear. Essas são características que identificam as obras de autores ",
+  "alternativas": [
+  "a) naturalistas.",
+  "b) parnasianistas.",
+  "c) simbolistas.",
+  "d) quinhentistas.",
+  "e) realistas."
+  ],
+  "resposta": "C",
+  "descrição": "O enunciado da questão  apresenta as características norteadoras dos poetas simbolistas, dentre os quais e o mais notável foi Cruz e Souza.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "139",
+  "tema": "portugues",
+  "pergunta": "Em 1880, Zola publicou suas teorias sobre o romance experimental em que expunha ideias como esta: “o romance experimental substitui o estudo do homem abstrato e metafísico pelo do homem natural, sujeito a leis físico-químicas e determinado pela influência do meio”.",
+  "alternativas": [
+  "a) Arcadismo.",
+  "b) Classicismo.",
+  "c) Realismo.",
+  "d) Naturalismo.",
+  "e) Barroco."
+  ],
+  "resposta": "D",
+  "descrição": "O Naturalismo ancorava-se na  ideia de que as ações do homem eram determinadas pelo meio, ou seja, as condições materiais influenciariam decisivamente o comportamento humano.",
+  "img-resposta": "",
+  "img-perguntas": ""
+},
+{
+  "id": "140",
+  "tema": "portugues",
+  "pergunta": "O romance realista brasileiro, tal como o conhecemos, focaliza principalmente:",
+  "alternativas": [
+  "a) as camadas marginalizadas da sociedade.",
+  "b) aspectos sociais e psicológicos nas relações humanas.",
+  "c) o preconceito racial.",
+  "d) a defesa das instituições, como o casamento, por exemplo.",
+  "e) a formação da nacionalidade."
+  ],
+  "resposta": "B",
+  "descrição": "O Realismo explorou as relações humanas em seus aspectos psicológicos e o comportamento do homem na sociedade, motivado por interesses nem sempre louváveis.",
+  "img-resposta": "",
+  "img-perguntas": ""
     }
+
   ]
 }
