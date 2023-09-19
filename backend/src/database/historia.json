@@ -1,0 +1,306 @@
+{
+  "história": [
+        {
+                "id": "1",
+                "pergunta": "Alexandre, o Grande, construiu um grande império e defendeu que os povos nele incluídos fundissem suas culturas  o que deu origem à Cultura Helenística.  Esta cultura foi caracterizada por:",
+                "alternativas": [
+                "a) A abolição da escravidão negra e a liberdade religiosa.",
+                "b) Favorecer difundir a religião egípcia.",
+                "c) Ter como sua língua de difusão o latim.",
+                "d) Ignorar as contribuições dos povos da Mesopotâmia.",
+                "e) Acolher contribuições de vários povos e ter no grego sua língua de difusão."
+                ],
+                "resposta": "e) Acolher contribuições de vários povos e ter no grego sua língua de difusão.",
+                "descrição":"A cultura helenística foi fruto da fusão do pensamento de vários povos (gregos, persas, egípcios, indianos etc.) e se expressou nas artes, na religião, na política e na filosofia.  A língua de transmissão desta cultura era o grego e foi um fator importante na estabilidade do Mediterrâneo oriental por vários séculos.",
+                "imagem": "https://s1.static.brasilescola.uol.com.br/be/e/alexander.jpg",
+                "nível": "Fácil"
+            },
+            {
+                "id": "2",
+                "pergunta": "Das guerras a seguir, quais estão em ordem cronológica correta (da mais antiga para a mais atual)?",
+                "alternativas": [
+                "a) Guerra do Peloponeso – Guerra de Secessão – Guerra da Criméia.",
+                "b) Guerra dos Trinta Anos – Guerra Franco-Prussiana – Primeira Guerra Mundial.",
+                "c) Guerra dos Cem Anos – Guerra de Sucessão ao Trono de Espanha – Guerra dos Trinta Anos.",
+                "d) Ignorar as contribuições dos povos da Mesopotâmia.",
+                "e) Guerra dos Cem Anos – Guerra da Tríplice Aliança – Guerra do Paraguai."
+                ],
+                "resposta": "b) Guerra dos Trinta Anos – Guerra Franco-Prussiana – Primeira Guerra Mundial.",
+                "descrição": "Guerra dos Trinta Anos (1618-1648) – Guerra Franco-Prussiana (1870-1871) – Primeira Guerra Mundial (1814-1818).",
+                "imagem": "https://escolaeducacao.com.br/wp-content/uploads/2020/07/guerra-franco-prussiana-1.jpg",
+                "nível": "Fácil"
+            },
+            {
+                "id": "3",
+                "pergunta": "A 1ª Guerra Mundial foi o túmulo dos impérios europeus, pois e todos os estados imperiais que participaram do conflito, somente um deles sobreviveu.  Este império foi a/o: ",
+                "alternativas": [
+                "a) Império Russo.",
+                "b) Favorecer difundir a religião egípcia.",
+                "c) Império Britânico.",
+                "d) Ignorar as contribuições dos povos da Mesopotâmia.",
+                "e) Império Austríaco."
+                ],
+                "resposta": "c) Império Britânico.",
+                "descrição": "O Império Britânico foi o único que sobreviveu à 1ª Guerra, ainda assim, saiu abalado do conflito e começou a ter dificuldades em manter algumas de suas possessões.  Os demais impérios (alemão, austro-húngaro, otomano) foram desmembrados.  Já o Império Russo, manteve seu território, mas a revolução socialista derrubou a monarquia.",
+                "imagem": "https://1.bp.blogspot.com/-fVD6OrkhI2M/VQSk-cjGWoI/AAAAAAAACbk/Tubq4BZjhqA/s1600/george%2BV.jpg",
+                "nível": "Fácil"
+            },
+            {
+                "id": "4",
+                "pergunta": "A 2ª Guerra Mundial foi um conflito sem precedentes e que criou um novo concerto mundial marcado pela polarização entre duas super-potências, ocasionando a Guerra Fria, além de desencadear o processo de:",
+                "alternativas": [
+                "a) Descolonização da Ásia e da África.",
+                "b) Repartição da África.",
+                "c) Industrialização dos países da América Latina.",
+                "d) Imperialismo cultural norte-americano.",
+                "e) Dissolução do bloco soviético."
+                ],
+                "resposta": "a) Descolonização da Ásia e da África.",
+                "descrição": "Com o fim da 2ª Guerra e o enfraquecimento das potências europeias, várias e suas colônias conseguiram sua independência.  Alguns desses movimentos eram apoiados por Estados Unidos e URSS dentro do princípio da autodeterminação dos povos e com o intuito de ampliar as suas áreas de influência.",
+                "imagem": "https://www.grupoescolar.com/wp-content/uploads/2021/03/C1FB6.jpg",
+                "nível": "Fácil"
+            },
+            {
+                "id": "5",
+                "pergunta": "Cleópatra, a última faraó do Egito, desperta até nossos dias grande fascínio e curiosidade.  Sobre a última faraó é possível afirmar que:",
+                "alternativas": [
+                "a) Era uma mulher negra, como a maioria dos egípcios da época.",
+                "b) Tentou garantir a autonomia do Egito frente o avanço dos romanos.",
+                "c) Era descendente direta de Alexandre, o Grande.",
+                "d) Casou-se simultaneamente com César e Marco Antônio.",
+                "e) Foi capturada por Otávio e levada cativa para Roma."
+                ],
+                "resposta": "b) Tentou garantir a autonomia do Egito frente o avanço dos romanos.",
+                "descrição": "Cleópatra VII (69-30 a.C.) era descendente de Ptolomeu, um dos generais de Alexandre, o Grande.  Reinou no Egito do ano 51 a.C. até a sua morte, casou-se sucessivamente com dois de seus irmãos, conforme tradição de sua família, e foi companheira de César e, mais tarde, Marco Antônio.  Tentou garantir a autonomia do Egito e foi derrotada por Otávio.",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kleopatra-VII.-Altes-Museum-Berlin1.jpg/800px-Kleopatra-VII.-Altes-Museum-Berlin1.jpg",
+                "nível": "Médio"
+            },
+            {
+                "id": "6",
+                "pergunta": "No século III, Roma enfrentou uma crise sem precedentes e que colocou em risco a unidade do Império.  São características dessa crise:",
+                "alternativas": [
+                "a) A anarquia militar e a ameaça de vizinhos poderosos.",
+                "b) As invasões bárbaras e o êxodo rural.",
+                "c) O reconhecimento do cristianismo como religião oficial e submissão do imperador ao papa.",
+                "d) A anarquia militar e a transferência da capital para Constantinopla.",
+                "e) O fim da escravidão e o êxodo urbano."
+                ],
+                "resposta": "a) A anarquia militar e a ameaça de vizinhos poderosos.",
+                "descrição": "No século III, Roma passou por uma crise sem precedentes.  A expansão territorial terminara e havia a ameaça das tribos bárbaras e do império persa em suas fronteiras.  Além disso, a estrutura do estado começou a ruir por excessos de gastos e corrupção, era o fim da Pax Romana, havia caos em algumas legiões e falta de mão-de-obra.",
+                "imagem": "https://media.istockphoto.com/id/477898271/photo/detail-from-trajans-column-in-rome.jpg?s=612x612&w=0&k=20&c=LlkELecpIhw9QQ_rjP0zAXYs4MhE3Jz3JHqdK8y6_XM=",
+                "nível": "Médio"
+            },
+            {
+                "id": "7",
+                "pergunta": "As ordens de cavalaria foram fundadas no contexto das cruzadas com o intuito de garantir a conquista de Jerusalém e proteger os peregrinos.  Uma das mais importantes ordens de cavalaria foi a:",
+                "alternativas": [
+                "a) Dos Dominicanos.",
+                "b) Dos Cistercienses.",
+                "c) De Cristo.",
+                "d) Dos Templários.",
+                "e) Dos Mercedários."
+                ],
+                "resposta": "d) Dos Templários.",
+                "descrição": "A Ordem dos Pobres Cavaleiros de Cristo e do Templo de Salomão, conhecida como Cavaleiros Templários, Ordem do Templo ou simplesmente como Templários, foi uma ordem militar de cavalaria fundada durante a a primeira Cruzada, no ano de 1118.  A ordem foi dissolvida sob acusação de heresia no ano de 1312.",
+                "imagem": "https://images.uncyc.org/pt/6/66/Templariofod%C3%A3o.jpg",
+                "nível": "Médio"
+            },
+            {
+                "id": "8",
+                "pergunta": "O Humanismo está diretamente ligado ao chamado Renascimento Cultural do final da Idade Média e início da Idade Moderna.  Um dos maiores nomes do Humanismo europeu foi:",
+                "alternativas": [
+                "a) William Shakespeare.",
+                "b) Martinho Lutero.",
+                "c) Elizabeth I.",
+                "d) Erasmo de Roterdã.",
+                "e) Maquiavel."
+                ],
+                "resposta": "d) Erasmo de Roterdã.",
+                "descrição": "Os humanistas se preocupavam com o ensino das línguas clássicas, buscando uma tradução mais rigorosa de textos antigos, como a Bíblia, e que fosse permitido o seu acesso nas línguas vernáculas.  Um dos seus maiores expoentes foi Erasmo, nascido em Roterdã, atual Holanda, autor de vários escritos, ele defendia a reforma interna da Igreja Católica.",
+                "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Holbein-erasmus.jpg/640px-Holbein-erasmus.jpg",
+                "nível": "Médio"
+            },
+            {
+                "id": "9",
+                "pergunta": "No século XVII, autores como Thomas Hobbes e John Locke inauguraram o contratualismo que defendia:",
+                "alternativas": [
+                "a) O Direito Divino dos reis.",
+                "b) O fim do Absolutismo Monárquico e a o ideal republicano.",
+                "c) A ideia de um pacto social como o momento de surgimento da sociedade civil.",
+                "d) Os direitos naturais, a vida, a liberdade e a propriedade.",
+                "e) Que o governo se dava por um pacto entre o rei e a igreja."
+                ],
+                "resposta": "c) A ideia de um pacto social como o momento de surgimento da sociedade civil.",
+                "descrição": "O contatualismo é uma corrente de pensamento político e filosófico que rompe com a ideia de que a sociedade civil ou o estado é estabalecido por forças externas, dando ao ser humano a responsabilidade na organização do governo e da sociedade.",
+                "imagem": "https://pt-static.z-dn.net/files/d44/30942b343e40846f427db593e0fe8e36.jpg",
+                "nível": "Médio"
+            },
+            {
+                "id": "10",
+                "pergunta": "A Revolução Francesa, em 1789, abalou a Europa e influenciou todo o mundo.  Dentre os princípios consagrados por esta revolução estão:",
+                "alternativas": [
+                "a) A igualdade entre homens e mulheres e o fim da propriedade privada.",
+                "b) A abolição dos privilégios feudais e o sufrágio universal.",
+                "c) Igualdade jurídica entre os cidadãos e o direito à propriedade privada.",
+                "d) A abolição da monarquia e a consagração do parlamentarismo.",
+                "e) A abolição da escravidão negra e a liberdade religiosa."
+                ],
+                "resposta": "c) Igualdade jurídica entre os cidadãos e o direito à propriedade privada.",
+                "descrição": "A Revolução Francesa, em todas as suas fases, buscou garantir alguns direitos defendidos pela burguesia, sendo que a igualdade jurídica entre todos os cidadãos do sexo masculino e o direito à propriedade privada.",
+                "imagem": "https://nanquim.com.br/wp-content/uploads/2021/12/Declaracoes-direitos-homem-cidadao-Le_Barbier_Jean-Jacques_1789-1020x1250.jpg",
+                "nível": "Médio"
+            },
+            {
+                "id": "11",
+                "pergunta": "A chegada da Família Real ao Brasil, em 1808, provocou uma série de transformações na colônia, trasformada em centro do império português.  Era necessário modernizar e embelezar a colônia, são inovações do período:",
+                "alternativas": [
+                "a) As primeiras universidades e o Banco do Brasil.",
+                "b) O Jardim Botânico e a eletrificação do Rio de Janeiro.",
+                "c) As primeiras escolas superiores e a Biblioteca Nacional.",
+                "d) As primeiras ferrovias e o porto de Santos.",
+                "e) A introdução o plantio de café no Vale do Paraíba e as primeiras escolas superiores."
+                ],
+                "resposta": "c) As primeiras escolas superiores e a Biblioteca Nacional.",
+                "descrição": "A Real Biblioteca, antigo nome da Biblioteca Nacional, foi fundada em 1810, no Rio de Janeiro, com livros que foram transferidos de Portugal para o Brasil.  Já as primeiras escolas superiores, a Faculdade de Cirurgia da Bahia e a de Medicina do Rio de Janeiro foram fundadas em 1808. ",
+                "imagem": "https://miro.medium.com/v2/resize:fit:640/1*vR6edgpSg_4SZHc11YHDzA.jpeg",
+                "nível": "Médio"
+            },
+            {
+                "id": "12",
+                "pergunta": "No dia 7 de setembro de 1822, foi proclamada a independência do Brasil, no entanto, nem todas as regiões da antiga colônia aceitaram a ruptura com Portugal e houve guerra.  A resistência foi particularmente forte no/na/em:",
+                "alternativas": [
+                    
+                "a) São Paulo, Minas Gerais e Cisplatina (atual Uruguai).",
+                "b) Pará, Bahia, Pernambuco e Cisplatina (atual Uruguai).",
+                "c) Amazonas, Santa Catarina, Rio Grande do Sul e Bahia.",
+                "d) Rio de Janeiro, Pará e Bahia.",
+                "e) Pará, Bahia e Cisplatina (atual Uruguai)."
+                ],
+                "resposta": "e) Pará, Bahia e Cisplatina (atual Uruguai).",
+                "descrição": "No senso comum, a independência do Brasil foi um evento pacífico, um negócio de pai para filho, no entanto, houve resistência em várias regiões da colônia.  Na Bahia, a luta foi sangrenta, no Pará, houve a tragédia do brigue Palhaço e na Cisplatina, as guarnições portuguesas entraram em combate com a recém criada Marinha brasileira.",
+                "imagem": "https://atlas.fgv.br/sites/atlas.fgv.br/files/03-05-a-full.png",
+                "nível": "Médio"
+            },
+            {
+                "id": "13",
+                "pergunta": "A luta pelo voto feminino começou no final do século XIX e foi reconhecido em 1932 e incorporado à Constituição de 1934.  Este voto, no entanto, era:",
+                "alternativas": [
+                "a) Obrigatório para mulheres maiores de 18 anos.",
+                "b) Facultativo e somente mulheres com trabalho remunerado eram obrigadas a se alistar.",
+                "c) Obrigatório para todas as mulheres alfabetizadas",
+                "d) Obrigatório para as mulheres solteiras e facultativo para as casadas.",
+                "e) Obrigatório para as mulheres que tivessem função remunerada."
+                ],
+                "resposta": "b) Facultativo e somente mulheres com trabalho remunerado eram obrigadas a se alistar.",
+                "descrição": "Após intensa campanha feita pelas organizações femininas, as mulheres conseguiram o direito de voto no Código Eleitoral de 1932, sendo o Brasil o pioneiro na América Latina.  No entanto, para as mulheres que não exercessem função remunerada ele permaneceu facultativo até o Código Eleitoral de 1965, quando o voto feminino e o masculino foi equiparado e todas as mulheres passaram a ter o dever de se alistar.",
+                "imagem": "https://www.tre-sp.jus.br/imagens/fotos/dia-da-conquista-do-voto-feminino/@@images/6c540caf-34ca-4c8f-8ff6-81169d2a6f8c.jpeg",
+                "nível": "Médio"
+            },
+            {
+                "id": "14",
+                "pergunta": "Antes da abolição com a Lei Áurea de 1988, houve uma série e leis que anteciparam o fim da escravidão.  Qual a sequência temporal correta das leis abolicionistas brasileiras?",
+                "alternativas": [
+                "a) Lei Feijó – Lei do Ventre Livre – Lei dos Sexagenários.",
+                "b) Lei Eusébio de Queiroz – Lei do Ventre Livre – Lei Feijó.",
+                "c) Lei dos Sexagenários – Lei Feijó – Lei o Ventre Livre.",
+                "d) Lei Feijó – Lei do Ventre Livre – Lei Eusébio de Queiroz.",
+                "e) Lei Eusébio de Queiroz – Lei dos Sexagenários – Lei Feijó."
+                ],
+                "resposta": "a) Lei Feijó – Lei do Ventre Livre – Lei dos Sexagenários.",
+                "descrição": "A sequência correta é Lei Feijó (1831) – Lei do Ventre Livre (1871) – Lei dos Sexagenários (1885).",
+                "imagem": "https://static.preparaenem.com/2021/08/revista-lei-sexagenarios.jpg",
+                "nível": "Médio"
+            },
+            {
+                "id": "15",
+                "pergunta": "O final do século XVIII e o século XIX foi marcado pelo processo de independência dos países da América.  A maioria das independências foi liderada pelas elites coloniais, sendo a única exceção: ",
+                "alternativas": [
+                "a) O México.",
+                "b)  Uruguai.",
+                "c) O Brasil.",
+                "d) O Haiti.",
+                "e) Porto Rico."
+                ],
+                "resposta": "d) O Haiti.",
+                "descrição": "A independência do Haiti foi singular, porque foi liderada por negros e mestiços, escravizados e livres.  A revolução haitiana (1791-1804) despertou o terror nas colônias e nações escravistas do continente, que temiam que a república negra pudesse inspirar movimentos semelhantes entre os escravizados e outras regiões da América.",
+                "imagem": "https://cliohistoriaeliteratura.files.wordpress.com/2019/10/jean-jacques-dessalines.jpg?w=446",
+                "nível": "Médio"
+            },
+            {
+                "id": "16",
+                "pergunta": "O Governo Getúlio Vargas, em especial durante o Estado Novo (1937-1945), percebeu a potencialidade do rádio e criou um programa diário cujo objetivo era fazer propaganda do governo e educar a propulação, seu nome era:",
+                "alternativas": [
+                "a) A Voz do Brasil.",
+                "b) A Voz da Democracia.",
+                "c) A Hora do Presidente.",
+                "d) A Hora do Brasil.",
+                "e) Brasil Vere-Amarelo."
+                ],
+                "resposta": "d) A Hora do Brasil.",
+                "descrição": "Em 1935, Getúlio Vargas criou o programa A Hora do Brasil que deveria ser transmitido por todas as estações de rádio, de segunda à sexta-feira (exceto feriado), das 19h às 20h. Todas as quintas-feiras eram transmitidas palestras de 10 minutos dirigidas aos trabalhadores. A partir de 1946, o programa passou a se chamar A Voz do Brasil, nome que mantém até hoje.",
+                "imagem": "https://1.bp.blogspot.com/-XXWhD17yBC4/Wq2gVMgHl9I/AAAAAAAAEGw/wo0_Ru4LO1sLhYZTycNaW_4ZarjWfcjOgCLcBGAs/s1600/getulio%2Bvargas%2Bno%2Bmicrofofone%2Bdo%2BDIP.jpg",
+                "nível": "Médio"
+            },
+            {
+                "id": "17",
+                "pergunta": "O teatro nasceu na Grécia e os helenos se destacaram na tragédia e na comédia.  Qual alternativa apresenta corretamente o nome de três autores de teatro da Grécia Antiga:  ",
+                "alternativas": [
+                "a) Aristófanes, Sófocles e Eurípedes.",
+                "b) Heródoto, Eurípedes e Políbio.",
+                "c) Sófocles, Ésquilo e Ptolomeu.",
+                "d) Aristófanes, Ésquilo e Aristóteles.",
+                "e) Heródoto, Aristófanes e Plutarco."
+                ],
+                "resposta": "a) Aristófanes, Sófocles e Eurípedes.",
+                "descrição": "O teatro nasceu em Atenas, no séc. VI a.C., e estava ligado às celebrações aos deuses, em especial Dionísio.  Os atores usavam máscaras (personas) e havia premiações para os melhores autores.  Os mais lembrados até nossos dias são Sófocles, Ésquilo, Eurípedes e Aristófanes.",
+                "imagem": "https://i0.wp.com/descobrindoasicilia.com/wp-content/uploads/2016/11/Teatro-Grego-de-Taormina.jpg?fit=1440%2C1080&ssl=1",
+                "nível": "Difícil"
+            },
+            {
+                "id": "18",
+                "pergunta": "O século XVI foi marcado pelas reformas religiosas e os conflitos decorrentes delas.  No Sacro Império um acordo foi travado em 1555 estabelecendo uma paz momentânea entre católicos e luteranos.  O nome deste acordo é: ",
+                "alternativas": [
+                "a) Paz de Augsburgo." ,
+                "b) Tratado de Latrão.",
+                "c) Ato de Supremacia.",
+                "d) Paz de Vestfália.",
+                "e) Tratado de Nantes."
+                ],
+                "resposta": "a) Paz de Augsburgo.",
+                "descrição": "A Paz de Augsburgo reconheceu a divisão do império em territórios católicos e luteranos, a partir do princípio “cuius regio, eius religio”, que significa literalmente “De quem (É) a região, dele (se siga) a religião, ou seja, os súditos deveriam seguir a religião do governante.",
+                "imagem": "https://martinttipia.files.wordpress.com/2019/08/augsburg.jpg?w=584&h=979",
+                "nível": "Difícil"
+            },
+            {
+                "id": "19",
+                "pergunta": "O território que é hoje o Brasil abrigou no século XVI e XVII as primeiras comunidades protestantes (huguenotes franceses) e judaicas das Américas.  Os grupos se estabeleceram respectivamente:",
+                "alternativas": [
+                "a) Huguenotes/Bahia e Judeus/Pernambuco.",
+                "b) Huguenotes/Espírito Santo e Judeus/Bahia.",
+                "c) Huguenotes/Rio de Janeiro e Judeus/Maranhão.",
+                "d) Huguenotes/Rio de Janeiro e Judeus/Pernambuco.",
+                "e) Huguenotes/Maranhão e Judeus/Minas Gerais."
+                ],
+                "resposta": "d) Huguenotes/Rio de Janeiro e Judeus/Pernambuco.",
+                "descrição": "Os franceses criaram a chamada França Antártica na região da Baía do Rio de Janeiro (hoje, Baía de Guanabara), entre 1555-1570, para abrigar os huguenotes.  Já os holandeses, ao dominarem o nordeste, deram liberdade religiosa aos judeus e a primeira sinagoga das Américas foi fundada em nosso território.",
+                "imagem": "https://miro.medium.com/v2/resize:fit:750/1*wXTDbJBJZOzevh1F2nul6Q.jpeg",
+                "nível": "Difícil"
+            },
+            {
+                "id": "20",
+                "pergunta": "Com o fim da ditadura do Estado Novo, em 1945, a democracia foi restaurada em nosso país e foi convocada uma assembleia constituinte.  Esta constituição: ",
+                "alternativas": [
+                "a) Restabeleceu o voto secreto.",
+                "b) Garantiu os direitos individuais.",
+                "c) Aboliu o direito de greve.",
+                "d) Estabeleceu o direito à reeleição presidencial.",
+                "e) Tornou o voto feminino obrigatório."
+                ],
+                "resposta": "b) Garantiu os direitos individuais.",
+                "descrição": "A constituição de 1946 foi uma carta magna democrática e liberal.  Manteve os direitos trabalhistas da Era Vargas e  buscou salvaguardar os direitos dos individuais dos cidadãos tais como, a liberdade de expressão, livre reunião, propriedade privada e à privacidade.",
+                "imagem": "https://www.unifal-mg.edu.br/remadih/wp-content/uploads/sites/11/2018/09/082FolhaDeJornal-1.jpg",
+                "nível": "Difícil"
+            }
+
+ 	]
+}
