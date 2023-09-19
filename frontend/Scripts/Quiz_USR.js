@@ -88,7 +88,6 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   // divPai.classList.add("pergunta");
 }
 
-
 // Linha 24 (localStorage.getItem())
 // Criar uma função que rendererize uma pergunta aleatória de acordo com a fase
 // Criar uma função que retire a pergunta já utilizada, passando para uma chave no localStorage.
