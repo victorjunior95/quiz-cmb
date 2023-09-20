@@ -1,9 +1,19 @@
 const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require('socket.io');
+const io = new Server(server, {
+  cors: {
+    origins: "*:*",
+    methods: "*",
+  }}
+);
+
 const fs = require('fs');
 
 // ...
 
-const app = express();
 
 app.use(express.json());
 // não remova ou mova esse endpoint
@@ -176,4 +186,31 @@ app.get('/quiz', (_req, res) => {
 
 // É importante exportar a constante `app`,
 // para que possa ser utilizada pelo arquivo `src/server.js`
-module.exports = app;
+
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+
+  socket.on('createRoom', (room) => {
+    console.log('room', room);
+    socket.join(room);
+  });
+
+  socket.on('joinRoom', (schoolName, room) => {
+    console.log('schoolName', schoolName);
+    console.log('room', room);
+    socket.join(room);
+    socket.to(room).emit('userConnected', schoolName);
+  });
+
+  socket.on('startGame', (room) => {
+    console.log('room', room);
+    socket.broadcast.to(room).emit('gameStarted');
+  });
+
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+});
+
+module.exports = server;
