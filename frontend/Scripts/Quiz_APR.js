@@ -1,6 +1,9 @@
 const BASE_URL = 'http://localhost:3001';
+const socket = io(BASE_URL);
 
 // localStorage.setItem("perguntasUsadas", []);
+
+socket.emit('createRoom', localStorage.getItem("roomId"));
 
 fetch(`${BASE_URL}/quiz`)
   .then(response => {
@@ -13,16 +16,7 @@ fetch(`${BASE_URL}/quiz`)
 
     localStorage.setItem("perguntasCompletas", JSON.stringify(data));
 
-    const mainDiv = document.querySelector('#page_usr');
-
-    const quizLs = JSON.parse(localStorage.getItem("perguntasCompletas"));
-
-    // console.log(typeof quizLs);
-
-    const randomIndex = Math.floor(Math.random() * quizLs.facil.length);
-    const { id, tema, pergunta, imagem, alternativas } = quizLs.facil[randomIndex];
-
-    createDivQuestion(id, tema, pergunta, alternativas, imagem, mainDiv);
+    exibirPergunta();
   })
   .catch(error => {
     console.error('Erro na solicitação:', error);
@@ -38,6 +32,9 @@ function exibirPergunta() {
     const randomIndex = Math.floor(Math.random() * perguntasDaDificuldadeAtual.length);
     perguntaAtual = perguntasDaDificuldadeAtual[randomIndex];
   
+    const roomId = localStorage.getItem("roomId");
+    socket.emit('sendQuestion', perguntaAtual, roomId);
+
     const mainDiv = document.querySelector('#page_usr');
     mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
     
@@ -57,6 +54,7 @@ function exibirPergunta() {
       localStorage.setItem("perguntasUsadas", JSON.stringify(perguntasUsadasLSParsed));
 
       quizLs[dificuldadeAtual] = quizLs[dificuldadeAtual].filter((object) => object.id !== perguntaAtual.id);
+      console.log(quizLs[dificuldadeAtual]);
       localStorage.setItem("perguntasCompletas", JSON.stringify(quizLs));
     }
   }

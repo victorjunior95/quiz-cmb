@@ -208,6 +208,10 @@ io.on('connection', (socket) => {
     socket.broadcast.to(room).emit('gameStarted');
   });
 
+  socket.on('sendQuestion', (question, roomId) => {
+    socket.broadcast.to(roomId).emit('receiveQuestion', question);
+  });
+
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
