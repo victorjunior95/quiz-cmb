@@ -1,9 +1,20 @@
 const express = require('express');
+const app = express();
+
+const http = require('http');
+const server = http.createServer(app); // Crie um servidor HTTP a partir do aplicativo Express
+
+const { Server } = require('socket.io'); // Importe o Socket.io
 const fs = require('fs');
 
-// ...
+const io = new Server(server, {
+  cors: {
+    origins: "*:*",
+    methods: "*",
+  }}
+);
 
-const app = express();
+const connection = require('./socket/socket.connection');
 
 app.use(express.json());
 // não remova ou mova esse endpoint
@@ -86,7 +97,7 @@ app.post('/users', (req, res) => {
   return res.status(201).json({ message: "Usuário adicionado com sucesso" });
 });
 
-// 1.b) Classificação
+// 1.b) GET Users
 app.get('/users', (_req, res) => {
   // Confere a lista de usuários (talvez separa em outro arquivo)
   const data = fs.readFileSync(database, 'utf8', (err, data) => {
@@ -101,14 +112,49 @@ app.get('/users', (_req, res) => {
 
   const jsonData = JSON.parse(data);
 
-  // Order pelos pontos
-  const classification = jsonData.sort((a, b) => b.points - a.points);
-
-  return res.status(200).json(classification);
+  return res.status(200).json(jsonData);
 });
 
+// 1.c) Classificação ----> Virou Socket
+// io.on('connection', (socket) => {
+//   console.log('Cliente conectado');
 
-// 1.c) Points
+//   socket.on('requestClassification', () => {
+//     // Quando um cliente se conecta, envie a classificação atual
+//     const data = fs.readFileSync(database, 'utf8');
+
+//     const jsonData = JSON.parse(data);
+//     const classification = jsonData.sort((a, b) => b.points - a.points);
+
+//     socket.emit("classification", classification);
+//   });
+
+
+//   socket.on('disconnect', () => {
+//     console.log('Cliente desconectado');
+//   });
+// });
+// app.get('/classification', (_req, res) => {
+//   // Confere a lista de usuários (talvez separa em outro arquivo)
+//   const data = fs.readFileSync(database, 'utf8', (err, data) => {
+//     if (err) {
+//       // erro de leitura
+//       console.error('Erro ao ler o arquivo:', err);
+//       return res.status(404).json({ message: `Erro ao ler o arquivo: ${err}`});  
+//     }
+
+//     return data;
+//   });
+
+//   const jsonData = JSON.parse(data);
+
+//   // Order pelos pontos
+//   const classification = jsonData.sort((a, b) => b.points - a.points);
+
+//   return res.status(200).json(classification);
+// });
+
+// 1.d) Points
 app.patch('/users/:id', (req, res) => {
   const userId = Number(req.params.id);
   const newPoints = req.body.points;
@@ -171,9 +217,6 @@ app.get('/quiz', (_req, res) => {
   return res.status(200).json(jsonData);
 });
 
+io.on('connection', connection);
 
-// ...
-
-// É importante exportar a constante `app`,
-// para que possa ser utilizada pelo arquivo `src/server.js`
-module.exports = app;
+module.exports = server;

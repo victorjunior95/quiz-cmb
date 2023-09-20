@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  
   <title>Quiz</title>
 </head>
 <body>
   <header>
-    <div id="page_usr"></div>
+    <div id="page_apr"></div>
   </header>
+  
+  <!-- Lugar onde a classificação será renderizada ao escutar a emissão socket 'classification' -->
+  <div id="classificacao"></div>
+  
   <footer>
+    <!-- div com a listagem de participantes e marcando quem já respondeu  -->
+    <div id="usuarios"></div>
+
     <button id="botaoAvancar">Avançar</button>
   </footer>
   <script src="../Scripts/Quiz_APR.js"></script>
