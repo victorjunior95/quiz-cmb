@@ -16,6 +16,7 @@ const waitForStart = (roomId) => {
 const main = () => {
   const roomId = Math.random().toString(36).substring(7)
   createRoom(roomId);
+  localStorage.setItem("roomId", roomId);
   const room = document.getElementById('roomIdSpan');
   room.textContent = roomId;
   waitForStart(roomId);

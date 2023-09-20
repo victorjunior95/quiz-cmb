@@ -3,6 +3,7 @@ const socket = io(BASE_URL);
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  localStorage.removeItem("roomData");
   socket.on('gameStarted', () => {
     window.location.href = "/frontend/pages/Quiz_USR.html";
   });
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         user: inputValue,
         roomId: inputRoomValue
       };
+
+      localStorage.setItem("roomData", JSON.stringify(data));
       
       socket.emit('joinRoom', data.user, data.roomId);
 

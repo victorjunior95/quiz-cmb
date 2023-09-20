@@ -1,40 +1,14 @@
 const BASE_URL = 'http://localhost:3001';
+const socket = io(BASE_URL);
 
-fetch(`${BASE_URL}/quiz`)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Erro ao fazer a solicitação: ' + response.status);
-    }
-    return response.json(); // Ou response.text() para obter uma resposta de texto
-  })
-  .then(data => {
-    // Faça algo com os dados recebidos
-    // console.log(data);
+const data = JSON.parse(localStorage.getItem("roomData"));
+socket.emit('joinRoom', data.user, data.roomId);
 
-    // Armazene os dados no localStorage aqui
-    localStorage.setItem("perguntasCompletas", JSON.stringify(data));
-
-
-    const mainDiv = document.querySelector('#page_usr');
-
-    const quizLs = JSON.parse(localStorage.getItem("perguntasCompletas"));
-
-    // console.log("retorno do local storage", quizLs.facil[0].alternativas);
-
-    const { id, tema, pergunta, imagem, alternativas } = quizLs.facil[0];
-    // console.log(`tema: ${tema}`, `pergunta: ${pergunta}`, `imagem: ${imagem}`, `alternativas: ${alternativas}`);
-
-    createDivQuestion(id, tema, pergunta, alternativas, imagem, mainDiv);
-  })
-  .catch(error => {
-    // Lida com erros de solicitação
-    console.error('Erro na solicitação:', error);
-  });
-
-// console.log("retorno do local storage", quizLs);
-
-// const page_usr = document.getElementById('page_usr');
-// console.log(page_usr);
+socket.on('receiveQuestion', (question) => {
+  const mainDiv = document.querySelector('#page_usr');
+  mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
+  createDivQuestion(question.id, question.tema, question.pergunta, question.alternativas, question.imagem, mainDiv);
+});
 
 function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) {
   const divPergunta = document.createElement('div');
