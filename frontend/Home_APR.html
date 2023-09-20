@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waiting Room</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+  <div class="main-login">
+    <h1 class="logo-login">Quiz!</h1>
+    <div class="painel-login">
+      <h2 id="roomIdSpan" style="text-align: center; margin: 20px;" ></h2>
+      <button id="sendButton" class="sendButton">Começar o jogo</button>
+    </div>
+    <div class="painel-login" id="painel-teams" style="margin-top: 10vh;">
+    </div>
+  </div>
+  <script src="Home_APR.js"></script>
+</body>
+</html>
