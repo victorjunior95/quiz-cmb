@@ -7,8 +7,7 @@ const createRoom = (roomId) => {
 const waitForStart = (roomId) => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
-    socket.emit('startGame', roomId);
-    window.location.href = "/frontend/pages/Quiz_APR.html";
+    window.location.href = "/pages/LoadingInitial_APR.html";
   });
 }
 

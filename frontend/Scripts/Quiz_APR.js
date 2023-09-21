@@ -1,26 +1,9 @@
 const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
-
+const ROOMID = localStorage.getItem("roomId");
 // localStorage.setItem("perguntasUsadas", []);
 
-socket.emit('createRoom', localStorage.getItem("roomId"));
-
-fetch(`${BASE_URL}/quiz`)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Erro ao fazer a solicitação: ' + response.status);
-    }
-    return response.json(); // Ou response.text() para obter uma resposta de texto
-  })
-  .then(data => {
-
-    localStorage.setItem("perguntasCompletas", JSON.stringify(data));
-
-    exibirPergunta();
-  })
-  .catch(error => {
-    console.error('Erro na solicitação:', error);
-  });
+socket.emit('connectAPR', ROOMID);
 
 let perguntaAtual;
 let dificuldadeAtual = "facil"; // Comece com a dificuldade "facil"
@@ -54,16 +37,47 @@ function exibirPergunta() {
       localStorage.setItem("perguntasUsadas", JSON.stringify(perguntasUsadasLSParsed));
 
       quizLs[dificuldadeAtual] = quizLs[dificuldadeAtual].filter((object) => object.id !== perguntaAtual.id);
-      console.log(quizLs[dificuldadeAtual]);
       localStorage.setItem("perguntasCompletas", JSON.stringify(quizLs));
     }
   }
   
+const createClassification = (classification) => {
+  const schoolList = document.getElementById('schoolList');
+  classification.forEach((element) => {
+    const classificationDiv = document.createElement('div');
+    classificationDiv.className = 'classificationDiv';
+    const classificationSpan = document.createElement('span');
+    classificationSpan.className = 'classificationSpan';
+    classificationSpan.textContent = element.schoolName;
+    classificationSpan.id = element.schoolName;
+    classificationDiv.appendChild(classificationSpan);
+    schoolList.appendChild(classificationDiv);
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  socket.emit('clearConnections');
+  exibirPergunta();
   const avancar = document.getElementById('botaoAvancar');
+  const answer = document.getElementById('botaoResposta');
+
+  socket.emit('requestClassification', ROOMID);
+
+  socket.on('classification', (classification) => {
+    createClassification(classification);
+  });
+
+  socket.on('schoolAnswered', (schoolName) => {
+    const school = document.getElementById(schoolName);
+    school.style.backgroundColor = "green";
+  });
 
   avancar.addEventListener('click', async () => {
     exibirPergunta();
+  });
+
+  answer.addEventListener('click', async () => {
+    window.location.href = "/pages/Answer_APR.html";
   });
 }); 
 
