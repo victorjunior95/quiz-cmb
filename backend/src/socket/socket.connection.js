@@ -13,9 +13,12 @@ const connection = (socket) => {
   socket.on('clearConnections', room.clearConnections(socket));
   socket.on('connectAnswer', room.connectAnswer(socket));
   socket.on('connectAPRAnswer', room.connectAPRAnswer(socket));
+  socket.on('connectAPRClassification', room.connectAPRClassification(socket));
+  socket.on('connectClassification', room.connectClassification(socket));
 
   // Game events
   socket.on('startGame', game.startGame(socket));
+  socket.on('sendClassification', game.sendClassification(socket));
 
   // Question events
   socket.on('sendQuestion', question.sendQuestion(socket));

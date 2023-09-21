@@ -30,6 +30,11 @@ const connectAPRAnswer = (socket) => (roomId) => {
   socket.broadcast.to(roomId).emit('getAnswer');
 }
 
+const connectAPRClassification = (socket) => (roomId) => {
+  socket.join(roomId);
+  socket.broadcast.to(roomId).emit('getClassification', roomId);
+}
+
 let waitingUsers = [];
 const connectAnswer = (socket) => (roomId) => {
   socket.join(roomId);
@@ -37,8 +42,19 @@ const connectAnswer = (socket) => (roomId) => {
   waitingUsers.push(roomId);
 
   if (waitingUsers.length === room.users.length) {
-    
+
     socket.to(roomId).emit('showAnswer', room.atualQuestion);
+    waitingUsers = [];
+  }
+}
+
+const connectClassification = (socket) => (roomId) => {
+  const room = userUtils.userRead()[roomId];
+  waitingUsers.push(roomId);
+  socket.join(roomId);
+  console.log(waitingUsers, room.users);
+  if (waitingUsers.length === room.users.length) {
+    socket.to(roomId).emit('showClassificationAPR', room.users);
     waitingUsers = [];
   }
 }
@@ -66,4 +82,6 @@ module.exports = {
   connectAPR,
   connectAnswer,
   connectAPRAnswer,
+  connectAPRClassification,
+  connectClassification
 }

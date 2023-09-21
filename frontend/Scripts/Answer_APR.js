@@ -54,6 +54,11 @@ const main = () => {
   nextButton.addEventListener('click', () => {
     window.location.href = "/pages/Loading_APR.html";
   });
+
+  const classificationButton = document.getElementById("botaoClassificacao");
+  classificationButton.addEventListener('click', () => {
+    window.location.href = "/pages/Classification_APR.html";
+  });
 };
 
 main();

@@ -59,6 +59,10 @@ socket.on('gameStarted', () => {
   window.location.href = "/pages/Quiz_USR.html";
 });
 
+socket.on('getClassification', () => {
+  window.location.href = "/pages/Classification_USR.html";
+});
+
 const main = () => {
   socket.emit('connectAnswer', roomId);
 };
