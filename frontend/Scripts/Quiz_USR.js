@@ -2,15 +2,18 @@ const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
 
 const data = JSON.parse(localStorage.getItem("roomData"));
-socket.emit('joinRoom', data.user, data.roomId);
+socket.emit('enterRoom', data.roomId, data.user);
 
 socket.on('receiveQuestion', (question) => {
+  console.log(question);
   const mainDiv = document.querySelector('#page_usr');
   mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
-  createDivQuestion(question.id, question.tema, question.pergunta, question.alternativas, question.imagem, mainDiv);
+  createDivQuestion(question, mainDiv);
 });
 
-function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) {
+function createDivQuestion(question, divAppend) {
+  const { id, tema, pergunta, alternativas, imagem } = question;
+
   const divPergunta = document.createElement('div');
   const divAlternativas = document.createElement('div');
   const textTema = document.createElement('h1');
@@ -34,6 +37,10 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     buttonAlternativa.id = element.slice(0,1);
     buttonAlternativa.textContent = element;
     buttonAlternativa.value = element.slice(0,1);
+    buttonAlternativa.addEventListener('click', () => {
+      buttonAlternativa.style.backgroundColor = "green";
+      localStorage.setItem("alternativaSelecionada", JSON.stringify(buttonAlternativa.value));
+    });
 
     divAlternativas.appendChild(buttonAlternativa);
   }
@@ -43,9 +50,12 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
 
   buttonEnviar.textContent = 'Confirmar';
   buttonEnviar.type = 'submit';
+  buttonEnviar.addEventListener('click', () => {
+    const selectAnswer = JSON.parse(localStorage.getItem("alternativaSelecionada"));
+    socket.emit('sendAnswer', { answer: selectAnswer, roomId: data.roomId, question  });
+  });
   // buttonEnviar.value = ;
   // Função que compara a alternativa selecionada com a alternativa correta
-  const resposta = JSON.parse(localStorage.getItem("perguntasCompletas")).facil[0].resposta;
   // console.log(resposta);
 
 

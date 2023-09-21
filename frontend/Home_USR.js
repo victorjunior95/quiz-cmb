@@ -5,7 +5,7 @@ const socket = io(BASE_URL);
 document.addEventListener('DOMContentLoaded', () => {
   localStorage.removeItem("roomData");
   socket.on('gameStarted', () => {
-    window.location.href = "/frontend/pages/Quiz_USR.html";
+    window.location.href = "/pages/Quiz_USR.html";
   });
   const sendButton = document.getElementById('sendButton');
   

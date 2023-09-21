@@ -1,5 +1,5 @@
-const startGame = (room) => {
-  socket.broadcast.to(room).emit('gameStarted');
+const startGame = (socket) => (room) => {
+  socket.to(room).emit('gameStarted');
 }
 
 module.exports = {
