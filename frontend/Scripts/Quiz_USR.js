@@ -11,6 +11,10 @@ socket.on('receiveQuestion', (question) => {
   createDivQuestion(question, mainDiv);
 });
 
+socket.on('getAnswer', () => {
+  window.location.href = "/pages/Answer_USR.html";
+});
+
 function createDivQuestion(question, divAppend) {
   const { id, tema, pergunta, alternativas, imagem } = question;
 
@@ -20,8 +24,6 @@ function createDivQuestion(question, divAppend) {
   const textPergunta = document.createElement('text');
   const imgPergunta = document.createElement('img');
   const buttonEnviar = document.createElement('button');
-
-  // console.log(imagem);
   
   textTema.textContent = tema;
   textPergunta.textContent = pergunta;
@@ -30,8 +32,6 @@ function createDivQuestion(question, divAppend) {
   
   for(let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
-    
-    // console.log(element);
 
     const buttonAlternativa = document.createElement('button');
     buttonAlternativa.id = element.slice(0,1);
@@ -39,25 +39,18 @@ function createDivQuestion(question, divAppend) {
     buttonAlternativa.value = element.slice(0,1);
     buttonAlternativa.addEventListener('click', () => {
       buttonAlternativa.style.backgroundColor = "green";
-      localStorage.setItem("alternativaSelecionada", JSON.stringify(buttonAlternativa.value));
+      localStorage.setItem("alternativaSelecionada", buttonAlternativa.value);
     });
 
     divAlternativas.appendChild(buttonAlternativa);
   }
 
-  // Alternativa/botão selecionado
-
-
   buttonEnviar.textContent = 'Confirmar';
   buttonEnviar.type = 'submit';
   buttonEnviar.addEventListener('click', () => {
-    const selectAnswer = JSON.parse(localStorage.getItem("alternativaSelecionada"));
-    socket.emit('sendAnswer', { answer: selectAnswer, roomId: data.roomId, question  });
+    const selectAnswer = localStorage.getItem("alternativaSelecionada");
+    socket.emit('receiveAnswer', { answer: selectAnswer, roomId: data.roomId, question, schoolName: data.user  });
   });
-  // buttonEnviar.value = ;
-  // Função que compara a alternativa selecionada com a alternativa correta
-  // console.log(resposta);
-
 
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
@@ -67,12 +60,4 @@ function createDivQuestion(question, divAppend) {
   divAppend.appendChild(divPergunta);
   divAppend.appendChild(divAlternativas);
   divAppend.appendChild(buttonEnviar);
-  // divAppend.appendChild(divPai);
-
-  // divPai.classList.add("pergunta");
 }
-
-// Linha 24 (localStorage.getItem())
-// Criar uma função que rendererize uma pergunta aleatória de acordo com a fase
-// Criar uma função que retire a pergunta já utilizada, passando para uma chave no localStorage.
-// O botão avançar ativa as funções acima, gerando uma nova pergunta

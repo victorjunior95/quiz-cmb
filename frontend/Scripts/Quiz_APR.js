@@ -3,7 +3,7 @@ const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
 // localStorage.setItem("perguntasUsadas", []);
 
-socket.emit('enterRoom', ROOMID);
+socket.emit('connectAPR', ROOMID);
 
 let perguntaAtual;
 let dificuldadeAtual = "facil"; // Comece com a dificuldade "facil"
@@ -37,7 +37,6 @@ function exibirPergunta() {
       localStorage.setItem("perguntasUsadas", JSON.stringify(perguntasUsadasLSParsed));
 
       quizLs[dificuldadeAtual] = quizLs[dificuldadeAtual].filter((object) => object.id !== perguntaAtual.id);
-      console.log(quizLs[dificuldadeAtual]);
       localStorage.setItem("perguntasCompletas", JSON.stringify(quizLs));
     }
   }
@@ -60,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   socket.emit('clearConnections');
   exibirPergunta();
   const avancar = document.getElementById('botaoAvancar');
+  const answer = document.getElementById('botaoResposta');
 
   socket.emit('requestClassification', ROOMID);
 
@@ -67,8 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
     createClassification(classification);
   });
 
+  socket.on('schoolAnswered', (schoolName) => {
+    const school = document.getElementById(schoolName);
+    school.style.backgroundColor = "green";
+  });
+
   avancar.addEventListener('click', async () => {
     exibirPergunta();
+  });
+
+  answer.addEventListener('click', async () => {
+    window.location.href = "/pages/Answer_APR.html";
   });
 }); 
 

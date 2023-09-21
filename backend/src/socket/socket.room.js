@@ -21,21 +21,40 @@ const joinRoom = (socket) => (schoolName, roomId) => {
   socket.to(roomId).emit('userConnected', schoolName);
 }
 
-let connectedUsers = [];
-
-const enterRoom = (socket) => (roomId, schoolName) => {
-  const users = userUtils.userRead()[roomId].users;
-  if (schoolName) {
-    connectedUsers.push(schoolName);
-  } 
-  console.log(connectedUsers);
+const connectAPR = (socket) => (roomId) => {
   socket.join(roomId);
-  if (connectedUsers.length === users.length) {
-    socket.to(roomId).emit('allUsersConnected');
+}
+
+const connectAPRAnswer = (socket) => (roomId) => {
+  socket.join(roomId);
+  socket.broadcast.to(roomId).emit('getAnswer');
+}
+
+let waitingUsers = [];
+const connectAnswer = (socket) => (roomId) => {
+  socket.join(roomId);
+  const room = userUtils.userRead()[roomId];
+  waitingUsers.push(roomId);
+
+  if (waitingUsers.length === room.users.length) {
+    
+    socket.to(roomId).emit('showAnswer', room.atualQuestion);
+    waitingUsers = [];
   }
 }
 
-const clearConnections = (socket) => () => {
+let connectedUsers = [];
+const enterRoom = (socket) => (roomId, schoolName) => {
+  const users = userUtils.userRead()[roomId].users;
+  connectedUsers.push(schoolName);
+  socket.join(roomId);
+  if (connectedUsers.length === users.length) {
+    socket.to(roomId).emit('allUsersConnected');
+    connectedUsers = [];
+  }
+}
+
+const clearConnections = () => () => {
   connectedUsers = [];
 }
 
@@ -43,5 +62,8 @@ module.exports = {
   createRoom,
   joinRoom,
   enterRoom,
-  clearConnections
+  clearConnections,
+  connectAPR,
+  connectAnswer,
+  connectAPRAnswer,
 }

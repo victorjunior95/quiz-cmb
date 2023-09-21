@@ -3,7 +3,7 @@ const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
 
 const createRoom = (roomId) => {
-  socket.emit('enterRoom', roomId);
+  socket.emit('connectAPR', roomId);
 }
 
 fetch(`${BASE_URL}/quiz`)
@@ -26,6 +26,7 @@ socket.on('allUsersConnected', () => {
 
 const main = () => {
   createRoom(ROOMID);
+  socket.emit('startGame', ROOMID);
   localStorage.removeItem("perguntasUsadas");
 };
 main();
