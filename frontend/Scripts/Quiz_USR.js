@@ -5,7 +5,6 @@ const data = JSON.parse(localStorage.getItem("roomData"));
 socket.emit('enterRoom', data.roomId, data.user);
 
 socket.on('receiveQuestion', (question) => {
-  console.log(question);
   const mainDiv = document.querySelector('#page_usr');
   mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
   createDivQuestion(question, mainDiv);
@@ -15,31 +14,38 @@ socket.on('getAnswer', () => {
   window.location.href = "/pages/Answer_USR.html";
 });
 
+socket.on('receiveTimer', (questionTime) => {
+  iniciarTempoQuestao(questionTime);
+})
+let questionAtual;
+let answerSent = false;
+
 function createDivQuestion(question, divAppend) {
-  console.log(question);
+  answerSent = false;
+  questionAtual = question;
   const { id, tema, pergunta, alternativas, imgPergunta } = question;
 
   const divPergunta = document.createElement('div');
   const divAlternativas = document.createElement('div');
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
-  
+
   const buttonEnviar = document.createElement('button');
-  
+
   textTema.textContent = tema;
   textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
   textPergunta.id = id;
   textPergunta.className = 'textPergunta';
-  
-  for(let index = 0; index < alternativas.length; index++) {
+
+  for (let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
 
     const buttonAlternativa = document.createElement('button');
-    buttonAlternativa.id = element.slice(0,1);
+    buttonAlternativa.id = element.slice(0, 1);
     buttonAlternativa.className = 'buttonAlternativa';
     buttonAlternativa.textContent = element;
-    buttonAlternativa.value = element.slice(0,1);
+    buttonAlternativa.value = element.slice(0, 1);
     buttonAlternativa.addEventListener('click', () => {
       buttonAlternativa.style.backgroundColor = "#0AABBA";
       buttonAlternativa.style.color = 'white';
@@ -55,7 +61,8 @@ function createDivQuestion(question, divAppend) {
   buttonEnviar.type = 'submit';
   buttonEnviar.addEventListener('click', () => {
     const selectAnswer = localStorage.getItem("alternativaSelecionada");
-    socket.emit('receiveAnswer', { answer: selectAnswer, roomId: data.roomId, question, schoolName: data.user  });
+    answerSent = true;
+    socket.emit('receiveAnswer', { answer: selectAnswer, roomId: data.roomId, question, schoolName: data.user });
   });
 
   divPergunta.appendChild(textTema);
@@ -73,4 +80,27 @@ function createDivQuestion(question, divAppend) {
   divAppend.appendChild(divPergunta);
   divAppend.appendChild(divAlternativas);
   divAppend.appendChild(buttonEnviar);
+}
+
+let questaoTimerInterval;
+
+function iniciarTempoQuestao(newTime) {
+  let questaoTimer = newTime;
+  const ele = document.getElementById('questao-timer');
+  ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
+
+  clearInterval(questaoTimerInterval); // Limpe qualquer intervalo anterior
+  questaoTimerInterval = setInterval(() => {
+    ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
+    questaoTimer--;
+
+    if (questaoTimer < 0) {
+      clearInterval(questaoTimerInterval);
+      const allButtons = document.querySelectorAll('.divAlternativas > button');
+      allButtons.forEach(btn => btn.disabled = true);
+      if (!answerSent) {
+        socket.emit('receiveAnswer', { answer: '', roomId: data.roomId, question: questionAtual, schoolName: data.user });
+      }
+    }
+  }, 1000);
 }

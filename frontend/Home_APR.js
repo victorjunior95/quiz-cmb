@@ -7,6 +7,7 @@ const createRoom = (roomId) => {
 const waitForStart = (roomId) => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
+    socket.emit('questionTime', { roomId, totalTime: 4800, questionTime: 20 });
     window.location.href = "/pages/LoadingInitial_APR.html";
   });
 }

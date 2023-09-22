@@ -12,34 +12,34 @@ const showAnswer = (question) => {
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
   const imgPergunta = document.createElement('img');
-  
+
   textTema.textContent = tema;
   textPergunta.textContent = pergunta;
   textPergunta.id = id;
-  imgPergunta.src = imagem;  
-  
-  for(let index = 0; index < alternativas.length; index++) {
+  imgPergunta.src = imagem;
+
+  for (let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
-    const isCorrect = element.slice(0,1) === resposta;
-    const isSelect = element.slice(0,1) === alternativaSelecionada;
+    const isCorrect = element.slice(0, 1) === resposta;
+    const isSelect = element.slice(0, 1) === alternativaSelecionada;
 
     const textAlternativa = document.createElement('li');
-    textAlternativa.id = element.slice(0,1);
+    textAlternativa.id = element.slice(0, 1);
     textAlternativa.textContent = element;
-    textAlternativa.value = element.slice(0,1);
+    textAlternativa.value = element.slice(0, 1);
 
-    if(isCorrect) {
+    if (isCorrect) {
       textAlternativa.style.backgroundColor = "green";
     }
 
-    console.log(isSelect, element.slice(0,1), alternativaSelecionada);
-    if(isSelect) {
+    if (isSelect) {
       const iconSelect = document.createElement('span');
       iconSelect.textContent = "X";
       textAlternativa.appendChild(iconSelect);
     }
 
     divAlternativas.appendChild(textAlternativa);
+    localStorage.removeItem("alternativaSelecionada");
   }
 
   divPergunta.appendChild(textTema);

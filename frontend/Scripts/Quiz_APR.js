@@ -1,6 +1,7 @@
 const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
+const questionTime = 30;
 // localStorage.setItem("perguntasUsadas", []);
 
 socket.emit('connectAPR', ROOMID);
@@ -16,7 +17,7 @@ function exibirPergunta() {
     perguntaAtual = perguntasDaDificuldadeAtual[randomIndex];
   
     const roomId = localStorage.getItem("roomId");
-    socket.emit('sendQuestion', perguntaAtual, roomId);
+    socket.emit('sendQuestion', perguntaAtual, roomId, questionTime);
 
     const mainDiv = document.querySelector('#page_usr');
     mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
@@ -58,7 +59,6 @@ const createClassification = (classification) => {
 document.addEventListener('DOMContentLoaded', () => {
   socket.emit('clearConnections');
   exibirPergunta();
-  const avancar = document.getElementById('botaoAvancar');
   const answer = document.getElementById('botaoResposta');
 
   socket.emit('requestClassification', ROOMID);
@@ -72,8 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
     school.style.backgroundColor = "green";
   });
 
-  avancar.addEventListener('click', async () => {
-    exibirPergunta();
+  socket.on('receiveTimer', (questionTime) => {
+    console.log('Quiz_APR', questionTime)
+    iniciarTempoQuestao(questionTime);
   });
 
   answer.addEventListener('click', async () => {
@@ -91,8 +92,6 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   // const buttonVoltar = document.createElement('button');
   // const buttonAvancar = document.createElement('button');
 
-  // console.log(imagem);
-  
   textTema.textContent = tema;
   textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
@@ -144,3 +143,22 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
 // quando acabar o tempo, direcionar para a pagina da resposta
 // na pagina de resposta é que o botao avançar tem que funcionar, direcionando para uma nova pergunta
 // Resposta_APR
+
+let questaoTimerInterval;
+
+function iniciarTempoQuestao(newTime) {
+  let questaoTimer = newTime;
+  const ele = document.getElementById('questao-timer');
+  ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
+
+  clearInterval(questaoTimerInterval); // Limpe qualquer intervalo anterior
+  questaoTimerInterval = setInterval(() => {
+    ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
+    questaoTimer--;
+
+    if (questaoTimer < 0) {
+      clearInterval(questaoTimerInterval);
+        window.location.href = "/pages/Answer_APR.html";
+    }
+  }, 1000);
+};
