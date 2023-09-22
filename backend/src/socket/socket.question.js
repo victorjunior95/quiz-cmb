@@ -6,7 +6,7 @@ const sendQuestion = (socket) => (question, roomId, questionTime) => {
   userUtils.userWrite(roomId, room);
   socket.broadcast.to(roomId).emit('receiveQuestion', question);
   socket.to(roomId).emit('receiveTimer', questionTime);
-  socket.emit('receiveTimer', questionTime);
+  socket.emit('receiveTimer', {questionTime, endTime: room.time.endTime});
 }
 
 const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => {

@@ -17,6 +17,7 @@ const connection = (socket) => {
   socket.on('connectClassification', room.connectClassification(socket));
 
   // Game events
+  socket.on('setTime', game.setTime(socket));
   socket.on('startGame', game.startGame(socket));
   socket.on('sendClassification', game.sendClassification(socket));
 

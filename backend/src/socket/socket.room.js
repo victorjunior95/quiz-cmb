@@ -1,7 +1,7 @@
-const userUtils = require('../utils/users')
+const userUtils = require('../utils/users');
 
 const createRoom = (socket) => (room) => {
-  userUtils.userWrite(room, { users: [], answered: [] });
+  userUtils.userWrite(room, { users: [], answered: [], difficulty: 1 });
   socket.join(room);
 }
 
