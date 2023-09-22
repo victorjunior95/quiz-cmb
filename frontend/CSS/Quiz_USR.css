@@ -57,6 +57,7 @@
     }
     
     .textPergunta {
+        padding: 10px;
         width: 100%;
         color: black;
         text-align: center;
@@ -143,6 +144,7 @@
     }
     
     .textPergunta {
+        padding: 10px;
         width: 110%;
         color: black;
         text-align: center;
@@ -229,6 +231,7 @@
     }
     
     .textPergunta {
+        padding: 10px;
         width: 115%;
         color: black;
         text-align: center;
@@ -315,6 +318,7 @@
     }
     
     .textPergunta {
+        padding: 10px;
         width: 120%;
         color: black;
         text-align: center;

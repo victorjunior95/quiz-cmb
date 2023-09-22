@@ -2,12 +2,11 @@ const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
 const questionTime = 30;
-// localStorage.setItem("perguntasUsadas", []);
 
 socket.emit('connectAPR', ROOMID);
 
 let perguntaAtual;
-let dificuldadeAtual = "facil"; // Comece com a dificuldade "facil"
+let dificuldadeAtual = localStorage.getItem('actualLevel'); // Comece com a dificuldade "facil"
 
 function exibirPergunta() {
   let quizLs = JSON.parse(localStorage.getItem("perguntasCompletas"));
@@ -19,10 +18,10 @@ function exibirPergunta() {
   const roomId = localStorage.getItem("roomId");
   socket.emit('sendQuestion', perguntaAtual, roomId, questionTime);
 
-  const mainDiv = document.querySelector('#page_usr');
+  const mainDiv = document.querySelector('#page_apr');
   mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
 
-  createDivQuestion(perguntaAtual.id, perguntaAtual.tema, perguntaAtual.pergunta, perguntaAtual.alternativas, perguntaAtual.imagem, mainDiv);
+  createDivQuestion(perguntaAtual.id, perguntaAtual.tema, perguntaAtual.pergunta, perguntaAtual.alternativas, perguntaAtual.imgPergunta, mainDiv);
 
   let perguntasUsadasLS = localStorage.getItem("perguntasUsadas");
 
@@ -58,6 +57,7 @@ const createClassification = (classification) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   socket.emit('clearConnections');
+
   exibirPergunta();
   const answer = document.getElementById('botaoResposta');
 
@@ -90,21 +90,15 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   const divImagem = document.createElement('div');
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
-  const imgPergunta = document.createElement('img');
-  // const buttonVoltar = document.createElement('button');
-  // const buttonAvancar = document.createElement('button');
-
+  
   textTema.textContent = tema;
   textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
   textPergunta.className = 'textPergunta';
   textPergunta.id = id;
-  imgPergunta.src = imagem;
-
-  for (let index = 0; index < alternativas.length; index++) {
+  
+  for(let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
-
-    // console.log(element);
 
     const textAlternativa = document.createElement('li');
     textAlternativa.id = element.slice(0, 1);
@@ -116,35 +110,22 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     divAlternativas.className = 'divAlternativas';
   }
 
-  // buttonVoltar.textContent = 'Voltar';
-  // buttonVoltar.type = 'submit';
-  // buttonVoltar.id = 'botaoVoltar';
-
-  // buttonAvancar.textContent = 'Avançar';
-  // buttonAvancar.type = 'submit';
-  // buttonAvancar.id = 'botaoAvancar';
-
-  divImagem.appendChild(divAlternativas);
-  divImagem.appendChild(imgPergunta);
-
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
-  // divPergunta.appendChild(imgPergunta);
-  divPergunta.className = 'divPergunta';
+  if (imagem !== "") {
+    const imgElement = document.createElement('img');
+    imgElement.src = imagem;
+    imgElement.className = 'imgElement';
+    divImagem.appendChild(divAlternativas);
+    divImagem.appendChild(imgElement);
+    divPergunta.appendChild(imgElement);
+  }
+  divPergunta.className = 'divPergunta'; 
   divPergunta.classList.add("pergunta");
   divAlternativas.classList.add("alternativas");
   divAppend.appendChild(divPergunta);
   divAppend.appendChild(divAlternativas);
-  // divAppend.appendChild(buttonVoltar);
-  // divAppend.appendChild(buttonAvancar);
-  // divAppend.appendChild(divPai);
-  // divPai.classList.add("pergunta");
 }
-
-// colocar tempo da pergunta
-// quando acabar o tempo, direcionar para a pagina da resposta
-// na pagina de resposta é que o botao avançar tem que funcionar, direcionando para uma nova pergunta
-// Resposta_APR
 
 let questaoTimerInterval;
 

@@ -3,6 +3,8 @@ const userUtils = require('../utils/users');
 const createRoom = (socket) => (room) => {
   userUtils.userWrite(room, { users: [], answered: [], difficulty: 1 });
   socket.join(room);
+
+  socket.emit('sendLevel', 'facil');
 }
 
 const joinRoom = (socket) => (schoolName, roomId) => {
@@ -13,7 +15,8 @@ const joinRoom = (socket) => (schoolName, roomId) => {
     socket.emit('schoolNameNotExists');
     return;
   }
-  users.push({ id: users.length + 1, schoolName, points: 0 });
+  // Todos os usuários já começam com 10 pontos
+  users.push({ id: users.length + 1, schoolName, points: 10 });
 
   userUtils.userWrite(roomId, { ...rooms[roomId], users });
   socket.join(roomId);
