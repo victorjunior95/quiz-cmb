@@ -1,26 +1,9 @@
 const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
-
+const ROOMID = localStorage.getItem("roomId");
 // localStorage.setItem("perguntasUsadas", []);
 
-socket.emit('createRoom', localStorage.getItem("roomId"));
-
-fetch(`${BASE_URL}/quiz`)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Erro ao fazer a solicitação: ' + response.status);
-    }
-    return response.json(); // Ou response.text() para obter uma resposta de texto
-  })
-  .then(data => {
-
-    localStorage.setItem("perguntasCompletas", JSON.stringify(data));
-
-    exibirPergunta();
-  })
-  .catch(error => {
-    console.error('Erro na solicitação:', error);
-  });
+socket.emit('connectAPR', ROOMID);
 
 let perguntaAtual;
 let dificuldadeAtual = "facil"; // Comece com a dificuldade "facil"
@@ -54,22 +37,54 @@ function exibirPergunta() {
       localStorage.setItem("perguntasUsadas", JSON.stringify(perguntasUsadasLSParsed));
 
       quizLs[dificuldadeAtual] = quizLs[dificuldadeAtual].filter((object) => object.id !== perguntaAtual.id);
-      console.log(quizLs[dificuldadeAtual]);
       localStorage.setItem("perguntasCompletas", JSON.stringify(quizLs));
     }
   }
   
+const createClassification = (classification) => {
+  const schoolList = document.getElementById('schoolList');
+  classification.forEach((element) => {
+    const classificationDiv = document.createElement('div');
+    classificationDiv.className = 'classificationDiv';
+    const classificationSpan = document.createElement('span');
+    classificationSpan.className = 'classificationSpan';
+    classificationSpan.textContent = element.schoolName;
+    classificationSpan.id = element.schoolName;
+    classificationDiv.appendChild(classificationSpan);
+    schoolList.appendChild(classificationDiv);
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  socket.emit('clearConnections');
+  exibirPergunta();
   const avancar = document.getElementById('botaoAvancar');
+  const answer = document.getElementById('botaoResposta');
+
+  socket.emit('requestClassification', ROOMID);
+
+  socket.on('classification', (classification) => {
+    createClassification(classification);
+  });
+
+  socket.on('schoolAnswered', (schoolName) => {
+    const school = document.getElementById(schoolName);
+    school.style.backgroundColor = "green";
+  });
 
   avancar.addEventListener('click', async () => {
     exibirPergunta();
+  });
+
+  answer.addEventListener('click', async () => {
+    window.location.href = "/pages/Answer_APR.html";
   });
 }); 
 
 function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) {
   const divPergunta = document.createElement('div');
   const divAlternativas = document.createElement('div');
+  const divImagem = document.createElement('div');
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
   const imgPergunta = document.createElement('img');
@@ -79,7 +94,9 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   // console.log(imagem);
   
   textTema.textContent = tema;
+  textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
+  textPergunta.className = 'textPergunta';
   textPergunta.id = id;
   imgPergunta.src = imagem;  
   
@@ -92,8 +109,10 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     textAlternativa.id = element.slice(0,1);
     textAlternativa.textContent = element;
     textAlternativa.value = element.slice(0,1);
+    textAlternativa.className = 'textAlternativa';
 
     divAlternativas.appendChild(textAlternativa);
+    divAlternativas.className = 'divAlternativas';
   }
 
   // buttonVoltar.textContent = 'Voltar';
@@ -104,9 +123,13 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   // buttonAvancar.type = 'submit';
   // buttonAvancar.id = 'botaoAvancar';
 
+  divImagem.appendChild(divAlternativas);
+  divImagem.appendChild(imgPergunta);
+
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
-  divPergunta.appendChild(imgPergunta);
+  // divPergunta.appendChild(imgPergunta);
+  divPergunta.className = 'divPergunta'; 
   divPergunta.classList.add("pergunta");
   divAlternativas.classList.add("alternativas");
   divAppend.appendChild(divPergunta);
