@@ -90,13 +90,13 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   const divImagem = document.createElement('div');
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
-  
+
   textTema.textContent = tema;
   textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
   textPergunta.className = 'textPergunta';
   textPergunta.id = id;
-  
+
   for(let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
 
@@ -120,7 +120,7 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     divImagem.appendChild(imgElement);
     divPergunta.appendChild(imgElement);
   }
-  divPergunta.className = 'divPergunta'; 
+  divPergunta.className = 'divPergunta';
   divPergunta.classList.add("pergunta");
   divAlternativas.classList.add("alternativas");
   divAppend.appendChild(divPergunta);
@@ -170,7 +170,7 @@ function totalTimer(endTime) {
     hours < 0 ? hours = 0 : hours;
     minutes < 0 ? minutes = 0 : minutes;
     seconds < 0 ? seconds = 0 : seconds;
-    
+
     if (hours === 0 && minutes === 0 && seconds === 0) {
       clearInterval(totalTimerInterval);
       console.log('Sem função aqui pra não parar o jogo quando as pessoas podem escolher respostas.');
@@ -179,6 +179,8 @@ function totalTimer(endTime) {
     var hoursStr = hours.toString().padStart(2, '0');
     var minutesStr = minutes.toString().padStart(2, '0');
     var secondsStr = seconds.toString().padStart(2, '0');
+
+    ele.setAttribute('aria-timer', endTime - new Date().getTime())
     ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
   }, 1000);
 };

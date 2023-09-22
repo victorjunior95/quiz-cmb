@@ -7,6 +7,20 @@ const createRoom = (socket) => (room) => {
   socket.emit('sendLevel', 'facil');
 }
 
+const changeLevel = (socket) => (newLevel) => {
+  socket.on('sendLevel', (newLevel) =>{
+    const { difficulty } = userUtils.userRead();
+
+    // seto a dificuldade de cada usuário pra o novo level
+    let newLevelRoom = newLevel === "medio" ? difficulty = 2 : difficulty = 3;
+
+    // Reescrevo o arquivo
+    userUtils.userWrite()
+
+    // emito send level na nova fase
+  });
+}
+
 const joinRoom = (socket) => (schoolName, roomId) => {
   const rooms = userUtils.userRead();
   const users = rooms[roomId].users;
