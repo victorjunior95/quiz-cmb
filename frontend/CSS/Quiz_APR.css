@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    
-    
 }  
 
 body {
@@ -31,16 +29,28 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    padding: 30px;
 }
 
 .textPergunta {
-    
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    /* font-weight: bold; */
 }
 
 .divImagem {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: center;
     flex-direction: row;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    /* padding: 10px; */
 }
 
 .divAlternativas {
@@ -54,7 +64,18 @@ body {
 }
 
 .textAlternativa {
-
+    width: 100%;
+    padding: 15px 0;
+    outline: none;
+    border: 3px solid #0AABBA;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;  
+    text-align: left;
+    padding: 20px;
 }
 
 .divBotoes {
