@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.divPai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+    gap: 50px;
+    border-radius: 45px;
+    padding: 20px;
+}
+
+.enfeiteTela {
+    width: 100%;
+    height: 29%;
+    border-radius: 0 0 65px 65px;
+    background-color: #0AABBA;
+    position: absolute;
+    margin-top: 0;
+    z-index: 1;
+}
+
+@media (min-width: 1281px) {
+    .pergunta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 85%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+        border-radius: 45px;
+        padding: 60px;
+        z-index: 2;
+    }
+    
+    .textTema {
+        color: #0AABBA;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .textPergunta {
+        width: 100%;
+        color: black;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .imgElement {
+        width: 200px;
+        height: 200px;
+        object-fit: fill;
+    }
+    
+    .divAlternativas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 85%;
+    }
+    
+    .buttonAlternativa {
+        width: 100%;
+        height: 105.6px;
+        padding: 15px 0;
+        outline: none;
+        border: 3px solid #0AABBA;
+        border-radius: 30px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        text-align: left;
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonAlternativa:hover {
+        background-color: #0AABBA;
+        color: white;
+    }
+    
+    .buttonEnviar {
+        width: 380px;
+        padding: 15px 0;
+        border: 3px solid black;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonEnviar:hover {
+        scale: 0.98;
+        transition-duration: 0.2s;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .pergunta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 85%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+        border-radius: 45px;
+        padding: 60px;
+        z-index: 2;
+    }
+    
+    .textTema {
+        color: #0AABBA;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .textPergunta {
+        width: 110%;
+        color: black;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .imgElement {
+        width: 200px;
+        height: 200px;
+        object-fit: fill;
+    }
+
+    .divAlternativas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 85%;
+    }
+    
+    .buttonAlternativa {
+        width: 100%;
+        height: 105.6px;
+        padding: 15px 0;
+        outline: none;
+        border: 3px solid #0AABBA;
+        border-radius: 30px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        text-align: left;
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonAlternativa:hover {
+        background-color: #0AABBA;
+        color: white;
+    }
+    
+    .buttonEnviar {
+        width: 380px;
+        padding: 15px 0;
+        border: 3px solid black;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonEnviar:hover {
+        scale: 0.98;
+        transition-duration: 0.2s;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .pergunta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 85%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+        border-radius: 45px;
+        padding: 60px;
+        z-index: 2;
+    }
+    
+    .textTema {
+        color: #0AABBA;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .textPergunta {
+        width: 115%;
+        color: black;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .imgElement {
+        width: 200px;
+        height: 200px;
+        object-fit: fill;
+    }
+    
+    .divAlternativas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 85%;
+    }
+    
+    .buttonAlternativa {
+        width: 100%;
+        height: 105.6px;
+        padding: 15px 0;
+        outline: none;
+        border: 3px solid #0AABBA;
+        border-radius: 30px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        text-align: left;
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonAlternativa:hover {
+        background-color: #0AABBA;
+        color: white;
+    }
+    
+    .buttonEnviar {
+        width: 380px;
+        padding: 15px 0;
+        border: 3px solid black;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonEnviar:hover {
+        scale: 0.98;
+        transition-duration: 0.2s;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .pergunta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 85%;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+        border-radius: 45px;
+        padding: 60px;
+        z-index: 2;
+    }
+    
+    .textTema {
+        color: #0AABBA;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .textPergunta {
+        width: 120%;
+        color: black;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .imgElement {
+        width: 200px;
+        height: 200px;
+        object-fit: fill;
+    }
+    
+    .divAlternativas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 85%;
+    }
+    
+    .buttonAlternativa {
+        width: 100%;
+        height: 105.6px;
+        padding: 15px 0;
+        outline: none;
+        border: 3px solid #0AABBA;
+        border-radius: 30px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        text-align: left;
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonAlternativa:hover {
+        background-color: #0AABBA;
+        color: white;
+    }
+    
+    .buttonEnviar {
+        width: 380px;
+        padding: 15px 0;
+        border: 3px solid black;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;  
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .buttonEnviar:hover {
+        scale: 0.98;
+        transition-duration: 0.2s;
+    }
+}
