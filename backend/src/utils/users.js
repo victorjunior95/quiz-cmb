@@ -5,7 +5,7 @@ const userRead = () => JSON.parse(fs.readFileSync('src/database/rooms.json', 'ut
 const userWrite = (roomId, data) => {
   const users = userRead();
   const newUsers = { ...users, [roomId]: data };
-  fs.writeFileSync('src/database/users.json', JSON.stringify(newUsers));
+  fs.writeFileSync('src/database/rooms.json', JSON.stringify(newUsers));
 }
 
 module.exports = {
