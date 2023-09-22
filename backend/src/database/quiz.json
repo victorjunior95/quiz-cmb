@@ -181,8 +181,8 @@
       "descricao": "O Equilíbrio será instável, se o brinquedo oscilar, não voltará mais para a posição de equílibrio.",
       "imgResposta":"",
       "imgPergunta": "https://http2.mlstatic.com/D_NQ_NP_613305-MLB25007777049_082016-O.jpg"
-  },
-  {
+    },
+    {
       "id": "82",
       "tema": "Física",
       "pergunta": "Os ciclistas de bicicleta de estrada descobriram uma nova manobra, a do Super Homem, para poderem atingirem velocidades maiores em descidas. Isso se deve à (ao):",
@@ -197,8 +197,8 @@
       "descricao": "Nessa posição, o ciclista reduz sua área, reduzindo assim a resistência do ar.",
       "imgResposta":"",
       "imgPergunta": "https://hypescience.com/wp-content/uploads/2016/08/ciclista-gif-768x348.gif"
-  },
-  {
+    },
+    {
       "id": "83",
       "tema": "Física",
       "pergunta": "Em lagos ou mares, onde o nível de salinidade é muito elevpara as pessoas boiarem. Esse fato se deve à (ao):",
@@ -352,7 +352,6 @@
       "C) Memórias Póstumas de Brás Cubas",
       "D) O Gaúcho",
       "E) A Moreninha"
-
       ],
       "resposta": "D",
       "descricao": "O Gaúcho é um dos romances do escritor brasileiro José de Alencar. Essa obra foi publicada em 1870.",
@@ -374,7 +373,7 @@
       "descricao": "O verbo CONCORDAR desdobra-se com a preposição COM, bem como o pronome relativo CUJAS faz alusão ao termo que lhe é consequente (IDEIAS).",
       "imgResposta": "",
       "imgPergunta": ""
-  },
+    },
   {
       "id": "124",
       "tema": "Português",
@@ -482,7 +481,7 @@
     {
       "id": 24,
       "tema": "Biologia",
-      "pergunta": "Observe a imagem ao lado. Uma pessoa do tipo A poderia receber sangue dos indivíduos...",
+      "pergunta": "Observe a imagem. Uma pessoa do tipo A poderia receber sangue dos indivíduos...",
       "alternativas": ["A) 2 e 4.", "B) 1 e 3.", "C) 1 e 4.", "D) 2 e 3.", "E) 1 e 2."],
       "imgResposta": "",
       "imgPergunta": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5NeDIyxLKsmvslchJbziof0Dh_tcHZcUXOssJlwHkIyjZoa4m6EyRtUhhhSsvzyz01x0&usqp=CAU",
@@ -1041,7 +1040,6 @@
       "descricao": "Como mostra a imagem, uma lente divergente de um óculos para a miopia,  a imagem é menor, direita e virtual. ",
       "imgResposta":"",
       "imgPergunta": "https://opticastacna.cl/wp-content/uploads/2021/05/caracteristicas-de-los-lentes-divergentes.jpg"
-
   },
   {
       "id": "94",
@@ -1058,7 +1056,6 @@
       "descricao": "Um maior rendimento de uma máquina térmica implica uma maior fração da sua potência útil produzida.",
       "imgResposta": "",
       "imgPergunta": ""
-
   },
   {
       "id": "95",
@@ -1075,7 +1072,6 @@
       "descricao": "Como seu combustível está acabando, essas estrelas apresentam uma temperatura menor e emitem luz em comprimentos de onda maiores.",
       "imgResposta":"",
       "imgPergunta": "https://2.bp.blogspot.com/-nVc37tmwxcQ/VzvIlbN6L3I/AAAAAAAAZP0/h2gcFXf3nG41mr5RnNmx25liKDCcYZS_ACLcB/s1600/Tamanho%2Bdo%2BSol%2Bquando%2Bestiver%2Bgigante%2Bvermelha.jpg"
-
   },
   {
   "id": "106",
@@ -1582,7 +1578,6 @@
       "descricao": "O papel sobe pois em cima a velocidade do ar será maior que em baixo, logo a pressão será menor.",
       "imgResposta":"",
       "imgPergunta": "https://www.ciensacao.org/fotografia_experimento_mao_na_massa/5049p_flying_2.jpg"
-
   },
   {
       "id": "97",
@@ -1599,7 +1594,6 @@
       "descricao": "No equílibrio μe = tg Θ = h/R ,  logo  0,60 = h/5     h = 3,00 m",
       "imgResposta":"",
       "imgPergunta": "https://ibb.co/PcQvW6W"
-
   },
   {
       "id": "98",
@@ -1616,7 +1610,6 @@
       "descricao": "No caso, seria no estado gasoso (terceira rampa no gráfico) Como Q = m.c.ΔT e Q = Pot x tempo   100 (J/s).60(s) = 100(g).c.30(oC)    c =  2,0 J/goC",
       "imgResposta":"",
       "imgPergunta": "https://ibb.co/RPNx3y9"
-
   },
   {
       "id": "99",
@@ -1633,7 +1626,6 @@
       "descricao": "Potência = V2 / Req = 252/100 = 6,25 W    Energia = P.Δt = (6,25 J/s) . (1s) = 6,25 J",
       "imgResposta":"",
       "imgPergunta": "https://ibb.co/cFqFy6C"
-
   },
   {
       "id": "100",
@@ -1650,8 +1642,7 @@
       "descricao": "Como a carga é dada por i = ΔQ/Δt  Teremos, Δt = (2,1 Ah)/ (3 A) = 0,7 h ou 42 min",
       "imgResposta":"",
       "imgPergunta": "https://api.netshopinformatica.com.br/uploads/content_manager/contents/161/image/celular-carregando-pode-conduzir-descarga-eletrica-em-tempestades.jpg"
-
-  },
+    },
   {
     "id": "116",
     "tema": "História",
@@ -1667,7 +1658,7 @@
     "descricao": "Em 1935, Getúlio Vargas criou o programa A Hora do Brasil que deveria ser transmitido por todas as estações de rádio, de segunda à sexta-feira (exceto feriado), das 19h às 20h. Todas as quintas-feiras eram transmitidas palestras de 10 minutos dirigidas aos trabalhadores. A partir de 1946, o programa passou a se chamar A Voz do Brasil, nome que mantém até hoje.",
     "imgResposta": "https://1.bp.blogspot.com/-XXWhD17yBC4/Wq2gVMgHl9I/AAAAAAAAEGw/wo0_Ru4LO1sLhYZTycNaW_4ZarjWfcjOgCLcBGAs/s1600/getulio%2Bvargas%2Bno%2Bmicrofofone%2Bdo%2BDIP.jpg",
     "imgPergunta": ""
-},
+  },
 {
     "id": "117",
     "tema": "História",
