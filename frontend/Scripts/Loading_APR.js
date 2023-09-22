@@ -8,7 +8,6 @@ socket.on('allUsersConnected', () => {
 
 const main = () => {
   socket.emit('connectAPR', ROOMID);
-  console.log(ROOMID);
   socket.emit('startGame', ROOMID);
 };
 main();

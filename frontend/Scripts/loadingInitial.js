@@ -27,6 +27,7 @@ socket.on('allUsersConnected', () => {
 const main = () => {
   createRoom(ROOMID);
   socket.emit('startGame', ROOMID);
+  socket.emit('setTime', ROOMID);
   localStorage.removeItem("perguntasUsadas");
 };
 main();

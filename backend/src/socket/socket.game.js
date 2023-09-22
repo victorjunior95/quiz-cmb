@@ -1,12 +1,29 @@
-const startGame = (socket) => (room) => {
-  socket.to(room).emit('gameStarted');
+const userUtils = require('../utils/users');
+
+const setTime = (socket) => (roomId) => {
+  const rooms = userUtils.userRead();
+  const difficulty = rooms[roomId].difficulty;
+  const phaseTime = difficulty === 2 ? 2400000 : 1200000;
+  rooms[roomId].time = {
+    startTime: new Date().getTime(), 
+    endTime: new Date().getTime() + phaseTime,
+  }
+  userUtils.userWrite(roomId, rooms[roomId]);
+  socket.emit('receiveTimer', rooms[roomId].time);
 }
 
-const sendClassification = (socket) => (room, users) => {
-  socket.to(room).emit('showClassificationUSR', users);
+const startGame = (socket) => (roomId) => {
+  socket.to(roomId).emit('gameStarted');
+}
+
+const sendClassification = (socket) => (roomId, users) => {
+  socket.to(roomId).emit('showClassificationUSR', users);
+  const rooms = userUtils.userRead();
+  socket.emit('receiveTimer', rooms[roomId].time);
 }
 
 module.exports = {
+  setTime,
   startGame,
   sendClassification
 }
