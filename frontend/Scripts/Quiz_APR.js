@@ -17,7 +17,7 @@ function exibirPergunta() {
     const roomId = localStorage.getItem("roomId");
     socket.emit('sendQuestion', perguntaAtual, roomId);
 
-    const mainDiv = document.querySelector('#page_usr');
+    const mainDiv = document.querySelector('#page_apr');
     mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
     
     createDivQuestion(perguntaAtual.id, perguntaAtual.tema, perguntaAtual.pergunta, perguntaAtual.alternativas, perguntaAtual.imgPergunta, mainDiv);

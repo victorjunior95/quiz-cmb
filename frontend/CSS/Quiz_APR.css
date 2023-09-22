@@ -23,6 +23,7 @@ body {
     margin: 50px;
     border-radius: 45px;
 }
+
 .divPergunta {
     display: flex;
     justify-content: flex-start;
@@ -37,7 +38,6 @@ body {
     color: black;
     text-align: center;
     font-size: 24px;
-    /* font-weight: bold; */
 }
 
 .divImagem {
@@ -50,7 +50,6 @@ body {
 img {
     height: 300px;
     width: 300px;
-    /* padding: 10px; */
 }
 
 .divAlternativas {
