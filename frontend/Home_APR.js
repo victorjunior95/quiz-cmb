@@ -1,15 +1,20 @@
+const startButton = document.getElementById('sendButton');
+  startButton.addEventListener('click', () => {
+    window.location.href = "/pages/Regras.html";
+  });
+
 const socket = io('http://localhost:3001');
 
 const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
 }
 
-const waitForStart = (roomId) => {
-  const startButton = document.getElementById('sendButton');
-  startButton.addEventListener('click', () => {
-    window.location.href = "/pages/LoadingInitial_APR.html";
-  });
-}
+// const waitForStart = (roomId) => {
+//   const startButton = document.getElementById('sendButton');
+//   startButton.addEventListener('click', () => {
+//     window.location.href = "/pages/LoadingInitial_APR.html";
+//   });
+// }
 
 socket.on('sendLevel', (level) => {
   localStorage.setItem('actualLevel', level);
