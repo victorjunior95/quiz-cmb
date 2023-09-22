@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
   <title>Quiz</title>
+  <link rel="stylesheet" href="../CSS/Quiz_APR.css">
 </head>
 <body>
-  <header>
+  <div class="divPai">
     <div id="page_usr"></div>
-  </header>
-  <footer>
-    <button id="botaoAvancar">Avançar</button>
-    <button id="botaoResposta">Mostrar resposta</button>
-  </footer>
-  <aside id="schoolList"></aside>
+    <div class="divBotoes">
+      <button id="botaoAvancar" class="botaoAvancar">Avançar</button>
+      <button id="botaoResposta" class="botaoResposta">Mostrar resposta</button>
+    </div>
+    <footer>
+      <aside id="schoolList"></aside>
+    </footer>
+  </div>
   <script src="../Scripts/Quiz_APR.js"></script>
 </body>
 </html>

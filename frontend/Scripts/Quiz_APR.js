@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) {
   const divPergunta = document.createElement('div');
   const divAlternativas = document.createElement('div');
+  const divImagem = document.createElement('div');
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
   const imgPergunta = document.createElement('img');
@@ -93,7 +94,9 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   // console.log(imagem);
   
   textTema.textContent = tema;
+  textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
+  textPergunta.className = 'textPergunta';
   textPergunta.id = id;
   imgPergunta.src = imagem;  
   
@@ -106,8 +109,10 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     textAlternativa.id = element.slice(0,1);
     textAlternativa.textContent = element;
     textAlternativa.value = element.slice(0,1);
+    textAlternativa.className = 'textAlternativa';
 
     divAlternativas.appendChild(textAlternativa);
+    divAlternativas.className = 'divAlternativas';
   }
 
   // buttonVoltar.textContent = 'Voltar';
@@ -118,9 +123,13 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   // buttonAvancar.type = 'submit';
   // buttonAvancar.id = 'botaoAvancar';
 
+  divImagem.appendChild(divAlternativas);
+  divImagem.appendChild(imgPergunta);
+
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
-  divPergunta.appendChild(imgPergunta);
+  // divPergunta.appendChild(imgPergunta);
+  divPergunta.className = 'divPergunta'; 
   divPergunta.classList.add("pergunta");
   divAlternativas.classList.add("alternativas");
   divAppend.appendChild(divPergunta);
