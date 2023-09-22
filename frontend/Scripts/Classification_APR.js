@@ -73,11 +73,5 @@ function totalTimer(endTime) {
       nextButtonLink = "/pages/ChangeDifficulty.html";
       console.log('Função de ir pra página de troca de dificuldade', nextButtonLink);
     }
-
-    // var hoursStr = hours.toString().padStart(2, '0');
-    // var minutesStr = minutes.toString().padStart(2, '0');
-    // var secondsStr = seconds.toString().padStart(2, '0');
-
-    // ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
   }, 1000);
 };
