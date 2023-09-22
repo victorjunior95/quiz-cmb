@@ -11,6 +11,7 @@ const io = new Server(server, {
 );
 
 const fs = require('fs');
+const connection = require('./socket/socket.connection');
 
 // ...
 
@@ -188,33 +189,6 @@ app.get('/quiz', (_req, res) => {
 // para que possa ser utilizada pelo arquivo `src/server.js`
 
 
-io.on('connection', (socket) => {
-  console.log('a user connected');
-
-  socket.on('createRoom', (room) => {
-    console.log('room', room);
-    socket.join(room);
-  });
-
-  socket.on('joinRoom', (schoolName, room) => {
-    console.log('schoolName', schoolName);
-    console.log('room', room);
-    socket.join(room);
-    socket.to(room).emit('userConnected', schoolName);
-  });
-
-  socket.on('startGame', (room) => {
-    console.log('room', room);
-    socket.broadcast.to(room).emit('gameStarted');
-  });
-
-  socket.on('sendQuestion', (question, roomId) => {
-    socket.broadcast.to(roomId).emit('receiveQuestion', question);
-  });
-
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
-});
+io.on('connection', connection);
 
 module.exports = server;

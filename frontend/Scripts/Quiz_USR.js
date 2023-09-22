@@ -2,67 +2,75 @@ const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
 
 const data = JSON.parse(localStorage.getItem("roomData"));
-socket.emit('joinRoom', data.user, data.roomId);
+socket.emit('enterRoom', data.roomId, data.user);
 
 socket.on('receiveQuestion', (question) => {
+  console.log(question);
   const mainDiv = document.querySelector('#page_usr');
   mainDiv.innerHTML = ""; // Limpe o conteúdo anterior
-  createDivQuestion(question.id, question.tema, question.pergunta, question.alternativas, question.imagem, mainDiv);
+  createDivQuestion(question, mainDiv);
 });
 
-function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) {
+socket.on('getAnswer', () => {
+  window.location.href = "/pages/Answer_USR.html";
+});
+
+function createDivQuestion(question, divAppend) {
+  console.log(question);
+  const { id, tema, pergunta, alternativas, imgPergunta } = question;
+
   const divPergunta = document.createElement('div');
   const divAlternativas = document.createElement('div');
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
-  const imgPergunta = document.createElement('img');
+  
   const buttonEnviar = document.createElement('button');
-
-  // console.log(imagem);
   
   textTema.textContent = tema;
+  textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
   textPergunta.id = id;
-  imgPergunta.src = imagem;  
+  textPergunta.className = 'textPergunta';
   
   for(let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
-    
-    // console.log(element);
 
     const buttonAlternativa = document.createElement('button');
     buttonAlternativa.id = element.slice(0,1);
+    buttonAlternativa.className = 'buttonAlternativa';
     buttonAlternativa.textContent = element;
     buttonAlternativa.value = element.slice(0,1);
+    buttonAlternativa.addEventListener('click', () => {
+      buttonAlternativa.style.backgroundColor = "#0AABBA";
+      buttonAlternativa.style.color = 'white';
+      localStorage.setItem("alternativaSelecionada", buttonAlternativa.value);
+    });
 
     divAlternativas.appendChild(buttonAlternativa);
+    divAlternativas.className = 'divAlternativas';
   }
 
-  // Alternativa/botão selecionado
-
-
   buttonEnviar.textContent = 'Confirmar';
+  buttonEnviar.className = 'buttonEnviar';
   buttonEnviar.type = 'submit';
-  // buttonEnviar.value = ;
-  // Função que compara a alternativa selecionada com a alternativa correta
-  const resposta = JSON.parse(localStorage.getItem("perguntasCompletas")).facil[0].resposta;
-  // console.log(resposta);
-
+  buttonEnviar.addEventListener('click', () => {
+    const selectAnswer = localStorage.getItem("alternativaSelecionada");
+    socket.emit('receiveAnswer', { answer: selectAnswer, roomId: data.roomId, question, schoolName: data.user  });
+  });
 
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
-  divPergunta.appendChild(imgPergunta);
+
+  if (imgPergunta !== "") {
+    const imgElement = document.createElement('img');
+    imgElement.src = imgPergunta;
+    imgElement.className = 'imgElement';
+    divPergunta.appendChild(imgElement);
+  }
+
   divPergunta.classList.add("pergunta");
   divAlternativas.classList.add("alternativas");
   divAppend.appendChild(divPergunta);
   divAppend.appendChild(divAlternativas);
   divAppend.appendChild(buttonEnviar);
-  // divAppend.appendChild(divPai);
-
-  // divPai.classList.add("pergunta");
 }
-
-// Linha 24 (localStorage.getItem())
-// Criar uma função que rendererize uma pergunta aleatória de acordo com a fase
-// Criar uma função que retire a pergunta já utilizada, passando para uma chave no localStorage.
-// O botão avançar ativa as funções acima, gerando uma nova pergunta
