@@ -26,7 +26,7 @@ const connection = (socket) => {
   socket.on('receiveAnswer', question.receiveAnswer(socket));
 
   // Change level events
-  socket.on('sendLevel', room.changeLevel(socket));
+  // socket.on('sendLevel', room.changeLevel(socket));
 
   // Classification events
   socket.on('requestClassification', classification.requestClassification(socket));

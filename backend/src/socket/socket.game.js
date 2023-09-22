@@ -4,7 +4,7 @@ const setTime = (socket) => (roomId) => {
   const rooms = userUtils.userRead();
   const difficulty = rooms[roomId].difficulty;
   // const phaseTime = difficulty === 2 ? 2400000 : 1200000;
-  const phaseTime = difficulty === 2 ? 2400000 : 60000; // para teste
+  const phaseTime = difficulty === 2 ? 2400000 : 30000; // para teste
   rooms[roomId].time = {
     startTime: new Date().getTime(), 
     endTime: new Date().getTime() + phaseTime,

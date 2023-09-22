@@ -6,9 +6,8 @@ const questionTime = 30;
 socket.emit('connectAPR', ROOMID);
 
 let perguntaAtual;
-let dificuldadeAtual = localStorage.getItem('actualLevel'); // Comece com a dificuldade "facil"
 
-function exibirPergunta() {
+function exibirPergunta(dificuldadeAtual) {
   let quizLs = JSON.parse(localStorage.getItem("perguntasCompletas"));
   const perguntasDaDificuldadeAtual = quizLs[dificuldadeAtual];
 
@@ -56,11 +55,20 @@ const createClassification = (classification) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  socket.emit('clearConnections');
+  const dificuldadeAtual = localStorage.getItem('actualLevel'); // Comece com a dificuldade "facil"
 
-  exibirPergunta();
+  if (dificuldadeAtual === 'facil') {
+    socket.emit('clearConnections');
+  }
+
+  exibirPergunta(dificuldadeAtual);
   const answer = document.getElementById('botaoResposta');
 
+  socket.on('receiveTimer', ({ questionTime, endTime }) => {
+    iniciarTempoQuestao(questionTime);
+    totalTimer(endTime);
+  });
+  
   socket.emit('requestClassification', ROOMID);
 
   socket.on('classification', (classification) => {
@@ -70,12 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
   socket.on('schoolAnswered', (schoolName) => {
     const school = document.getElementById(schoolName);
     school.style.backgroundColor = "green";
-  });
-
-  socket.on('receiveTimer', ({ questionTime, endTime }) => {
-    console.log('Quiz_APR', questionTime)
-    iniciarTempoQuestao(questionTime);
-    totalTimer(endTime);
   });
 
   answer.addEventListener('click', async () => {
@@ -148,8 +150,11 @@ function iniciarTempoQuestao(newTime) {
 
 let totalTimerInterval;
 function totalTimer(endTime) {
+  // console.log(endTime); o endtime está vindo fixo? e por isso não reinicia?
   const actualTime = new Date().getTime();
+
   const timeLeft = Math.round((endTime - actualTime) / 1000);
+  console.log(timeLeft); // está -12 na segunda fase
   var hours = 0;
   var minutes = Math.floor(timeLeft / 60);
   var seconds = timeLeft % 60;
@@ -180,7 +185,6 @@ function totalTimer(endTime) {
     var minutesStr = minutes.toString().padStart(2, '0');
     var secondsStr = seconds.toString().padStart(2, '0');
 
-    ele.setAttribute('aria-timer', endTime - new Date().getTime())
     ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
   }, 1000);
 };

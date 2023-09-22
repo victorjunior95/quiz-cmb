@@ -7,22 +7,22 @@ const createRoom = (socket) => (room) => {
   socket.emit('sendLevel', 'facil');
 }
 
-const changeLevel = (socket) => (newLevel) => {
-  socket.on('sendLevel', (newLevel) =>{
-    const actualRoom = userUtils.userRead();
+// const changeLevel = (socket) => (newLevel) => {
+//   socket.on('sendLevel', () =>{
+//     const actualRoom = userUtils.userRead();
 
+//     console.log(actualRoom);
 
+//     // seto a dificuldade de cada usuário pra o novo level
+//     let newLevelRoom = actualRoom.difficulty === 1 ? actualRoom[difficulty] = 2 : actualRoom[difficulty] = 3;
 
-    // seto a dificuldade de cada usuário pra o novo level
-    let newLevelRoom = actualRoom.difficulty === "facil" ? actualRoom[difficulty] = 2 : actualRoom[difficulty] = 3;
+//     // Reescrevo o arquivo
+//     userUtils.userWrite(newLevelRoom);
 
-    // Reescrevo o arquivo
-    userUtils.userWrite(newLevelRoom);
-
-    // emito send level na nova fase
-    socket.emit('sendLevel', )
-  });
-}
+//     // emito send level na nova fase
+//     socket.emit('sendLevel', )
+//   });
+// }
 
 const joinRoom = (socket) => (schoolName, roomId) => {
   const rooms = userUtils.userRead();
@@ -103,5 +103,6 @@ module.exports = {
   connectAnswer,
   connectAPRAnswer,
   connectAPRClassification,
-  connectClassification
+  connectClassification,
+  // changeLevel
 }
