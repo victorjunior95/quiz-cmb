@@ -13,7 +13,6 @@ const showAnswer = (question) => {
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
   const textDesc = document.createElement('text');
-  // const imgPergunta = document.createElement('img');
   
   textTema.textContent = tema;
   textTema.className = 'textTema';
@@ -21,34 +20,33 @@ const showAnswer = (question) => {
   textPergunta.className = 'textPergunta';
   textPergunta.id = id;
   textDesc.textContent = descricao;
-  textDesc.className = 'textDesc';
-  // imgPergunta.src = imagem;  
+  textDesc.className = 'textDesc'; 
   
   for(let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
-    const isCorrect = element.slice(0,1) === resposta;
-    const isSelect = element.slice(0,1) === alternativaSelecionada;
+    const isCorrect = element.slice(0, 1) === resposta;
+    const isSelect = element.slice(0, 1) === alternativaSelecionada;
 
     const textAlternativa = document.createElement('li');
-    textAlternativa.id = element.slice(0,1);
+    textAlternativa.id = element.slice(0, 1);
     textAlternativa.textContent = element;
     textAlternativa.value = element.slice(0,1);
     textAlternativa.className = 'textAlternativa';
     textAlternativa.style.listStyleType = 'none';
 
-    if(isCorrect) {
+    if (isCorrect) {
       textAlternativa.style.backgroundColor = "green";
       textAlternativa.style.color = "white";
     }
 
-    console.log(isSelect, element.slice(0,1), alternativaSelecionada);
-    if(isSelect) {
+    if (isSelect) {
       const iconSelect = document.createElement('span');
       iconSelect.textContent = "X";
       textAlternativa.appendChild(iconSelect);
     }
 
     divAlternativas.appendChild(textAlternativa);
+    localStorage.removeItem("alternativaSelecionada");
   }
 
   divPergunta.appendChild(textTema);

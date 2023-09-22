@@ -206,7 +206,7 @@
       "A) redução do peso da pessoa.",
       "B) aumento da pressão abaixo da pessoa.",
       "C) aumento da densidade da pessoa.",
-      "D) aumento da pressão do ar nas costas do ciclista.",
+      "D) aumento de empuxo",
       "E) redução da densidade da pessoa."
       ],
       "resposta": "D",
@@ -233,7 +233,7 @@
   {
       "id": "85",
       "tema": "Física",
-      "pergunta": "De acordo com a placa de trânsito abaixo, em frente à uma escola nos EUA, qual é a velocidade máxima nessa rua?",
+      "pergunta": "De acordo com a placa de trânsito, em frente à uma escola nos EUA, qual é a velocidade máxima nessa rua?",
       "alternativas": [
       "A) 15 km/h",
       "B) 54 km/h",
@@ -251,7 +251,7 @@
   "tema": "História",
   "pergunta": "Alexandre, o Grande, construiu um grande império e defendeu que os povos nele incluídos fundissem suas culturas  o que deu origem à Cultura Helenística.  Esta cultura foi caracterizada por:",
   "alternativas": [
-  "A) A abolição da escravidão negra e a liberdade religiosa.",
+  "A) priorizar o pensamento e a língua grega.",
   "B) Favorecer difundir a religião egípcia.",
   "C) Ter como sua língua de difusão o latim.",
   "D) Ignorar as contribuições dos povos da Mesopotâmia.",
@@ -826,13 +826,13 @@
     {
       "id": 57,
       "tema": "Química",
-      "pergunta": "Qual das alternativas abaixo só contem frutas cítricas (frutas ácidas)?",
+      "pergunta": "Qual das alternativas só contem frutas cítricas (frutas ácidas)?",
       "alternativas": ["A) Azeitona, Laranja, Caju", "B) Manga, Uva Passa, Pêra", "C) Maracujá, Goiaba, Caqui", "D) Romã, Groselha, Cupuaçu", "E) Tomate, Limão, Chuchu"
       ],
       "imgResposta": "",
       "imgPergunta": "",
       "resposta": "D",
-      "descricao": "LIGAÇÃO DE HIDROGÊNIO É UM TIPO DE INTERAÇÃO INTERMOLECULAR QUE SE DÁ ENTRE ÁTOMOS DE HIDROGÊNIO DE UMA MOLÉCULA COM ÁTOMOS DE ELEMENTOS ALTAMENTE ELETRONEGATIVOS DE FORMA QUE O HIDROGÊNIO SIRVA COMO UM ELO ENTRE OS ÁTOMOS COM OS QUAIS INTERAGE."
+      "descricao": "AS FRUTAS CÍTRICAS SÃO AQUELAS RICAS EM ÁCIDO CÍTRICO, O GRANDE RESPONSÁVEL PELO SABOR AZEDINHO QUE CAUSA A FAMOSA SENSAÇÃO AO PALADAR."
     },
     {
       "id": 58,
@@ -947,7 +947,7 @@
   { 
       "id": "88",
       "tema": "Física",
-      "pergunta": "Qual dos pesquisadores abaixo teve uma grande contribuição, sob o ponto de vista experimental,  na explicação do efeito fotoelétrico?",
+      "pergunta": "Qual dos pesquisadores teve uma grande contribuição, sob o ponto de vista experimental,  na explicação do efeito fotoelétrico?",
       "alternativas": [
       "A) R. A. Milikan",
       "B) E. R. Rutherford",
@@ -1370,7 +1370,7 @@
 {
   "id": "134",
   "tema": "Português",
-  "pergunta": "Assinale a única alternativa que completa corretamente as lacunas da frase abaixo. O rapaz tinha _________ a condição: a luz só seria _________ depois que tudo estivesse _________ e devidamente ___________.",
+  "pergunta": "Assinale a única alternativa que completa corretamente as lacunas da frase. O rapaz tinha _________ a condição: a luz só seria _________ depois que tudo estivesse _________ e devidamente ___________.",
   "alternativas": [
   "A) aceito – acendida – limpo – enxugado",
   "B) aceitado – acendida – limpado – enxugado",
@@ -1434,7 +1434,7 @@
     {
       "id": 68,
       "tema": "Biologia",
-      "pergunta": "A morte celular programada ou apoptose celular é imprescindível para o desenvolvimento dos animais. Nos tecidos de um ser humano saudável, a cada dia, bilhões de células ativam um programa de morte intracelular, por mecanismos celulares complexos e variados. As situações abaixo ilustram exemplos de apoptose em organismos pluricelulares, EXCETO uma, qual?",
+      "pergunta": "A morte celular programada ou apoptose celular é imprescindível para o desenvolvimento dos animais. Nos tecidos de um ser humano saudável, a cada dia, bilhões de células ativam um programa de morte intracelular, por mecanismos celulares complexos e variados. As situações ilustram exemplos de apoptose em organismos pluricelulares, EXCETO uma, qual?",
       "alternativas": ["A) A regressão do útero logo após o parto.", "B) A regressão da mama após o desmame.", "C) A morte de um tecido devido a necrose onde foi desencadeado um processo inflamatório.", "D) A reabsorção da cauda do girino durante a metamorfose que leva ao surgimento do sapo adulto.", "E) A eliminação das membranas existentes entre os dedos de um embrião humano durante a modelagem da mão."],
       "imgResposta": "",
       "imgPergunta": "",
@@ -1581,8 +1581,8 @@
       "resposta": "C",
       "descricao": "O papel sobe pois em cima a velocidade do ar será maior que em baixo, logo a pressão será menor.",
       "imgResposta":"",
-      "imgPergunta": "https://www.ciensacao.org/fotografia_experimento_mao_na_massa/5049p_flying_2.jpg",
-      "nível": "Difícil"
+      "imgPergunta": "https://www.ciensacao.org/fotografia_experimento_mao_na_massa/5049p_flying_2.jpg"
+
   },
   {
       "id": "97",
@@ -1598,8 +1598,8 @@
       "resposta": "B",
       "descricao": "No equílibrio μe = tg Θ = h/R ,  logo  0,60 = h/5     h = 3,00 m",
       "imgResposta":"",
-      "imgPergunta": "https://ibb.co/PcQvW6W",
-      "nível": "Difícil"
+      "imgPergunta": "https://ibb.co/PcQvW6W"
+
   },
   {
       "id": "98",
@@ -1615,13 +1615,13 @@
       "resposta": "A",
       "descricao": "No caso, seria no estado gasoso (terceira rampa no gráfico) Como Q = m.c.ΔT e Q = Pot x tempo   100 (J/s).60(s) = 100(g).c.30(oC)    c =  2,0 J/goC",
       "imgResposta":"",
-      "imgPergunta": "https://ibb.co/RPNx3y9",
-      "nível": "Difícil"
+      "imgPergunta": "https://ibb.co/RPNx3y9"
+
   },
   {
       "id": "99",
       "tema": "Física",
-      "pergunta": "A energia elétrica dissipada pelos resistores no circuito abaixo, em 1 segundo, é igual a:",
+      "pergunta": "A energia elétrica dissipada pelos resistores no circuito, em 1 segundo, é igual a:",
       "alternativas": [
       "A)12,50 J",
       "B)25 J",
@@ -1632,8 +1632,8 @@
       "resposta": "E",
       "descricao": "Potência = V2 / Req = 252/100 = 6,25 W    Energia = P.Δt = (6,25 J/s) . (1s) = 6,25 J",
       "imgResposta":"",
-      "imgPergunta": "https://ibb.co/cFqFy6C",
-      "nível": "Difícil"
+      "imgPergunta": "https://ibb.co/cFqFy6C"
+
   },
   {
       "id": "100",
@@ -1649,8 +1649,8 @@
       "resposta": "C",
       "descricao": "Como a carga é dada por i = ΔQ/Δt  Teremos, Δt = (2,1 Ah)/ (3 A) = 0,7 h ou 42 min",
       "imgResposta":"",
-      "imgPergunta": "https://api.netshopinformatica.com.br/uploads/content_manager/contents/161/image/celular-carregando-pode-conduzir-descarga-eletrica-em-tempestades.jpg",
-      "nível": "Difícil"
+      "imgPergunta": "https://api.netshopinformatica.com.br/uploads/content_manager/contents/161/image/celular-carregando-pode-conduzir-descarga-eletrica-em-tempestades.jpg"
+
   },
   {
     "id": "116",
@@ -1666,8 +1666,7 @@
     "resposta": "D",
     "descricao": "Em 1935, Getúlio Vargas criou o programa A Hora do Brasil que deveria ser transmitido por todas as estações de rádio, de segunda à sexta-feira (exceto feriado), das 19h às 20h. Todas as quintas-feiras eram transmitidas palestras de 10 minutos dirigidas aos trabalhadores. A partir de 1946, o programa passou a se chamar A Voz do Brasil, nome que mantém até hoje.",
     "imgResposta": "https://1.bp.blogspot.com/-XXWhD17yBC4/Wq2gVMgHl9I/AAAAAAAAEGw/wo0_Ru4LO1sLhYZTycNaW_4ZarjWfcjOgCLcBGAs/s1600/getulio%2Bvargas%2Bno%2Bmicrofofone%2Bdo%2BDIP.jpg",
-    "imgPergunta": "",
-    "nível": "Difícil"
+    "imgPergunta": ""
 },
 {
     "id": "117",
@@ -1683,8 +1682,7 @@
     "resposta": "A",
     "descricao": "O teatro nasceu em Atenas, no séc. VI a.C., e estava ligado às celebrações aos deuses, em especial Dionísio.  Os atores usavam máscaras (personas) e havia premiações para os melhores autores.  Os mais lembrados até nossos dias são Sófocles, Ésquilo, Eurípedes e Aristófanes.",
     "imgResposta": "https://i0.wp.com/descobrindoasicilia.com/wp-content/uploads/2016/11/Teatro-Grego-de-Taormina.jpg?fit=1440%2C1080&ssl=1",
-    "imgPergunta": "",
-    "nível": "Difícil"
+    "imgPergunta": ""
 },
 {
     "id": "118",
@@ -1700,8 +1698,7 @@
     "resposta": "A",
     "descricao": "A Paz de Augsburgo reconheceu a divisão do império em territórios católicos e luteranos, a partir do princípio “cuius regio, eius religio”, que significa literalmente “De quem (É) a região, dele (se siga) a religião, ou seja, os súditos deveriam seguir a religião do governante.",
     "imgResposta": "https://martinttipia.files.wordpress.com/2019/08/augsburg.jpg?w=584&h=979",
-    "imgPergunta": "",
-    "nível": "Difícil"
+    "imgPergunta": ""
 },
 {
     "id": "119",
@@ -1717,8 +1714,7 @@
     "resposta": "D",
     "descricao": "Os franceses criaram a chamada França Antártica na região da Baía do Rio de Janeiro (hoje, Baía de Guanabara), entre 1555-1570, para abrigar os huguenotes.  Já os holandeses, ao dominarem o nordeste, deram liberdade religiosa aos judeus e a primeira sinagoga das Américas foi fundada em nosso território.",
     "imgResposta": "https://miro.medium.com/v2/resize:fit:750/1*wXTDbJBJZOzevh1F2nul6Q.jpeg",
-    "imgPergunta": "",
-    "nível": "Difícil"
+    "imgPergunta": ""
 },
 {
     "id": "120",
@@ -1734,8 +1730,7 @@
     "resposta": "B",
     "descricao": "A constituição de 1946 foi uma carta magna democrática e liberal.  Manteve os direitos trabalhistas da Era Vargas e  buscou salvaguardar os direitos dos individuais dos cidadãos tais como, a liberdade de expressão, livre reunião, propriedade privada e à privacidade.",
     "imgResposta": "https://www.unifal-mg.edu.br/remadih/wp-content/uploads/sites/11/2018/09/082FolhaDeJornal-1.jpg",
-    "imgPergunta": "",
-    "nível": "Difícil"
+    "imgPergunta": ""
 },
 {
   "id": "136",
