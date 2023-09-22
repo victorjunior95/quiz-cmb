@@ -16,9 +16,16 @@ const createRoom = (roomId) => {
 //   });
 // }
 
-socket.on('sendLevel', (level) => {
-  localStorage.setItem('actualLevel', level);
-});
+const waitForStart = () => {
+  const startButton = document.getElementById('sendButton');
+  startButton.addEventListener('click', () => {
+    window.location.href = "/pages/Regras.html";
+  });
+}
+
+// socket.on('sendLevel', (level) => {
+//   localStorage.setItem('actualLevel', level);
+// });
 
 
 const main = () => {
@@ -27,7 +34,7 @@ const main = () => {
   localStorage.setItem("roomId", roomId);
   const room = document.getElementById('roomIdSpan');
   room.textContent = roomId;
-  waitForStart(roomId);
+  waitForStart();
 }
 
 const createTeamPanel = (teamName) => {
