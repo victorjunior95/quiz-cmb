@@ -55,7 +55,8 @@ const createClassification = (classification) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const dificuldadeAtual = localStorage.getItem('actualLevel'); // Comece com a dificuldade "facil"
+  const dificuldadeAtual = localStorage.getItem('actualLevel');
+  // Para ativar o 'receiveTimer' precisa atualizar a dificuldade no 'rooms.js' que é feito no Loading.js (socket.emit('changeDifficulty'))
 
   if (dificuldadeAtual === 'facil') {
     socket.emit('clearConnections');
@@ -64,8 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
   exibirPergunta(dificuldadeAtual);
   const answer = document.getElementById('botaoResposta');
 
+  // Falta um emit para escutar de volta o receiveTimer (?)
+  // Seria um socket.emit('setTime') que ocorre na página Loading.js
+
   socket.on('receiveTimer', ({ questionTime, endTime }) => {
     iniciarTempoQuestao(questionTime);
+    // conferir endtime - é o timestamp ("Date.now()") + o tempo da fase
     totalTimer(endTime);
   });
   
@@ -150,11 +155,17 @@ function iniciarTempoQuestao(newTime) {
 
 let totalTimerInterval;
 function totalTimer(endTime) {
-  // console.log(endTime); o endtime está vindo fixo? e por isso não reinicia?
+  // o endtime é fixo, setado em soket.game.setTime
   const actualTime = new Date().getTime();
 
+  // Precisa construir uma condicional em caso de mudança de fase (?)
+  // acho que não
+
+  console.log(`endTime: ${endTime}, atualTime: ${actualTime}, dif:${endTime - actualTime}`);
   const timeLeft = Math.round((endTime - actualTime) / 1000);
-  console.log(timeLeft); // está -12 na segunda fase
+  // Após a mudança de fase ele retorna negativo. Pq?
+    // provavelmente não está mudando a fase no back-end, que deveria ocorrer em Loading.js (socket.emit('changeDifficulty'))
+  console.log('timeleft', timeLeft);
   var hours = 0;
   var minutes = Math.floor(timeLeft / 60);
   var seconds = timeLeft % 60;

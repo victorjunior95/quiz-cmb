@@ -9,7 +9,7 @@ const setTime = (socket) => (roomId) => {
     startTime: new Date().getTime(), 
     endTime: new Date().getTime() + phaseTime,
   }
-  userUtils.userWrite(roomId, rooms[roomId]);
+  userUtils.userWriteNewData(roomId, rooms[roomId]);
   socket.emit('receiveTimer', rooms[roomId].time);
 }
 
@@ -23,8 +23,24 @@ const sendClassification = (socket) => (roomId, users) => {
   socket.emit('receiveTimer', rooms[roomId].time);
 }
 
+const changeDifficulty = (socket) => (roomId, level) => {
+  const rooms = userUtils.userRead();
+  console.log(rooms);
+  console.log(rooms[roomId].difficulty);
+  rooms[roomId].difficulty === 1 ? rooms[roomId].difficulty = 2 : rooms[roomId].difficulty = 3;
+  console.log(rooms);
+  console.log(rooms[roomId].difficulty);
+
+  userUtils.userRewrite(roomId, 'difficulty', level)
+}
+
+const continueGame = (socket) => (roomId) => {
+  socket.to(roomId).emit('gameContinued');
+}
+
 module.exports = {
   setTime,
   startGame,
-  sendClassification
+  sendClassification,
+  changeDifficulty
 }

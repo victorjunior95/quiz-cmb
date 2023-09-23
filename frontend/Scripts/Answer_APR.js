@@ -78,6 +78,13 @@ const main = () => {
   nextButton.addEventListener('click', () => {
     clearInterval(totalTimerInterval);
 
+    if (document.getElementById('total-timer').getAttribute('aria-timer') <= 0) {
+      let currentLevel = localStorage.getItem('actualLevel')
+      let newLevel = currentLevel === 'facil' ? 'media' : 'dificil';
+
+      localStorage.setItem('actualLevel', newLevel);
+    }
+
     window.location.href = nextButtonLink;
   });
 
@@ -126,6 +133,7 @@ function totalTimer(endTime) {
     var minutesStr = minutes.toString().padStart(2, '0');
     var secondsStr = seconds.toString().padStart(2, '0');
 
+    ele.setAttribute('aria-timer', endTime - new Date().getTime());
     ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
   }, 1000);
 };
