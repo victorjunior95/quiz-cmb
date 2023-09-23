@@ -1,69 +1,37 @@
 const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
-const level = localStorage.getItem("actualLevel");
+let level = localStorage.getItem('actualLevel');
+let acabouExist = localStorage.getItem(`${level}`);
 
-const levels = {
-  facil: 1,
-  media: 2,
-  dificil: 3
-}
+
+// O Loading é usado tanto de Answer para Classification, quanto de Classification para Question
 
 socket.on('allUsersConnected', () => {
   window.location.href = "/pages/Quiz_APR.html";
-  
-  // setTimeout(() => {
-  //   window.location.href = "/pages/Quiz_APR.html";
-  // }, 60000);
 });
 
+
 const main = () => {
-  // // Versão 2.0
-  // let paginaAnterior = window.history.go(-1);
-  // const pagesGetLoading = ['Answer_APR.html', 'Classification_APR.html'];
-  // if (level !== 'facil' && paginaAnterior === pagesGetLoading[1]) {
-  //   socket.emit('changeDifficulty', ROOMID, levels[level]);
-  //   socket.emit('setTime', ROOMID);
-  //   socket.emit('startGame', ROOMID);
-  //   socket.on('startedGame', () => {
-  //     window.location.href = "/pages/Quiz_APR.html";
-  //   });
-  // }
-
-  // socket.emit('connectAPR', ROOMID);
-  // socket.emit('startGame', ROOMID);
+  // Versão 3.0
+  // Ele passa por aqui qnd o timer não é 0 (?) SIM
+  // Então, se veio de Answer com tempo: faz o mesmo qnd vai para Classification
   
-
-  // Versão 1.0 - Ainda na fácil, o tempo da fase está reiniciando a cada pergunta
-  if (level === 'facil') {
-    socket.emit('connectAPR', ROOMID);
+  // Ele passa por aqui qnd o timer é 0, ou seja, a chave da fase foi criada no localStorage('localStorage.getItem(`${level}`)')
+  // Então, se veio de Answer com timer zerado: muda fase no back, seta o novo tempo e segue para Classification
+  if (acabouExist !== null) {
+    socket.emit('changeDifficulty', ROOMID);
+    socket.emit('setTime', ROOMID);
     socket.emit('startGame', ROOMID);
+    socket.on('startedGame', () => {
+      window.location.href = "/pages/Quiz_APR.html";
+    });
   }
 
-  console.log('level - Loading', `${typeof level} e ${level}`); // obj e null?
-  console.log('levels - Loading', `${typeof levels[level]} e ${levels[level]}`);
-  
-  socket.emit('changeDifficulty', ROOMID, levels[level]); // está enviando um objeto null
-  // Aqui a fase já precisa estar mudada para setar um novo tempo
-  // Ainda não está mandando as perguntas da nova fase para o usuário
-  socket.emit('setTime', ROOMID);
-  // Sem o código abaixo ele está indo para a pergunta da nova fase, porém não recomeça a contagem do tempo da nova fase
-
-  // Falta redirecionar para a tela de Quiz_APR.html (?) parece que sim
-  // Seria com emit('startGame'), on('startedGame') ou outro?
-  // 1. emit('startGame')
+  // Quando ele vem de Classification, só quer renderizar a próxima pergunta pq a mudança de fase no back acontece qnd vier de Answer timer zerado
+    // Então se veio de Classification: starta o game e segue para Quiz
+  socket.emit('connectAPR', ROOMID);
   socket.emit('startGame', ROOMID);
-
-  // 2. on('startedGame') - Parece que é esse!
-  socket.on('startedGame', () => {
-    window.location.href = "/pages/Quiz_APR.html";
-  });
-
-  // 3. outro
-  // socket.emit('continueGame', ROOMID); // outro
-  // socket.on('gameContinued', () => {
-  //   window.location.href = "/pages/Quiz_USR.html";
-  // });
-
 };
+
 main();

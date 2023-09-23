@@ -4,7 +4,7 @@ const setTime = (socket) => (roomId) => {
   const rooms = userUtils.userRead();
   const difficulty = rooms[roomId].difficulty;
   // const phaseTime = difficulty === 2 ? 2400000 : 1200000;
-  const phaseTime = difficulty === 2 ? 2400000 : 30000; // para teste
+  const phaseTime = difficulty === 2 ? 2400000 : 1200000; // para teste
   rooms[roomId].time = {
     startTime: new Date().getTime(), 
     endTime: new Date().getTime() + phaseTime,
@@ -23,9 +23,8 @@ const sendClassification = (socket) => (roomId, users) => {
   socket.emit('receiveTimer', rooms[roomId].time);
 }
 
-const changeDifficulty = (socket) => (roomId, level) => {
+const changeDifficulty = (socket) => (roomId) => {
   const rooms = userUtils.userRead();
-  // console.log('level', `${typeof level} e ${level}`); // obj e null?
 
   console.log('rooms antes da mudança', rooms);
   console.log('rooms[roomId].difficulty antes da mudança', rooms[roomId].difficulty);

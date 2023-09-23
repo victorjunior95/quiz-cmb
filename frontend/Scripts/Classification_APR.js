@@ -76,12 +76,10 @@ function totalTimer(endTime) {
       console.log('Função de ir pra página de troca de dificuldade', nextButtonLink);
     }
 
-    // Novo
     // var hoursStr = hours.toString().padStart(2, '0');
     // var minutesStr = minutes.toString().padStart(2, '0');
     // var secondsStr = seconds.toString().padStart(2, '0');
 
-    // Novo
     // ele.setAttribute('aria-timer', endTime - new Date().getTime())
     // ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
   }, 1000);

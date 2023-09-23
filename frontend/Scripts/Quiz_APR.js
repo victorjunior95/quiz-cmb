@@ -65,9 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
   exibirPergunta(dificuldadeAtual);
   const answer = document.getElementById('botaoResposta');
 
-  // Falta um emit para escutar de volta o receiveTimer (?)
-  // Seria um socket.emit('setTime') que ocorre na página Loading.js
-
   socket.on('receiveTimer', ({ questionTime, endTime }) => {
     iniciarTempoQuestao(questionTime);
     // conferir endtime - é o timestamp ("Date.now()") + o tempo da fase
@@ -157,9 +154,6 @@ let totalTimerInterval;
 function totalTimer(endTime) {
   // o endtime é fixo, setado em soket.game.setTime
   const actualTime = new Date().getTime();
-
-  // Precisa construir uma condicional em caso de mudança de fase (?)
-  // acho que não
 
   console.log(`endTime: ${endTime}, atualTime: ${actualTime}, dif:${endTime - actualTime}`);
   const timeLeft = Math.round((endTime - actualTime) / 1000);

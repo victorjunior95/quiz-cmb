@@ -1,6 +1,8 @@
 const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
+let currentLevel = localStorage.getItem('actualLevel');
 const ROOMID = localStorage.getItem("roomId");
+
 
 const showAnswer = (question) => {
   const { id, tema, pergunta, alternativas, imgResposta, resposta, descricao } = question;
@@ -78,8 +80,12 @@ const main = () => {
   nextButton.addEventListener('click', () => {
     clearInterval(totalTimerInterval);
 
+    // O tempo da fase está reiniciando 
+
+    // Posso passar essa lógica para o if no final do script (?)
     if (document.getElementById('total-timer').getAttribute('aria-timer') <= 0) {
-      let currentLevel = localStorage.getItem('actualLevel')
+      localStorage.setItem(`${currentLevel}`, 'acabou');
+
       let newLevel = currentLevel === 'facil' ? 'media' : 'dificil';
 
       localStorage.setItem('actualLevel', newLevel);
