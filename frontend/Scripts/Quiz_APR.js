@@ -151,45 +151,43 @@ function iniciarTempoQuestao(newTime) {
 };
 
 let totalTimerInterval;
+
 function totalTimer(endTime) {
-  // o endtime é fixo, setado em soket.game.setTime
-  const actualTime = new Date().getTime();
+  const { time } = endTime;
 
-  console.log(`endTime: ${endTime}, atualTime: ${actualTime}, dif:${endTime - actualTime}`);
-  const timeLeft = Math.round((endTime - actualTime) / 1000);
-  // Após a mudança de fase ele retorna negativo. Pq?
-    // provavelmente não está mudando a fase no back-end, que deveria ocorrer em Loading.js (socket.emit('changeDifficulty'))
-  console.log('timeleft', timeLeft);
-  var hours = 0;
-  var minutes = Math.floor(timeLeft / 60);
-  var seconds = timeLeft % 60;
-  var ele = document.getElementById('total-timer');
-  var totalTimerInterval = setInterval(() => {
-    if (seconds === 0) {
-      if (minutes === 0) {
-        hours--;
-        minutes = 59;
-      } else {
-        minutes--;
+  const counter = document.getElementById("counter");
+  const storageTime = JSON.parse(localStorage.getItem('currentTime'));
+  const getCurrentTime = storageTime?.started ? storageTime.time : time;
+
+  var timeInMilliseconds = getCurrentTime;
+
+    // Função para atualizar a contagem regressiva
+    function updateCountDown() {
+      var minutesRemaining = Math.floor(timeInMilliseconds / 60000);
+      var secondsRemaining = Math.floor((timeInMilliseconds % 60000) / 1000);
+
+      // Formate os minutos e segundos para exibição
+      var formattedMinutes = minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining;
+      var formattedSeconds = secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining;
+
+      // Exiba a contagem regressiva na div com id "contador"
+      counter.innerHTML = formattedMinutes + ":" + formattedSeconds;
+
+      // Reduza o tempo em milissegundos em 1 segundo (1000 milissegundos)
+      timeInMilliseconds -= 1000;
+
+      localStorage.setItem("currentTime", JSON.stringify({ started: true, time: timeInMilliseconds}));
+
+      // Verifique se a contagem regressiva chegou a zero
+      if (timeInMilliseconds < 0) {
+        clearInterval(intervalo);
+        counter.innerHTML = "Tempo esgotado!";
       }
-      seconds = 59;
-    } else {
-      seconds--;
     }
 
-    hours < 0 ? hours = 0 : hours;
-    minutes < 0 ? minutes = 0 : minutes;
-    seconds < 0 ? seconds = 0 : seconds;
+    // Chame a função de atualização a cada segundo (1000 milissegundos)
+    var interval = setInterval(updateCountDown, 1000);
 
-    if (hours === 0 && minutes === 0 && seconds === 0) {
-      clearInterval(totalTimerInterval);
-      console.log('Sem função aqui pra não parar o jogo quando as pessoas podem escolher respostas.');
-    }
-
-    var hoursStr = hours.toString().padStart(2, '0');
-    var minutesStr = minutes.toString().padStart(2, '0');
-    var secondsStr = seconds.toString().padStart(2, '0');
-
-    ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
-  }, 1000);
+    // Inicialize a contagem regressiva
+    updateCountDown();
 };

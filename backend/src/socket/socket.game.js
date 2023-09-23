@@ -3,12 +3,23 @@ const userUtils = require('../utils/users');
 const setTime = (socket) => (roomId) => {
   const rooms = userUtils.userRead();
   const difficulty = rooms[roomId].difficulty;
-  // const phaseTime = difficulty === 2 ? 2400000 : 1200000;
-  const phaseTime = difficulty === 2 ? 2400000 : 60000; // para teste
+  const getTime = {
+    1: {
+      time: 1200000
+    },
+    2: {
+      time: 2400000
+    },
+    3: {
+      time: 1200000
+    }
+  };
+
   rooms[roomId].time = {
     startTime: new Date().getTime(), 
-    endTime: new Date().getTime() + phaseTime,
-  }
+    endTime: getTime[difficulty]
+  };
+
   userUtils.userWriteNewData(roomId, rooms[roomId]);
   socket.emit('receiveTimer', rooms[roomId].time);
 }

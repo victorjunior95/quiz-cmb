@@ -67,9 +67,9 @@ socket.on('showAnswer', (question) => {
   socket.emit('sendQuestion', question, ROOMID);
 });
 
-socket.on('receiveTimer', ({ endTime }) => {
-  totalTimer(endTime);
-});
+// socket.on('receiveTimer', ({ endTime }) => {
+//   totalTimer(endTime);
+// });
 
 let nextButtonLink = "/pages/Loading_APR.html";
 
@@ -83,7 +83,7 @@ const main = () => {
     // O tempo da fase está reiniciando 
 
     // Posso passar essa lógica para o if no final do script (?)
-    if (document.getElementById('total-timer').getAttribute('aria-timer') <= 0) {
+    if (document.getElementById('counter').getAttribute('aria-timer') <= 0) {
       localStorage.setItem(`${currentLevel}`, 'acabou');
 
       let newLevel = currentLevel === 'facil' ? 'media' : 'dificil';
@@ -105,41 +105,28 @@ const main = () => {
 main();
 
 let totalTimerInterval;
-function totalTimer(endTime) {
-  const actualTime = new Date().getTime();
-  const timeLeft = Math.round((endTime - actualTime) / 1000);
-  var hours = 0;
-  var minutes = Math.floor(timeLeft / 60);
-  var seconds = timeLeft % 60;
-  var ele = document.getElementById('total-timer');
-  var totalTimerInterval = setInterval(() => {
-    if (seconds === 0) {
-      if (minutes === 0) {
-        hours--;
-        minutes = 59;
-      } else {
-        minutes--;
-      }
-      seconds = 59;
-    } else {
-      seconds--;
+
+function totalTimer() {
+  const counter = document.getElementById("counter");
+
+  const localStorageTime = JSON.parse(localStorage.getItem('currentTime'));
+  const currentTime = localStorageTime.time;
+
+  var timeInMilliseconds = currentTime;
+
+    // Função para buscar onde time foi pausado
+    function showsPausedTime() {
+      var minutesRemaining = Math.floor(timeInMilliseconds / 60000);
+      var secondsRemaining = Math.floor((timeInMilliseconds % 60000) / 1000);
+
+      // Formate os minutos e segundos para exibição
+      var formattedMinutes = minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining;
+      var formattedSeconds = secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining;
+
+      // Exibe tempo pausado na tela
+      counter.innerHTML = formattedMinutes + ":" + formattedSeconds;
     }
 
-    hours < 0 ? hours = 0 : hours;
-    minutes < 0 ? minutes = 0 : minutes;
-    seconds < 0 ? seconds = 0 : seconds;
-
-    if (hours === 0 && minutes === 0 && seconds === 0) {
-      clearInterval(totalTimerInterval);
-      nextButtonLink = "/pages/Classification_APR.html";
-      console.log('Função de ir pra página de troca de dificuldade', nextButtonLink);
-    }
-
-    var hoursStr = hours.toString().padStart(2, '0');
-    var minutesStr = minutes.toString().padStart(2, '0');
-    var secondsStr = seconds.toString().padStart(2, '0');
-
-    ele.setAttribute('aria-timer', endTime - new Date().getTime());
-    ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
-  }, 1000);
+    // Inicializa função
+    showsPausedTime();
 };
