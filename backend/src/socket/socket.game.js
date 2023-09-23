@@ -25,15 +25,25 @@ const sendClassification = (socket) => (roomId, users) => {
 
 const changeDifficulty = (socket) => (roomId, level) => {
   const rooms = userUtils.userRead();
-  console.log(rooms);
-  console.log(rooms[roomId].difficulty);
-  rooms[roomId].difficulty === 1 ? rooms[roomId].difficulty = 2 : rooms[roomId].difficulty = 3;
-  console.log(rooms);
-  console.log(rooms[roomId].difficulty);
+  // console.log('level', `${typeof level} e ${level}`); // obj e null?
 
-  userUtils.userRewrite(roomId, 'difficulty', level)
+  console.log('rooms antes da mudança', rooms);
+  console.log('rooms[roomId].difficulty antes da mudança', rooms[roomId].difficulty);
+  console.log('rooms[roomId].difficulty antes da mudança', typeof rooms[roomId].difficulty);
+
+  rooms[roomId].difficulty === 1 ? rooms[roomId].difficulty = 2 : rooms[roomId].difficulty = 3;
+
+  console.log('rooms depois da mudança', rooms);
+  console.log('rooms[roomId].difficulty depois da mudança', rooms[roomId].difficulty);
+
+  // O erro está aqui!!!
+  userUtils.userRewrite(roomId, 'difficulty', rooms[roomId].difficulty);
+  
+  const newRooms = userUtils.userRead();
+  console.log('conferindo a mudança:', JSON.stringify(newRooms, null, 2));
 }
 
+// Será que vai ser útil? Acho que não
 const continueGame = (socket) => (roomId) => {
   socket.to(roomId).emit('gameContinued');
 }
@@ -42,5 +52,6 @@ module.exports = {
   setTime,
   startGame,
   sendClassification,
-  changeDifficulty
+  changeDifficulty,
+  continueGame
 }

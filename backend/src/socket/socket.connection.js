@@ -21,6 +21,9 @@ const connection = (socket) => {
   socket.on('startGame', game.startGame(socket));
   socket.on('sendClassification', game.sendClassification(socket));
   socket.on('changeDifficulty', game.changeDifficulty(socket));
+  // Será que vai ser útil? Acho que não
+  socket.on('continueGame', game.continueGame(socket));
+
 
   // Question events
   socket.on('sendQuestion', question.sendQuestion(socket));
