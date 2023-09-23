@@ -21,11 +21,12 @@ const main = () => {
   // Então, se veio de Answer com timer zerado: muda fase no back, seta o novo tempo e segue para Classification
   if (acabouExist !== null) {
     socket.emit('changeDifficulty', ROOMID);
+    // Acho que o erro agora está aqui!!!
     socket.emit('setTime', ROOMID);
     socket.emit('startGame', ROOMID);
-    socket.on('startedGame', () => {
-      window.location.href = "/pages/Quiz_APR.html";
-    });
+    // socket.on('startedGame', () => {
+    //   window.location.href = "/pages/Quiz_APR.html";
+    // });
   }
 
   // Quando ele vem de Classification, só quer renderizar a próxima pergunta pq a mudança de fase no back acontece qnd vier de Answer timer zerado

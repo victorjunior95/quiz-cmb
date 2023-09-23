@@ -1,4 +1,5 @@
 const socket = io('http://localhost:3001');
+localStorage.clear();
 
 const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
