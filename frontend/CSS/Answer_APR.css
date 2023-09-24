@@ -9,6 +9,24 @@ body {
   background-color: #0AABBA;
 }
 
+.question-timer {
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+}
+
+.question-timer > p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .divPai {
   min-height: 100vh;
   background-color: #ffffff ;
