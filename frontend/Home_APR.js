@@ -1,27 +1,24 @@
 const socket = io('http://localhost:3001');
 localStorage.clear();
 
+const userConnecteds = [];
+
 const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
 }
 
-const waitForStart = (roomId) => {
+const waitForStart = () => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
     const getUsersLength = Number(localStorage.getItem('usersLength'));
 
     if (getUsersLength > 0) {
-      window.location.href = "/pages/LoadingInitial_APR.html";
+      window.location.href = "/pages/Regras.html";
     } else {
       alert('Nenhum jogador na sala!');
     }
   });
 }
-
-socket.on('sendLevel', (level) => {
-  localStorage.setItem('actualLevel', level);
-});
-
 
 const main = () => {
   const roomId = Math.random().toString(36).substring(7)
@@ -30,7 +27,7 @@ const main = () => {
   localStorage.setItem("usersLength", 0);
   const room = document.getElementById('roomIdSpan');
   room.textContent = roomId;
-  waitForStart(roomId);
+  waitForStart();
 }
 
 const getAllUsers = (users) => {
@@ -56,6 +53,11 @@ socket.on('currentUser', (currentUser) => {
 
 socket.on('usersConnected', (allUsers) => {
   getAllUsers(allUsers);
+});
+
+socket.on('userConnected', (schoolName) => {
+  userConnecteds.push(schoolName);
+  createTeamPanel(schoolName);
 });
 
 window.onload = main;

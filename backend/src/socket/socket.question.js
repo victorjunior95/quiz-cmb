@@ -13,8 +13,8 @@ const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => 
   socket.to(roomId).emit('schoolAnswered', schoolName);
 
   const isCorrect = answer === question.resposta;
-  const newPoints = isCorrect ? 10 : -10;
   const room = userUtils.userRead()[roomId];
+  const newPoints = isCorrect ? 10 * room.difficulty : -10;
 
   const updatedUsers = room.users.map((user) => {
     if (user.schoolName === schoolName) {
@@ -28,10 +28,6 @@ const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => 
 
   userUtils.userWriteNewData(roomId, { ...room, users: updatedUsers });
 }
-
-// timesOver vai para a próxima fase
-// Se estiver no meio de uma pergunta, espera acabar e então vai para a tela de mudança de fase
-// Se precaver para mudança de fase no meio de Loading
 
 module.exports = {
   sendQuestion,
