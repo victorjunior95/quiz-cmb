@@ -76,9 +76,8 @@ const main = () => {
   socket.emit("connectAPRAnswer", ROOMID);
 
   const nextButton = document.getElementById("botaoAvancar");
-  nextButton.addEventListener("click", () => {
-    clearInterval(totalTimerInterval);
 
+  const updateLevelIfTimeOrQuestionsAreEmpty = () => {
     const completedAnswers = JSON.parse(
       localStorage.getItem("perguntasCompletas")
     );
@@ -87,7 +86,6 @@ const main = () => {
     // O tempo da fase está reiniciando
 
     // Posso passar essa lógica para o if no final do script (?)
-    
     localStorage.setItem(
       "changeDifficulty",
       JSON.stringify({ hasChangedLastAnswer: false })
@@ -107,14 +105,18 @@ const main = () => {
         JSON.stringify({ hasChangedLastAnswer: true })
       );
     }
+  }
 
+  nextButton.addEventListener("click", () => {
+    clearInterval(totalTimerInterval);
+    updateLevelIfTimeOrQuestionsAreEmpty();
     window.location.href = nextButtonLink;
   });
 
   const classificationButton = document.getElementById("botaoClassificacao");
   classificationButton.addEventListener("click", () => {
     clearInterval(totalTimerInterval);
-    console.log("AnswerClass");
+    updateLevelIfTimeOrQuestionsAreEmpty();
     window.location.href = "/pages/Classification_APR.html";
   });
 };
