@@ -71,10 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   socket.on('receiveTimer', ({ questionTime, endTime }) => {
     initTimeQuestion(questionTime);
-    // Endtime virá diretamente do backend em milissegundos
     totalTimer(endTime);
   });
   
+  // Aparentemente sem uso - conferir com o time
   socket.emit('requestClassification', ROOMID);
 
   socket.on('classification', (classification) => {
