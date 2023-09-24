@@ -195,8 +195,18 @@ function totalTimer(endTime) {
 
       // Verifique se a contagem regressiva chegou a zero
       if (timeInMilliseconds < 0) {
-        clearInterval(intervalo);
-        counter.innerHTML = "Tempo esgotado!";
+        clearInterval(timeInMilliseconds);
+        const currentLevel = localStorage.getItem("actualLevel");
+        let newLevel = currentLevel === "facil" ? "media" : "dificil";
+
+        console.log('newLevel', newLevel);
+        localStorage.setItem("actualLevel", newLevel);
+        localStorage.setItem(
+          "currentTime",
+          JSON.stringify({ started: false, time: 0 })
+        );
+
+        counter.innerHTML = '00:00'
       }
     }
 

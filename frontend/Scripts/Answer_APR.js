@@ -157,7 +157,7 @@ function totalTimer() {
 
       // Verifique se a contagem regressiva chegou a zero
       if (timeInMilliseconds < 0) {
-        clearInterval(intervalo);
+        clearInterval(timeInMilliseconds);
         counter.innerHTML = "Tempo esgotado!";
       }
     }
