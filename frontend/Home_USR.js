@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   sendButton.addEventListener('click', async () => {
     try {
+      const getRoomId = localStorage.getItem('roomId');
       const inputElement = document.getElementById('textInput');
       const inputRoom = document.getElementById('roomIdInput');
       const inputRoomValue = inputRoom.value;
@@ -26,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      if (getRoomId !== inputRoomValue) {
+        alert("Código da sala inexistente!");
+        return;
+      }
+
       // Dados a serem enviados para o servidor
       const data = {
         user: inputValue,
@@ -33,8 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       localStorage.setItem("roomData", JSON.stringify(data));
-      
       socket.emit('joinRoom', data.user, data.roomId);
+
+      const sendButton = document.getElementById('sendButton');
+      sendButton.style.display = "none";
+
+      const cLoaderContainer = document.getElementById('c-loader-container');
+      cLoaderContainer.style.display = "contents";
 
       // Enviando a requisição POST para o backend usando a Fetch API
       // const response = await fetch(`${BASE_URL}/users`, {

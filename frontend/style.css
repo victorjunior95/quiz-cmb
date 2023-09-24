@@ -26,6 +26,8 @@
     padding: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     margin-bottom: 15px;
 }
@@ -55,7 +57,7 @@
     border-radius: 10px;
     color: black;
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     text-align: center;
     font-weight: bold;    
 }
@@ -81,4 +83,29 @@
 .sendButton:active {
     scale: 0.98;
     transition-duration: 0.2s;
+}
+
+.c-loader-container {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.c-loader-container > h4 {
+    margin-top: 5px;
+}
+
+.c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
 }
