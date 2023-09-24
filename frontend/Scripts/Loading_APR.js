@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'quiz-cmb-production.up.railway.app';
 const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
 const changeDifficulty = JSON.parse(localStorage.getItem("changeDifficulty"));

@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3001');
+const socket = io('quiz-cmb-production.up.railway.app');
 
 const main = () => {
   startGame()
