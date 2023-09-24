@@ -29,6 +29,7 @@ const connection = (socket) => {
   // Classification events
   socket.on('requestClassification', classification.requestClassification(socket));
 
+  //Está sendo chamado em todo momento, verificar a necessidade
   // socket.on('disconnect', () => {
   //   console.log('user disconnected');
   // });
