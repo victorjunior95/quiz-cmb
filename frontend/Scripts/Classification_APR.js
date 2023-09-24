@@ -35,7 +35,17 @@ let nextButtonLink = "/pages/Loading_APR.html";
 const main = () => {
   socket.emit('connectAPRClassification', ROOMID);
 
+  const completedAnswers = JSON.parse(
+    localStorage.getItem("perguntasCompletas")
+  );
+  const isLastDifficultyCompleted = !completedAnswers['dificil']?.length
+  
   const nextButton = document.getElementById("botaoAvancar");
+
+  if(isLastDifficultyCompleted) {
+    nextButton.remove()
+  }
+
   nextButton.addEventListener('click', () => {
     window.location.href = nextButtonLink;
   });
