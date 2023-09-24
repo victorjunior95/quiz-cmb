@@ -5,27 +5,31 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #0AABBA;
+.divTotal {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #0AABBA;
+    min-height: 100vh;
 }
 
 .divPai {
-    min-height: 100vh;
-    background-color: #ffffff ;
-    color: rgb(0, 0, 0);
-    padding: 100px;
-    text-align: left;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
-    margin: 50px;
+    text-align: left;
+    background-color: #ffffff ;
     border-radius: 45px;
+    padding: 35px;
+    gap: 10px;
+    margin: 20px;
 }
 
 p {
-    width: 100%;
     color: black; 
     font-size: 20px;
     font-weight: bold;
@@ -47,7 +51,7 @@ footer {
 }
 
 .comecarQuiz {
-    width: 110px;
+    width: 100%;
     padding: 15px 0;
     border: 3px solid black;
     border-radius: 30px;

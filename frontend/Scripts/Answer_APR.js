@@ -4,8 +4,7 @@ let currentLevel = localStorage.getItem("actualLevel");
 const ROOMID = localStorage.getItem("roomId");
 
 const showAnswer = (question) => {
-  const { id, tema, pergunta, alternativas, imgResposta, resposta, descricao } =
-    question;
+  const { id, tema, pergunta, alternativas, imgResposta, resposta, descricao } = question;
 
   const divAppend = document.getElementById("page_apr");
   const divPergunta = document.createElement("div");
@@ -15,6 +14,10 @@ const showAnswer = (question) => {
   const textPergunta = document.createElement("text");
   const textDesc = document.createElement("text");
 
+  const textRespostaCorreta = document.createElement("text");
+  textRespostaCorreta.textContent = "Resposta correta:";
+  textRespostaCorreta.className = "textRespostaCorreta";
+
   textTema.textContent = tema;
   textTema.className = "textTema";
   textPergunta.textContent = pergunta;
@@ -23,40 +26,44 @@ const showAnswer = (question) => {
   textDesc.textContent = descricao;
   textDesc.className = "textDesc";
 
-  for (let index = 0; index < alternativas.length; index++) {
-    const element = alternativas[index];
-    const isCorrect = element.slice(0, 1) === resposta;
+  divAlternativas.classList.add("divAlternativas");
 
+  // Encontre a alternativa correta
+  const correctAlternative = alternativas.find((alternative) => alternative.slice(0, 1) === resposta);
+
+  if (correctAlternative) {
     const textAlternativa = document.createElement("li");
-    textAlternativa.id = element.slice(0, 1);
-    textAlternativa.textContent = element;
-    textAlternativa.value = element.slice(0, 1);
+    textAlternativa.id = correctAlternative.slice(0, 1);
+    textAlternativa.textContent = correctAlternative;
+    textAlternativa.value = correctAlternative.slice(0, 1);
     textAlternativa.className = "textAlternativa";
     textAlternativa.style.listStyleType = "none";
-
-    if (isCorrect) {
-      textAlternativa.style.backgroundColor = "green";
-      textAlternativa.style.color = "white";
-    }
-
+    textAlternativa.style.backgroundColor = "green";
+    textAlternativa.style.border = "green";
+    textAlternativa.style.color = "white";
     divAlternativas.appendChild(textAlternativa);
   }
 
   divPergunta.appendChild(textTema);
-  divPergunta.appendChild(textPergunta);
+
+  divPergunta.appendChild(textRespostaCorreta);
+
+  if (correctAlternative) {
+    divPergunta.appendChild(divAlternativas);
+  }
+
   divPergunta.appendChild(textDesc);
+
   if (imgResposta !== "") {
     const imgElement = document.createElement("img");
     imgElement.src = imgResposta;
-    divImagem.appendChild(divAlternativas);
     divImagem.appendChild(imgElement);
     divPergunta.appendChild(imgElement);
   }
+
   divPergunta.classList.add("divPergunta");
-  divAlternativas.classList.add("divAlternativas");
   divAppend.appendChild(divPergunta);
-  divAppend.appendChild(divAlternativas);
-};
+};  
 
 socket.on("showAnswer", (question) => {
   document.getElementById("loading").remove();
