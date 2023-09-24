@@ -74,15 +74,14 @@ const main = () => {
   socket.emit("connectAPRAnswer", ROOMID);
 
   const nextButton = document.getElementById("botaoAvancar");
-  nextButton.addEventListener("click", () => {
-    clearInterval(totalTimerInterval);
 
+  const updateLevelIfTimeOrQuestionsAreEmpty = () => {
     const completedAnswers = JSON.parse(
       localStorage.getItem("perguntasCompletas")
     );
     const currentTime = JSON.parse(localStorage.getItem("currentTime"));
     const isCurrentLevelCompleted = !completedAnswers[currentLevel]?.length;
-    
+
     localStorage.setItem(
       "changeDifficulty",
       JSON.stringify({ hasChangedLastAnswer: false })
@@ -102,13 +101,20 @@ const main = () => {
         JSON.stringify({ hasChangedLastAnswer: true })
       );
     }
+  }
 
+  nextButton.addEventListener("click", () => {
+    clearInterval(totalTimerInterval);
+    updateLevelIfTimeOrQuestionsAreEmpty();
     window.location.href = nextButtonLink;
   });
 
   const classificationButton = document.getElementById("botaoClassificacao");
   classificationButton.addEventListener("click", () => {
     clearInterval(totalTimerInterval);
+
+    updateLevelIfTimeOrQuestionsAreEmpty();
+
     window.location.href = "/pages/Classification_APR.html";
   });
 };
