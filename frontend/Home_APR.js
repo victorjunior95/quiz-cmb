@@ -25,11 +25,6 @@ const waitForStart = () => {
   });
 }
 
-// socket.on('sendLevel', (level) => {
-//   localStorage.setItem('actualLevel', level);
-// });
-
-
 const main = () => {
   const roomId = Math.random().toString(36).substring(7)
   createRoom(roomId);
