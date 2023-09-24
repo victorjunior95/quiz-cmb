@@ -38,7 +38,8 @@ const joinRoom = (socket) => (schoolName, roomId) => {
   userUtils.userWriteNewData(roomId, { ...rooms[roomId], users });
   socket.join(roomId);
   console.log(`User ${schoolName} connected to room ${roomId}`);
-  socket.to(roomId).emit('userConnected', schoolName);
+  socket.to(roomId).emit('currentUser', schoolName);
+  socket.to(roomId).emit('usersConnected', users);
 }
 
 const connectAPR = (socket) => (roomId) => {
