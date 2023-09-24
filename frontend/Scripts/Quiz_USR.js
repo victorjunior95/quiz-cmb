@@ -21,6 +21,7 @@ let questionAtual;
 let answerSent = false;
 
 function createDivQuestion(question, divAppend) {
+  localStorage.setItem("alternativaSelecionada", "");
   answerSent = false;
   questionAtual = question;
   const { id, tema, pergunta, alternativas, imgPergunta } = question;

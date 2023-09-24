@@ -46,12 +46,13 @@ const connectAnswer = (socket) => (roomId) => {
   const room = userUtils.userRead()[roomId];
   waitingUsers.push(roomId);
 
-  if (waitingUsers.length === room.users.length) {
+  // Sem isso quebra a página de resposta, mas com isso tbm quebra a próxima pergunta
+  // if (waitingUsers.length === room.users.length) {
 
-    socket.to(roomId).emit('showAnswer', room.atualQuestion);
+  //   socket.to(roomId).emit('showAnswer', room.atualQuestion);
 
-    waitingUsers = [];
-  }
+  //   waitingUsers = [];
+  // }
 }
 
 const connectClassification = (socket) => (roomId) => {
