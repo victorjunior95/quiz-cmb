@@ -22,14 +22,15 @@ body {
 }
 
 .question-timer {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   background-color: #fff;
   border: 10px solid #000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .question-timer > p {
