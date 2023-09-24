@@ -133,27 +133,38 @@ let totalTimerInterval;
 
 function totalTimer() {
   const counter = document.getElementById("counter");
+  const storageTime = JSON.parse(localStorage.getItem('currentTime'));
+  const getCurrentTime = storageTime.time;
 
-  const localStorageTime = JSON.parse(localStorage.getItem("currentTime"));
-  const currentTime = localStorageTime.time;
+  var timeInMilliseconds = getCurrentTime;
 
-  var timeInMilliseconds = currentTime;
+    // Função para atualizar a contagem regressiva
+    function updateCountDown() {
+      var minutesRemaining = Math.floor(timeInMilliseconds / 60000);
+      var secondsRemaining = Math.floor((timeInMilliseconds % 60000) / 1000);
 
-  // Função para buscar onde time foi pausado
-  function showsPausedTime() {
-    var minutesRemaining = Math.floor(timeInMilliseconds / 60000);
-    var secondsRemaining = Math.floor((timeInMilliseconds % 60000) / 1000);
+      // Formate os minutos e segundos para exibição
+      var formattedMinutes = minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining;
+      var formattedSeconds = secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining;
 
-    // Formate os minutos e segundos para exibição
-    var formattedMinutes =
-      minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining;
-    var formattedSeconds =
-      secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining;
+      // Exiba a contagem regressiva na div com id "contador"
+      counter.innerHTML = formattedMinutes + ":" + formattedSeconds;
 
-    // Exibe tempo pausado na tela
-    counter.innerHTML = formattedMinutes + ":" + formattedSeconds;
-  }
+      // Reduza o tempo em milissegundos em 1 segundo (1000 milissegundos)
+      timeInMilliseconds -= 1000;
 
-  // Inicializa função
-  showsPausedTime();
+      localStorage.setItem("currentTime", JSON.stringify({ started: true, time: timeInMilliseconds}));
+
+      // Verifique se a contagem regressiva chegou a zero
+      if (timeInMilliseconds < 0) {
+        clearInterval(intervalo);
+        counter.innerHTML = "Tempo esgotado!";
+      }
+    }
+
+    // Chame a função de atualização a cada segundo (1000 milissegundos)
+    var interval = setInterval(updateCountDown, 1000);
+
+    // Inicialize a contagem regressiva
+    updateCountDown();
 }
