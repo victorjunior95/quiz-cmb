@@ -7,13 +7,6 @@ const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
 }
 
-// const waitForStart = (roomId) => {
-//   const startButton = document.getElementById('sendButton');
-//   startButton.addEventListener('click', () => {
-//     window.location.href = "/pages/LoadingInitial_APR.html";
-//   });
-// }
-
 const waitForStart = () => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
