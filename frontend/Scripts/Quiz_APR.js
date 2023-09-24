@@ -6,9 +6,8 @@ const questionTime = 30;
 socket.emit('connectAPR', ROOMID);
 
 let perguntaAtual;
-let dificuldadeAtual = localStorage.getItem('actualLevel'); // Comece com a dificuldade "facil"
 
-function exibirPergunta() {
+function exibirPergunta(dificuldadeAtual) {
   let quizLs = JSON.parse(localStorage.getItem("perguntasCompletas"));
   const perguntasDaDificuldadeAtual = quizLs[dificuldadeAtual];
 
@@ -56,11 +55,27 @@ const createClassification = (classification) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  socket.emit('clearConnections');
+  let dificuldadeAtual = localStorage.getItem('actualLevel');
+  // Para ativar o 'receiveTimer' precisa atualizar a dificuldade no 'rooms.js' que é feito no Loading.js (socket.emit('changeDifficulty'))
 
-  exibirPergunta();
+  if (!dificuldadeAtual) {
+    localStorage.setItem('actualLevel', 'facil');
+    dificuldadeAtual = 'facil';
+  }
+
+  if (dificuldadeAtual === 'facil') {
+    socket.emit('clearConnections');
+  }
+
+  exibirPergunta(dificuldadeAtual);
   const answer = document.getElementById('botaoResposta');
 
+  socket.on('receiveTimer', ({ questionTime, endTime }) => {
+    initTimeQuestion(questionTime);
+    // Endtime virá diretamente do backend em milissegundos
+    totalTimer(endTime);
+  });
+  
   socket.emit('requestClassification', ROOMID);
 
   socket.on('classification', (classification) => {
@@ -72,14 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     school.style.backgroundColor = "green";
   });
 
-  socket.on('receiveTimer', ({ questionTime, endTime }) => {
-    console.log('Quiz_APR', questionTime)
-    iniciarTempoQuestao(questionTime);
-    totalTimer(endTime);
-  });
-
   answer.addEventListener('click', async () => {
-    clearInterval(totalTimerInterval);
     window.location.href = "/pages/Answer_APR.html";
   });
 });
@@ -90,13 +98,13 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   const divImagem = document.createElement('div');
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
-  
+
   textTema.textContent = tema;
   textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
   textPergunta.className = 'textPergunta';
   textPergunta.id = id;
-  
+
   for(let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
 
@@ -120,65 +128,82 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     divImagem.appendChild(imgElement);
     divPergunta.appendChild(imgElement);
   }
-  divPergunta.className = 'divPergunta'; 
+  divPergunta.className = 'divPergunta';
   divPergunta.classList.add("pergunta");
   divAlternativas.classList.add("alternativas");
   divAppend.appendChild(divPergunta);
   divAppend.appendChild(divAlternativas);
 }
 
-let questaoTimerInterval;
+function initTimeQuestion(questionTime) {
+  // Busca elemento HTML para renderizar timer
+  const questionTimeEle = document.getElementById('question-time');
 
-function iniciarTempoQuestao(newTime) {
-  let questaoTimer = newTime;
-  const ele = document.getElementById('questao-timer');
-  ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
+  // Inicializa o contador com o tempo fornecido em segundos
+  let remainingTime = questionTime;
 
-  clearInterval(questaoTimerInterval); // Limpe qualquer intervalo anterior
-  questaoTimerInterval = setInterval(() => {
-    ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
-    questaoTimer--;
+  // Função para atualizar o contador na tela
+  function updateTimer() {
+    // Renderiza o tempo restante na tela
+    questionTimeEle.textContent = remainingTime >= 10 ? remainingTime : '0' + remainingTime;
 
-    if (questaoTimer < 0) {
-      clearInterval(questaoTimerInterval);
+    // Reduz o tempo em 1 segundo
+    remainingTime--;
+
+    if (remainingTime <= 0) {
+      // Redireciona para a página desejada quando o tempo acabar
       window.location.href = "/pages/Answer_APR.html";
     }
-  }, 1000);
+  }
+
+  // Chama a função inicialmente para exibir o tempo inicial
+  updateTimer();
+
+  // Define um intervalo para atualizar o contador a cada segundo
+  const timerInterval = setInterval(updateTimer, 1000);
+
+  // Certifique-se de parar o intervalo quando o tempo acabar ou quando necessário
+  if (remainingTime < 0) {
+    clearInterval(timerInterval);
+  }
 };
 
-let totalTimerInterval;
 function totalTimer(endTime) {
-  const actualTime = new Date().getTime();
-  const timeLeft = Math.round((endTime - actualTime) / 1000);
-  var hours = 0;
-  var minutes = Math.floor(timeLeft / 60);
-  var seconds = timeLeft % 60;
-  var ele = document.getElementById('total-timer');
-  var totalTimerInterval = setInterval(() => {
-    if (seconds === 0) {
-      if (minutes === 0) {
-        hours--;
-        minutes = 59;
-      } else {
-        minutes--;
+  const { time } = endTime;
+
+  const counter = document.getElementById("counter");
+  const storageTime = JSON.parse(localStorage.getItem('currentTime'));
+  const getCurrentTime = storageTime?.started ? storageTime.time : time;
+
+  var timeInMilliseconds = getCurrentTime;
+
+    // Função para atualizar a contagem regressiva
+    function updateCountDown() {
+      var minutesRemaining = Math.floor(timeInMilliseconds / 60000);
+      var secondsRemaining = Math.floor((timeInMilliseconds % 60000) / 1000);
+
+      // Formate os minutos e segundos para exibição
+      var formattedMinutes = minutesRemaining < 10 ? "0" + minutesRemaining : minutesRemaining;
+      var formattedSeconds = secondsRemaining < 10 ? "0" + secondsRemaining : secondsRemaining;
+
+      // Exiba a contagem regressiva na div com id "contador"
+      counter.innerHTML = formattedMinutes + ":" + formattedSeconds;
+
+      // Reduza o tempo em milissegundos em 1 segundo (1000 milissegundos)
+      timeInMilliseconds -= 1000;
+
+      localStorage.setItem("currentTime", JSON.stringify({ started: true, time: timeInMilliseconds}));
+
+      // Verifique se a contagem regressiva chegou a zero
+      if (timeInMilliseconds < 0) {
+        clearInterval(intervalo);
+        counter.innerHTML = "Tempo esgotado!";
       }
-      seconds = 59;
-    } else {
-      seconds--;
     }
 
-    hours < 0 ? hours = 0 : hours;
-    minutes < 0 ? minutes = 0 : minutes;
-    seconds < 0 ? seconds = 0 : seconds;
-    
-    if (hours === 0 && minutes === 0 && seconds === 0) {
-      clearInterval(totalTimerInterval);
-      console.log('Sem função aqui pra não parar o jogo quando as pessoas podem escolher respostas.');
-    }
+    // Chame a função de atualização a cada segundo (1000 milissegundos)
+    var interval = setInterval(updateCountDown, 1000);
 
-    var hoursStr = hours.toString().padStart(2, '0');
-    var minutesStr = minutes.toString().padStart(2, '0');
-    var secondsStr = seconds.toString().padStart(2, '0');
-    ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
-  }, 1000);
+    // Inicialize a contagem regressiva
+    updateCountDown();
 };

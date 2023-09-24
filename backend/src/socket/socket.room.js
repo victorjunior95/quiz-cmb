@@ -1,11 +1,28 @@
 const userUtils = require('../utils/users');
 
 const createRoom = (socket) => (room) => {
-  userUtils.userWrite(room, { users: [], answered: [], difficulty: 1 });
+  userUtils.userWriteNewData(room, { users: [], answered: [], difficulty: 1 });
   socket.join(room);
 
   socket.emit('sendLevel', 'facil');
 }
+
+// const changeLevel = (socket) => (newLevel) => {
+//   socket.on('sendLevel', () =>{
+//     const actualRoom = userUtils.userRead();
+
+//     console.log(actualRoom);
+
+//     // seto a dificuldade de cada usuário pra o novo level
+//     let newLevelRoom = actualRoom.difficulty === 1 ? actualRoom[difficulty] = 2 : actualRoom[difficulty] = 3;
+
+//     // Reescrevo o arquivo
+//     userUtils.userWriteNewData(newLevelRoom);
+
+//     // emito send level na nova fase
+//     socket.emit('sendLevel', )
+//   });
+// }
 
 const joinRoom = (socket) => (schoolName, roomId) => {
   const rooms = userUtils.userRead();
@@ -18,7 +35,7 @@ const joinRoom = (socket) => (schoolName, roomId) => {
   // Todos os usuários já começam com 10 pontos
   users.push({ id: users.length + 1, schoolName, points: 10 });
 
-  userUtils.userWrite(roomId, { ...rooms[roomId], users });
+  userUtils.userWriteNewData(roomId, { ...rooms[roomId], users });
   socket.join(roomId);
   console.log(`User ${schoolName} connected to room ${roomId}`);
   socket.to(roomId).emit('userConnected', schoolName);
@@ -86,5 +103,6 @@ module.exports = {
   connectAnswer,
   connectAPRAnswer,
   connectAPRClassification,
-  connectClassification
+  connectClassification,
+  // changeLevel
 }

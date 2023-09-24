@@ -3,7 +3,7 @@ const userUtils = require('../utils/users');
 const sendQuestion = (socket) => (question, roomId, questionTime) => {
   const room = userUtils.userRead()[roomId];
   room.atualQuestion = question;
-  userUtils.userWrite(roomId, room);
+  userUtils.userWriteNewData(roomId, room);
   socket.broadcast.to(roomId).emit('receiveQuestion', question);
   socket.to(roomId).emit('receiveTimer', questionTime);
   socket.emit('receiveTimer', {questionTime, endTime: room.time.endTime});
@@ -13,8 +13,8 @@ const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => 
   socket.to(roomId).emit('schoolAnswered', schoolName);
 
   const isCorrect = answer === question.resposta;
-  const newPoints = isCorrect ? 10 : -10;
   const room = userUtils.userRead()[roomId];
+  const newPoints = isCorrect ? 10 * room.difficulty : -10;
 
   const updatedUsers = room.users.map((user) => {
     if (user.schoolName === schoolName) {
@@ -26,7 +26,7 @@ const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => 
     return user;
   });
 
-  userUtils.userWrite(roomId, { ...room, users: updatedUsers });
+  userUtils.userWriteNewData(roomId, { ...room, users: updatedUsers });
 }
 
 // timesOver vai para a próxima fase

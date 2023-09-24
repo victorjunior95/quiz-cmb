@@ -1,19 +1,33 @@
 const socket = io('http://localhost:3001');
+localStorage.clear();
+
+const userConnecteds = [];
 
 const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
 }
 
-const waitForStart = (roomId) => {
+// const waitForStart = (roomId) => {
+//   const startButton = document.getElementById('sendButton');
+//   startButton.addEventListener('click', () => {
+//     window.location.href = "/pages/LoadingInitial_APR.html";
+//   });
+// }
+
+const waitForStart = () => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
-    window.location.href = "/pages/LoadingInitial_APR.html";
+    if (userConnecteds.length === 0) {
+      alert('Nenhuma equipe conectada');
+      return;
+    }
+    window.location.href = "/pages/Regras.html";
   });
 }
 
-socket.on('sendLevel', (level) => {
-  localStorage.setItem('actualLevel', level);
-});
+// socket.on('sendLevel', (level) => {
+//   localStorage.setItem('actualLevel', level);
+// });
 
 
 const main = () => {
@@ -22,7 +36,7 @@ const main = () => {
   localStorage.setItem("roomId", roomId);
   const room = document.getElementById('roomIdSpan');
   room.textContent = roomId;
-  waitForStart(roomId);
+  waitForStart();
 }
 
 const createTeamPanel = (teamName) => {
@@ -39,6 +53,7 @@ const createTeamPanel = (teamName) => {
 
 
 socket.on('userConnected', (schoolName) => {
+  userConnecteds.push(schoolName);
   createTeamPanel(schoolName);
 });
 

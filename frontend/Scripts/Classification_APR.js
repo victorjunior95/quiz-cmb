@@ -50,6 +50,7 @@ function totalTimer(endTime) {
   var hours = 0;
   var minutes = Math.floor(timeLeft / 60);
   var seconds = timeLeft % 60;
+  // Novo
   // var ele = document.getElementById('total-timer');
   var totalTimerInterval = setInterval(() => {
     if (seconds === 0) {
@@ -70,14 +71,9 @@ function totalTimer(endTime) {
 
     if (hours === 0 && minutes === 0 && seconds === 0) {
       clearInterval(totalTimerInterval);
-      nextButtonLink = "/pages/ChangeDifficulty.html";
+      // aqui na vdd deve renderizar a as perguntas no próximo nível
+      nextButtonLink = "/pages/Quiz_APR.html";
       console.log('Função de ir pra página de troca de dificuldade', nextButtonLink);
     }
-
-    // var hoursStr = hours.toString().padStart(2, '0');
-    // var minutesStr = minutes.toString().padStart(2, '0');
-    // var secondsStr = seconds.toString().padStart(2, '0');
-
-    // ele.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
   }, 1000);
 };
