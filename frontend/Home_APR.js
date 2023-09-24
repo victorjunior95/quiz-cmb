@@ -21,7 +21,6 @@ const waitForStart = () => {
       alert('Nenhuma equipe conectada');
       return;
     }
-    window.location.href = "/pages/LoadingInitial_APR.html";
     window.location.href = "/pages/Regras.html";
   });
 }

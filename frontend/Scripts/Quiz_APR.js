@@ -55,7 +55,7 @@ const createClassification = (classification) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const dificuldadeAtual = localStorage.getItem('actualLevel');
+  const dificuldadeAtual = localStorage.getItem('actualLevel') || 'facil';
   // Para ativar o 'receiveTimer' precisa atualizar a dificuldade no 'rooms.js' que é feito no Loading.js (socket.emit('changeDifficulty'))
 
   if (dificuldadeAtual === 'facil') {

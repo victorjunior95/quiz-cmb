@@ -12,6 +12,8 @@ const startGame = () => {
   });
 }
 
+window.onload = main;
+
 // socket.on('sendLevel', (level) => {
 //   localStorage.setItem('actualLevel', level);
 // });
