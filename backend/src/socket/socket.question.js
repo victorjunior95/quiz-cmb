@@ -13,8 +13,8 @@ const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => 
   socket.to(roomId).emit('schoolAnswered', schoolName);
 
   const isCorrect = answer === question.resposta;
-  const newPoints = isCorrect ? 10 : -10;
   const room = userUtils.userRead()[roomId];
+  const newPoints = isCorrect ? 10 * room.difficulty : -10;
 
   const updatedUsers = room.users.map((user) => {
     if (user.schoolName === schoolName) {
