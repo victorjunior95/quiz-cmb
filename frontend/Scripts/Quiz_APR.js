@@ -45,9 +45,9 @@ const createClassification = (classification) => {
   classification.forEach((element) => {
     const classificationDiv = document.createElement('div');
     classificationDiv.className = 'classificationDiv';
+    classificationDiv.textContent = element.schoolName;
     const classificationSpan = document.createElement('span');
     classificationSpan.className = 'classificationSpan';
-    classificationSpan.textContent = element.schoolName;
     classificationSpan.id = element.schoolName;
     classificationDiv.appendChild(classificationSpan);
     schoolList.appendChild(classificationDiv);
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   socket.on('schoolAnswered', (schoolName) => {
     const school = document.getElementById(schoolName);
-    school.style.backgroundColor = "green";
+    school.style.display = "block";
   });
 
   answer.addEventListener('click', async () => {
