@@ -1,9 +1,7 @@
 const BASE_URL = 'http://localhost:3001';
 const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
-let level = localStorage.getItem('actualLevel');
-let acabouExist = localStorage.getItem(`${level}`);
-
+const changeDifficulty = JSON.parse(localStorage.getItem("changeDifficulty"));
 
 // O Loading é usado tanto de Answer para Classification, quanto de Classification para Question
 
@@ -17,9 +15,10 @@ const main = () => {
   // Ele passa por aqui qnd o timer não é 0 (?) SIM
   // Então, se veio de Answer com tempo: faz o mesmo qnd vai para Classification
   
-  // Ele passa por aqui qnd o timer é 0, ou seja, a chave da fase foi criada no localStorage('localStorage.getItem(`${level}`)')
+  // Ele passa por aqui qnd o timer é 0 ou quando as perguntas da fase terminaram, ou seja, a fase foi alterada
+  // Para isso, verificamos a chave no local storage {changeDifficulty?.hasChangedLastAnswer}
   // Então, se veio de Answer com timer zerado: muda fase no back, seta o novo tempo e segue para Classification
-  if (acabouExist !== null) {
+  if (changeDifficulty?.hasChangedLastAnswer) {
     socket.emit('changeDifficulty', ROOMID);
     // Acho que o erro agora está aqui!!!
     socket.emit('setTime', ROOMID);

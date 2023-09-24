@@ -87,6 +87,11 @@ const main = () => {
     // O tempo da fase está reiniciando
 
     // Posso passar essa lógica para o if no final do script (?)
+    
+    localStorage.setItem(
+      "changeDifficulty",
+      JSON.stringify({ hasChangedLastAnswer: false })
+    );
     if (currentTime.time <= 0 || isCurrentLevelCompleted) {
       localStorage.setItem(`${currentLevel}`, "acabou");
 
@@ -96,6 +101,10 @@ const main = () => {
       localStorage.setItem(
         "currentTime",
         JSON.stringify({ started: false, time: 0 })
+      );
+      localStorage.setItem(
+        "changeDifficulty",
+        JSON.stringify({ hasChangedLastAnswer: true })
       );
     }
 
