@@ -84,14 +84,10 @@ const main = () => {
     );
     const currentTime = JSON.parse(localStorage.getItem("currentTime"));
     const isCurrentLevelCompleted = !completedAnswers[currentLevel]?.length;
-    console.log("completedAnswers", completedAnswers);
-    console.log("isCurrentLevelCompleted", isCurrentLevelCompleted);
-    console.log("currentTime", currentTime);
     // O tempo da fase está reiniciando
 
     // Posso passar essa lógica para o if no final do script (?)
     if (currentTime.time <= 0 || isCurrentLevelCompleted) {
-      console.log("entrou");
       localStorage.setItem(`${currentLevel}`, "acabou");
 
       let newLevel = currentLevel === "facil" ? "media" : "dificil";
