@@ -3,28 +3,15 @@ const userUtils = require('../utils/users');
 const setTime = (socket) => (roomId) => {
   const rooms = userUtils.userRead();
   const difficulty = rooms[roomId].difficulty;
-  // const getTime = {
-  //   1: {
-  //     time: 1200000
-  //   },
-  //   2: {
-  //     time: 2400000
-  //   },
-  //   3: {
-  //     time: 1200000
-  //   }
-  // };
-
-  // teste
   const getTime = {
     1: {
-      time: 45000
+      time: 1200000
     },
     2: {
-      time: 90000
+      time: 2400000
     },
     3: {
-      time: 45000
+      time: 1200000
     }
   };
 
