@@ -37,6 +37,12 @@ const sendClassification = (socket) => (roomId, users) => {
 const changeDifficulty = (socket) => (roomId) => {
   const rooms = userUtils.userRead();
 
+  if (rooms[roomId].difficulty === 2) {
+    const users = rooms[roomId].users;
+    const [firstUser, secondUser, thirdUser] = users.sort((a, b) => b.points - a.points);
+    userUtils.userRewrite(roomId, 'users', [firstUser, secondUser, thirdUser])
+  }
+
   rooms[roomId].difficulty === 1 ? rooms[roomId].difficulty = 2 : rooms[roomId].difficulty = 3;
 
   userUtils.userRewrite(roomId, 'difficulty', rooms[roomId].difficulty);
