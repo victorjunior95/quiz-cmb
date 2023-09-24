@@ -7,13 +7,6 @@ const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
 }
 
-// const waitForStart = (roomId) => {
-//   const startButton = document.getElementById('sendButton');
-//   startButton.addEventListener('click', () => {
-//     window.location.href = "/pages/LoadingInitial_APR.html";
-//   });
-// }
-
 const waitForStart = () => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
@@ -24,11 +17,6 @@ const waitForStart = () => {
     window.location.href = "/pages/Regras.html";
   });
 }
-
-// socket.on('sendLevel', (level) => {
-//   localStorage.setItem('actualLevel', level);
-// });
-
 
 const main = () => {
   const roomId = Math.random().toString(36).substring(7)
