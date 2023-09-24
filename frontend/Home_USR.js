@@ -35,22 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem("roomData", JSON.stringify(data));
       
       socket.emit('joinRoom', data.user, data.roomId);
-
-      // Enviando a requisição POST para o backend usando a Fetch API
-      // const response = await fetch(`${BASE_URL}/users`, {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify(data)
-      // });
-
-      // const result = await response.json();
-      // console.log('Resposta do servidor:', result);
-    
-      // window.location.href = "../pages/loading.html";
-      // alert(`Bem-vindo, ${escola}!`);
-
     } catch (error) {
       console.error('Erro ao enviar requisição:', error);
     }

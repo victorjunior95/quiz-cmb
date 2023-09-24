@@ -35,7 +35,6 @@ const showAnswer = (question) => {
     textAlternativa.style.listStyleType = "none";
 
     if (isCorrect) {
-      // Uma opção de estilização é aumentar a div da correta e diminuir as demais
       textAlternativa.style.backgroundColor = "green";
       textAlternativa.style.color = "white";
     }
@@ -46,7 +45,6 @@ const showAnswer = (question) => {
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
   divPergunta.appendChild(textDesc);
-  // divAlternativas.appendChild(textDesc);
   if (imgResposta !== "") {
     const imgElement = document.createElement("img");
     imgElement.src = imgResposta;
@@ -84,9 +82,6 @@ const main = () => {
     );
     const currentTime = JSON.parse(localStorage.getItem("currentTime"));
     const isCurrentLevelCompleted = !completedAnswers[currentLevel]?.length;
-    // O tempo da fase está reiniciando
-
-    // Posso passar essa lógica para o if no final do script (?)
     
     localStorage.setItem(
       "changeDifficulty",

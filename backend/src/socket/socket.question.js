@@ -29,10 +29,6 @@ const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => 
   userUtils.userWriteNewData(roomId, { ...room, users: updatedUsers });
 }
 
-// timesOver vai para a próxima fase
-// Se estiver no meio de uma pergunta, espera acabar e então vai para a tela de mudança de fase
-// Se precaver para mudança de fase no meio de Loading
-
 module.exports = {
   sendQuestion,
   receiveAnswer,

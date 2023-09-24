@@ -12,7 +12,6 @@ const connection = (socket) => {
   socket.on('connectAPR', room.connectAPR(socket));
   socket.on('clearConnections', room.clearConnections(socket));
   socket.on('connectAnswer', room.connectAnswer(socket));
-  socket.on('connectAPRAnswer', room.connectAPRAnswer(socket));
   socket.on('connectAPRClassification', room.connectAPRClassification(socket));
   socket.on('connectClassification', room.connectClassification(socket));
 
@@ -21,9 +20,6 @@ const connection = (socket) => {
   socket.on('startGame', game.startGame(socket));
   socket.on('sendClassification', game.sendClassification(socket));
   socket.on('changeDifficulty', game.changeDifficulty(socket));
-  // Será que vai ser útil? Acho que não
-  socket.on('continueGame', game.continueGame(socket));
-
 
   // Question events
   socket.on('sendQuestion', question.sendQuestion(socket));

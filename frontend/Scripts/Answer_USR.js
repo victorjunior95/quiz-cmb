@@ -89,11 +89,6 @@ socket.on('gameStarted', () => {
   window.location.href = "/pages/Quiz_USR.html";
 });
 
-// Estaria sem utilidade, pois a classificação só aparece para o apresentador ou é usada para direcionar para a página de classificação (o mais provável)?
-socket.on('getClassification', () => {
-  window.location.href = "/pages/Classification_USR.html";
-});
-
 const main = () => {
   socket.emit('connectAnswer', roomId);
 };
