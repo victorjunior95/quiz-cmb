@@ -39,7 +39,7 @@ const changeDifficulty = (socket) => (roomId) => {
 
   if (rooms[roomId].difficulty === 2) {
     const users = rooms[roomId].users;
-    const [firstUser, secondUser, ThirdUser] = users.sort((a, b) => b.points - a.points);
+    const [firstUser, secondUser, thirdUser] = users.sort((a, b) => b.points - a.points);
     userUtils.userRewrite(roomId, 'users', [firstUser, secondUser, ThirdUser])
   }
 
