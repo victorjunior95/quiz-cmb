@@ -67,9 +67,9 @@ socket.on('showAnswer', (question) => {
   socket.emit('sendQuestion', question, ROOMID);
 });
 
-// socket.on('receiveTimer', ({ endTime }) => {
-//   totalTimer(endTime);
-// });
+socket.on('receiveTimer', () => {
+  totalTimer();
+});
 
 let nextButtonLink = "/pages/Loading_APR.html";
 
