@@ -54,7 +54,26 @@ const createClassification = (classification) => {
   });
 };
 
+const nameExisted = (list, name) => {
+  return list.indexOf(name) !== -1;
+}
+
+const addNameList = (name) => {
+  // Verificar se o nome já existe na lista
+  const listSchool = JSON.parse(localStorage.getItem('listSchool')) || [];
+  
+  if (!nameExisted(listSchool, name)) {
+    // Adicionar o nome à lista
+    listSchool.push(name);
+    // Salvar a lista atualizada no localStorage
+    localStorage.setItem('listSchool', JSON.stringify(listSchool));
+  } else {
+    console.log(`Nome "${name}" já existe na lista e será ignorado.`);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  localStorage.setItem('listSchool', JSON.stringify([]));
   let dificuldadeAtual = localStorage.getItem('actualLevel');
   
   if (!dificuldadeAtual) {
@@ -84,6 +103,15 @@ document.addEventListener('DOMContentLoaded', () => {
   socket.on('schoolAnswered', (schoolName) => {
     const school = document.getElementById(schoolName);
     school.style.display = "block";
+
+    addNameList(schoolName);
+
+    const getListSchoolAnswered = JSON.parse(localStorage.getItem('listSchool'));
+    const usersLength = Number(localStorage.getItem('usersLength'));
+
+    if (getListSchoolAnswered.length === Number(usersLength)) {
+      window.location.href = "/pages/Answer_APR.html";
+    }
   });
 
   answer.addEventListener('click', async () => {
