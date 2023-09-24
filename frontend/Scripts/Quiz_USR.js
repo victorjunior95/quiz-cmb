@@ -15,7 +15,7 @@ socket.on('getAnswer', () => {
 });
 
 socket.on('receiveTimer', (questionTime) => {
-  iniciarTempoQuestao(questionTime);
+  initTimeQuestion(questionTime);
 })
 let questionAtual;
 let answerSent = false;
@@ -84,15 +84,31 @@ function createDivQuestion(question, divAppend) {
 
 let questaoTimerInterval;
 
-function iniciarTempoQuestao(newTime) {
-  let questaoTimer = newTime;
-  const ele = document.getElementById('questao-timer');
-  ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
+function initTimeQuestion(questionTime) {
+  const questionTimeEle = document.getElementById('question-time');
 
-  clearInterval(questaoTimerInterval); // Limpe qualquer intervalo anterior
-  questaoTimerInterval = setInterval(() => {
-    ele.innerHTML = questaoTimer >= 10 ? questaoTimer : '0' + questaoTimer;
-    questaoTimer--;
+  // Inicializa o contador com o tempo fornecido em segundos
+  let remainingTime = questionTime;
+
+  // Função para atualizar o contador na tela
+  function updateTimer() {
+    // Renderiza o tempo restante na tela
+    questionTimeEle.textContent = remainingTime >= 10 ? remainingTime : '0' + remainingTime;
+
+    // Reduz o tempo em 1 segundo
+    remainingTime--;
+
+    // if (remainingTime < 0) {
+    //   // Redireciona para a página desejada quando o tempo acabar
+    //   window.location.href = "/pages/Answer_APR.html";
+    // }
+  }
+
+  // Chama a função inicialmente para exibir o tempo inicial
+  updateTimer();
+
+  // Define um intervalo para atualizar o contador a cada segundo
+  const timerInterval = setInterval(updateTimer, 1000);
 
     if (questaoTimer < 0) {
       clearInterval(questaoTimerInterval);
@@ -102,5 +118,4 @@ function iniciarTempoQuestao(newTime) {
         socket.emit('receiveAnswer', { answer: '', roomId: data.roomId, question: questionAtual, schoolName: data.user });
       }
     }
-  }, 1000);
 }

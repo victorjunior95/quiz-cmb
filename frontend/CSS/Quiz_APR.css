@@ -9,10 +9,49 @@ body {
     background-color: #0AABBA;
 }
 
+.main-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.question-container {
+    width: 80%;
+}
+
+.timers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+}
+
+.total-timer {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border: 10px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.question-timer {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border: 10px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .divPai {
-    min-height: 100vh;
-    background-color: #ffffff ;
-    color: rgb(0, 0, 0);
+    height: 100%;
+    background-color: #fff ;
     padding: 100px;
     text-align: left;
     display: flex;
@@ -35,7 +74,7 @@ body {
 
 .textPergunta {
     width: 100%;
-    color: black;
+    color: #000;
     text-align: center;
     font-size: 24px;
 }
@@ -78,10 +117,8 @@ img {
 }
 
 .divBotoes {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
+    width: 30%;
+    height: 50px;
 }
 
 .botaoAvancar {
@@ -98,16 +135,19 @@ img {
 }
 
 .botaoResposta {
-    width: 110px;
+    width: 100%;
+    height: 100%;
     padding: 15px 0;
-    border: 3px solid black;
+    border: none;
     border-radius: 30px;
-    background-color: black;
+    background-color: #000;
     color: white;
-    text-align: center;
     font-weight: bold;  
-    padding: 2px;
     cursor: pointer;
+}
+
+.botaoResposta:hover {
+    background-color: rgba(0, 0, 0, 0.839);
 }
 
 footer {
