@@ -29,9 +29,9 @@ const connection = (socket) => {
   // Classification events
   socket.on('requestClassification', classification.requestClassification(socket));
 
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
+  // socket.on('disconnect', () => {
+  //   console.log('user disconnected');
+  // });
 }
 
 module.exports = connection;

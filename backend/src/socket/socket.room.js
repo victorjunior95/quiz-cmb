@@ -46,13 +46,12 @@ const connectAnswer = (socket) => (roomId) => {
   const room = userUtils.userRead()[roomId];
   waitingUsers.push(roomId);
 
-  // Sem isso quebra a página de resposta, mas com isso tbm quebra a próxima pergunta
-  // if (waitingUsers.length === room.users.length) {
+  if (room.users.length) {
 
-  //   socket.to(roomId).emit('showAnswer', room.atualQuestion);
+    socket.to(roomId).emit('showAnswer', room.atualQuestion);
 
-  //   waitingUsers = [];
-  // }
+    waitingUsers = [];
+  }
 }
 
 const connectClassification = (socket) => (roomId) => {
@@ -60,7 +59,7 @@ const connectClassification = (socket) => (roomId) => {
   waitingUsers.push(roomId);
   socket.join(roomId);
   
-  if (waitingUsers.length === room.users.length) {
+  if (room.users.length) {
     socket.to(roomId).emit('showClassificationAPR', room.users);
     waitingUsers = [];
   }
@@ -71,7 +70,7 @@ const enterRoom = (socket) => (roomId, schoolName) => {
   const users = userUtils.userRead()[roomId].users;
   connectedUsers.push(schoolName);
   socket.join(roomId);
-  if (connectedUsers.length === users.length) {
+  if (users.length) {
     socket.to(roomId).emit('allUsersConnected');
     connectedUsers = [];
   }
