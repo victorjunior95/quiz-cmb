@@ -30,8 +30,6 @@ function createDivQuestion(question, divAppend) {
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
 
-  const buttonEnviar = document.createElement('button');
-
   textTema.textContent = tema;
   textTema.className = 'textTema';
   textPergunta.textContent = pergunta;
@@ -46,28 +44,26 @@ function createDivQuestion(question, divAppend) {
     buttonAlternativa.className = 'buttonAlternativa';
     buttonAlternativa.textContent = element;
     buttonAlternativa.value = element.slice(0, 1);
+  
     buttonAlternativa.addEventListener('click', () => {
       alternativas.forEach((alternative) => {
         const getCurrentButton = document.getElementById('alternative-button-' + alternative.slice(0, 1))
-        getCurrentButton.classList.remove('selected-button');
+        getCurrentButton.style.color = "#000";
+        getCurrentButton.style.backgroundColor = "#fff"
       })
-      
-      buttonAlternativa.classList.add('selected-button');
+      console.log(buttonAlternativa);
+
+      buttonAlternativa.style.color = "#fff";
+      buttonAlternativa.style.backgroundColor = "#0AABBA"
+
       localStorage.setItem("alternativaSelecionada", buttonAlternativa.value);
+    
+      socket.emit('receiveAnswer', { answer: buttonAlternativa.value, roomId: data.roomId, question, schoolName: data.user });
     });
 
     divAlternativas.appendChild(buttonAlternativa);
     divAlternativas.className = 'divAlternativas';
   }
-
-  buttonEnviar.textContent = 'Confirmar';
-  buttonEnviar.className = 'buttonEnviar';
-  buttonEnviar.type = 'submit';
-  buttonEnviar.addEventListener('click', () => {
-    const selectAnswer = localStorage.getItem("alternativaSelecionada");
-    answerSent = true;
-    socket.emit('receiveAnswer', { answer: selectAnswer, roomId: data.roomId, question, schoolName: data.user });
-  });
 
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
@@ -83,7 +79,6 @@ function createDivQuestion(question, divAppend) {
   divAlternativas.classList.add("alternativas");
   divAppend.appendChild(divPergunta);
   divAppend.appendChild(divAlternativas);
-  divAppend.appendChild(buttonEnviar);
 }
 
 let questaoTimerInterval;
