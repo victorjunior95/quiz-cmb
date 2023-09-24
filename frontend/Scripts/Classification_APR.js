@@ -50,8 +50,7 @@ function totalTimer(endTime) {
   var hours = 0;
   var minutes = Math.floor(timeLeft / 60);
   var seconds = timeLeft % 60;
-  // Novo
-  // var ele = document.getElementById('total-timer');
+
   var totalTimerInterval = setInterval(() => {
     if (seconds === 0) {
       if (minutes === 0) {
@@ -71,9 +70,7 @@ function totalTimer(endTime) {
 
     if (hours === 0 && minutes === 0 && seconds === 0) {
       clearInterval(totalTimerInterval);
-      // aqui na vdd deve renderizar a as perguntas no próximo nível
       nextButtonLink = "/pages/Quiz_APR.html";
-      console.log('Função de ir pra página de troca de dificuldade', nextButtonLink);
     }
   }, 1000);
 };
