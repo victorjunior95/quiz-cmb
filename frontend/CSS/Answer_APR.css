@@ -9,6 +9,14 @@ body {
   background-color: #0AABBA;
 }
 
+.question-timer-container {
+  width: 100%;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
 .question-timer {
   height: 100px;
   width: 100px;
@@ -18,8 +26,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 10px;
 }
 
 .question-timer > p {
@@ -28,7 +34,7 @@ body {
 }
 
 .divPai {
-  min-height: 100vh;
+  height: 100%;
   background-color: #ffffff ;
   color: rgb(0, 0, 0);
   padding: 100px;
