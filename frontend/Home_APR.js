@@ -1,6 +1,8 @@
 const socket = io('http://localhost:3001');
 localStorage.clear();
 
+const userConnecteds = [];
+
 const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
 }
@@ -8,6 +10,10 @@ const createRoom = (roomId) => {
 const waitForStart = (roomId) => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
+    if (userConnecteds.length === 0) {
+      alert('Nenhuma equipe conectada');
+      return;
+    }
     window.location.href = "/pages/LoadingInitial_APR.html";
   });
 }
@@ -40,6 +46,7 @@ const createTeamPanel = (teamName) => {
 
 
 socket.on('userConnected', (schoolName) => {
+  userConnecteds.push(schoolName);
   createTeamPanel(schoolName);
 });
 
