@@ -11,7 +11,7 @@ fetch(`${BASE_URL}/quiz`)
     if (!response.ok) {
       throw new Error('Erro ao fazer a solicitação: ' + response.status);
     }
-    return response.json(); // Ou response.text() para obter uma resposta de texto
+    return response.json();
   })
   .then(data => {
     localStorage.setItem("perguntasCompletas", JSON.stringify(data));
