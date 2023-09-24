@@ -9,6 +9,10 @@ body {
   background-color: #0AABBA;
 }
 
+.main-page {
+  width: 100%;
+}
+
 .question-timer-container {
   width: 100%;
   top: 10px;
