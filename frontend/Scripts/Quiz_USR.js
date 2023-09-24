@@ -47,8 +47,6 @@ function createDivQuestion(question, divAppend) {
     buttonAlternativa.textContent = element;
     buttonAlternativa.value = element.slice(0, 1);
     buttonAlternativa.addEventListener('click', () => {
-      buttonAlternativa.style.backgroundColor = "#0AABBA";
-      buttonAlternativa.style.color = 'white';
       localStorage.setItem("alternativaSelecionada", buttonAlternativa.value);
     });
 
