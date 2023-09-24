@@ -7,7 +7,14 @@ const createRoom = (roomId) => {
   socket.emit('createRoom', roomId);
 }
 
-const waitForStart = (roomId) => {
+// const waitForStart = (roomId) => {
+//   const startButton = document.getElementById('sendButton');
+//   startButton.addEventListener('click', () => {
+//     window.location.href = "/pages/LoadingInitial_APR.html";
+//   });
+// }
+
+const waitForStart = () => {
   const startButton = document.getElementById('sendButton');
   startButton.addEventListener('click', () => {
     if (userConnecteds.length === 0) {
@@ -15,12 +22,13 @@ const waitForStart = (roomId) => {
       return;
     }
     window.location.href = "/pages/LoadingInitial_APR.html";
+    window.location.href = "/pages/Regras.html";
   });
 }
 
-socket.on('sendLevel', (level) => {
-  localStorage.setItem('actualLevel', level);
-});
+// socket.on('sendLevel', (level) => {
+//   localStorage.setItem('actualLevel', level);
+// });
 
 
 const main = () => {
@@ -29,7 +37,7 @@ const main = () => {
   localStorage.setItem("roomId", roomId);
   const room = document.getElementById('roomIdSpan');
   room.textContent = roomId;
-  waitForStart(roomId);
+  waitForStart();
 }
 
 const createTeamPanel = (teamName) => {
