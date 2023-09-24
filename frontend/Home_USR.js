@@ -27,11 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      if (getRoomId !== inputRoomValue) {
-        alert("Código da sala inexistente!");
-        return;
-      }
-
       // Dados a serem enviados para o servidor
       const data = {
         user: inputValue,

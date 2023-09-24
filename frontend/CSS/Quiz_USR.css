@@ -187,6 +187,11 @@
         background-color: #0AABBA;
         color: white;
     }
+
+    .selected-button{
+        background-color: #0AABBA;
+        color: white;
+    }
     
     .buttonEnviar {
         width: 380px;

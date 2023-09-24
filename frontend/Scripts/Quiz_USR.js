@@ -42,11 +42,17 @@ function createDivQuestion(question, divAppend) {
     const element = alternativas[index];
 
     const buttonAlternativa = document.createElement('button');
-    buttonAlternativa.id = element.slice(0, 1);
+    buttonAlternativa.id = 'alternative-button-' + element.slice(0, 1);
     buttonAlternativa.className = 'buttonAlternativa';
     buttonAlternativa.textContent = element;
     buttonAlternativa.value = element.slice(0, 1);
     buttonAlternativa.addEventListener('click', () => {
+      alternativas.forEach((alternative) => {
+        const getCurrentButton = document.getElementById('alternative-button-' + alternative.slice(0, 1))
+        getCurrentButton.classList.remove('selected-button');
+      })
+      
+      buttonAlternativa.classList.add('selected-button');
       localStorage.setItem("alternativaSelecionada", buttonAlternativa.value);
     });
 

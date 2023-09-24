@@ -155,3 +155,35 @@ footer {
     bottom: 0;
     display: flex;
 }
+
+#schoolList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.classificationDiv {
+    width: 120px;
+    height: 120px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 0 0 50% 50%;
+    border: 7px solid rgba(255, 217, 0, 0.978);
+    background-color: #f82727;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    margin-right: 50px;
+    box-shadow: 0px 0px 36px 31px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.classificationSpan {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    position: absolute;
+    margin-left: 8%;
+    margin-top: -3%;
+    border-radius: 50%;
+    display: none;
+}
