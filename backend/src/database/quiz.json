@@ -167,7 +167,7 @@
       "descricao": "FENOL É UMA FUNÇÃO ORGÂNICA ESPECIAL. NELA, HÁ A PRESENÇA DE UM ANEL AROMÁTICO COM UMA OU MAIS HIDROXILAS (OH) LIGADAS A ELE."
     },
     {
-      "id": "81",
+      "id": 81,
       "tema": "Física",
       "pergunta": "De acordo com a figura, se o centro de massa do brinquedo, conhecido como João bobo, estiver acima da cintura da criança seu equilíbrio será:",
       "alternativas": [
@@ -183,7 +183,7 @@
       "imgPergunta": "https://http2.mlstatic.com/D_NQ_NP_613305-MLB25007777049_082016-O.jpg"
     },
     {
-      "id": "82",
+      "id": 82,
       "tema": "Física",
       "pergunta": "Os ciclistas de bicicleta de estrada descobriram uma nova manobra, a do Super Homem, para poderem atingirem velocidades maiores em descidas. Isso se deve à (ao):",
       "alternativas": [
@@ -199,7 +199,7 @@
       "imgPergunta": "https://hypescience.com/wp-content/uploads/2016/08/ciclista-gif-768x348.gif"
     },
     {
-      "id": "83",
+      "id": 83,
       "tema": "Física",
       "pergunta": "Em lagos ou mares, onde o nível de salinidade é muito elevpara as pessoas boiarem. Esse fato se deve à (ao):",
       "alternativas": [
@@ -215,7 +215,7 @@
       "imgPergunta": "https://turismo.ig.com.br/imagens/186/186/85/3369411.mar_morto_educacao_224_299.jpg"
   },
   {
-      "id": "84",
+      "id": 84,
       "tema": "Física",
       "pergunta": "Segundo o paradoxo dos gêmeos, se um dos irmãos viaja quase com a velocidade da luz para uma estrela distante e volta à Terra, quando retornar estará mais jovem que seu gêmeo idêntico que aqui permaneceu. Este fato é explicado pela:",
       "alternativas": [
@@ -231,7 +231,7 @@
       "imgPergunta": "https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo_legenda/22625ba02e898a8d48593756b54f93c0.jpg"
   },
   {
-      "id": "85",
+      "id": 85,
       "tema": "Física",
       "pergunta": "De acordo com a placa de trânsito, em frente à uma escola nos EUA, qual é a velocidade máxima nessa rua?",
       "alternativas": [
@@ -247,7 +247,7 @@
       "imgPergunta": "http://www.hayatgibi.com/wp-content/uploads/2018/05/Speed-limit-15.jpg" 
 },
 {
-  "id": "101",
+  "id": 101,
   "tema": "História",
   "pergunta": "Alexandre, o Grande, construiu um grande império e defendeu que os povos nele incluídos fundissem suas culturas  o que deu origem à Cultura Helenística.  Esta cultura foi caracterizada por:",
   "alternativas": [
@@ -263,7 +263,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "102",
+  "id": 102,
   "tema": "História",
   "pergunta": "Das guerras a seguir, quais estão em ordem cronológica correta (da mais antiga para a mais atual)?",
   "alternativas": [
@@ -279,7 +279,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "103",
+  "id": 103,
   "tema": "História",
   "pergunta": "A 1ª Guerra Mundial foi o túmulo dos impérios europeus, pois e todos os estados imperiais que participaram do conflito, somente um deles sobreviveu.  Este império foi a/o: ",
   "alternativas": [
@@ -295,7 +295,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "104",
+  "id": 104,
   "tema": "História",
   "pergunta": "A 2ª Guerra Mundial foi um conflito sem precedentes e que criou um novo concerto mundial marcado pela polarização entre duas super-potências, ocasionando a Guerra Fria, além de desencadear o processo de:",
   "alternativas": [
@@ -311,7 +311,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "105",
+  "id": 105,
   "tema": "História",
   "pergunta": "Cleópatra, a última faraó do Egito, desperta até nossos dias grande fascínio e curiosidade.  Sobre a última faraó é possível afirmar que:",
   "alternativas": [
@@ -327,7 +327,7 @@
   "imgPergunta": ""
 },
 {
-    "id": "121",
+    "id": 121,
       "tema": "Português",
       "pergunta": "O autor do poema I-Juca-Pirama é:",
       "alternativas": [
@@ -343,7 +343,7 @@
       "imgPergunta": ""
   },
   {
-      "id": "122",
+      "id": 122,
       "tema": "Português",
       "pergunta": "Assinale a alternativa em que se encontra um poema histórico.",
       "alternativas": [
@@ -359,7 +359,7 @@
       "imgPergunta": ""
   },
   {
-      "id": "123",
+      "id": 123,
       "tema": "Português",
       "pergunta": "Assinale a alternativa que completa adequadamente a lacuna da frase seguinte: Aquele é o professor __________ ideias sobre literatura não concordamos.",
       "alternativas": [
@@ -375,7 +375,7 @@
       "imgPergunta": ""
     },
   {
-      "id": "124",
+      "id": 124,
       "tema": "Português",
       "pergunta": "Assinale a opção em que ocorre um dífono.",
       "alternativas": [
@@ -391,7 +391,7 @@
       "imgPergunta": "" 
   },
   {
-      "id": "125",
+      "id": 125,
       "tema": "Português",
       "pergunta": "Assinale a opção em que a acentuação gráfica da palavra  pode ser justificada, simultaneamente, por duas regras de acentuação.",
       "alternativas": [
@@ -911,7 +911,7 @@
       "descricao": "UM ELEMENTO COM 3 ELÉTRONS NA ÚLTIMA CAMADA FAZ LIGAÇÃO IÔNICA COM 3 ELEMENTOS DE 7 ELÉTRONS NA ÚLTIMA CAMADA, FORMANDO UM COMPOSTO DO TIPO XY3."
     },
     {
-      "id": "86",
+      "id": 86,
       "tema": "Física",
       "pergunta": "Um gerador elétrico, de f.e.m igual a 48V e resistência elétrica interna igual a 30Ω, entrega para um aparelho uma potência elétrica máxima. Nessas condições o rendimento desse gerador é de: ",
       "alternativas": [
@@ -928,7 +928,7 @@
 
   },
   {
-      "id": "87",
+      "id": 87,
       "tema": "Física",
       "pergunta": "A temperatura e pressão nas quais podemos encontrar o carbono nos três estados físicos são aproximadamente:",
       "alternativas": [
@@ -944,7 +944,7 @@
       "imgPergunta": "https://2img.net/h/oi65.tinypic.com/2946l29.jpg"
   },
   { 
-      "id": "88",
+      "id": 88,
       "tema": "Física",
       "pergunta": "Qual dos pesquisadores teve uma grande contribuição, sob o ponto de vista experimental,  na explicação do efeito fotoelétrico?",
       "alternativas": [
@@ -960,7 +960,7 @@
       "imgPergunta": "https://www.colegioweb.com.br/wp-content/uploads/2014/04/Efeito-Fotoel%C3%A9trico.jpg"
   },
   {
-      "id": "89",
+      "id": 89,
       "tema": "Física",
       "pergunta": "O Titanic foi o maior navio já construído em sua época, e naufragou em 1912 em sua primeira viagem, no norte do Oceano Atlântico. Hoje, seus destroços encontram-se a uma profundidade de 3840 m, assim podemos dizer que a pressão que o navio está sujeito é de aproximadamente ?",
       "alternativas": [
@@ -977,7 +977,7 @@
 
   },
   {
-      "id": "90",
+      "id": 90,
       "tema": "Física",
       "pergunta": "Tem sido recorrente os acidentes domésticos envolvendo panelas de pressão. Uma das recomendações para evitar esses acidentes é diminuir o fogo quando a panela começar a soltar vapor, isso porque:",
       "alternativas": [
@@ -994,7 +994,7 @@
 
   },
   {
-      "id": "91",
+      "id": 91,
       "tema": "Física",
       "pergunta": "No início do século XX tivemos uma grande disputa entre dois grandes cientistas, Thomas Edison e Nikola Tesla. Essa disputa ficou conhecida como Guerra das Correntes, para saber qual sistema seria usado para a distribuição de energia elétrica. O modelo de Tesla foi o sistema que acabou sendo usado para a transmissão de energia elétrica, isso devido à(ao):",
       "alternativas": [
@@ -1010,7 +1010,7 @@
       "imgPergunta": ""
   },
   {
-      "id": "92",
+      "id": 92,
       "tema": "Física",
       "pergunta": "Na flauta Andina, conhecida como Zapona, o som mais grave é emitido pelo tubo:",
       "alternativas": [
@@ -1026,7 +1026,7 @@
       "imgPergunta": "https://flauta.top/wp-content/uploads/2020/12/Flauta-andina-Gewa-700285-en-Do-300x300.jpg"
   },
   {
-      "id": "93",
+      "id": 93,
       "tema": "Física",
       "pergunta": "Em uma lente divergente, quando o objeto é colocado além da distância focal, a imagem formada será:",
       "alternativas": [
@@ -1042,7 +1042,7 @@
       "imgPergunta": "https://opticastacna.cl/wp-content/uploads/2021/05/caracteristicas-de-los-lentes-divergentes.jpg"
   },
   {
-      "id": "94",
+      "id": 94,
       "tema": "Física",
       "pergunta": "No fim do século passado, tínhamos que os motores movidos à gasolina apresentavam um rendimento por volta de 20%, enquanto nos motores movidos à diesel o rendimento aumentava para 30%. Isso significa que: ",
       "alternativas": [
@@ -1058,7 +1058,7 @@
       "imgPergunta": ""
   },
   {
-      "id": "95",
+      "id": 95,
       "tema": "Física",
       "pergunta": "As estrelas que estão no estágio final da evolução estelar são  conhecidas como Gigantes Vermelhas. Por que elas tem uma cor avermelhada?",
       "alternativas": [
@@ -1074,7 +1074,7 @@
       "imgPergunta": "https://2.bp.blogspot.com/-nVc37tmwxcQ/VzvIlbN6L3I/AAAAAAAAZP0/h2gcFXf3nG41mr5RnNmx25liKDCcYZS_ACLcB/s1600/Tamanho%2Bdo%2BSol%2Bquando%2Bestiver%2Bgigante%2Bvermelha.jpg"
   },
   {
-  "id": "106",
+  "id": 106,
   "tema": "História",
   "pergunta": "No século III, Roma enfrentou uma crise sem precedentes e que colocou em risco a unidade do Império.  São características dessa crise:",
   "alternativas": [
@@ -1090,7 +1090,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "107",
+  "id": 107,
   "tema": "História",
   "pergunta": "As ordens de cavalaria foram fundadas no contexto das cruzadas com o intuito de garantir a conquista de Jerusalém e proteger os peregrinos.  Uma das mais importantes ordens de cavalaria foi a:",
   "alternativas": [
@@ -1106,7 +1106,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "108",
+  "id": 108,
   "tema": "História",
   "pergunta": "O Humanismo está diretamente ligado ao chamado Renascimento Cultural do final da Idade Média e início da Idade Moderna.  Um dos maiores nomes do Humanismo europeu foi:",
   "alternativas": [
@@ -1122,7 +1122,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "109",
+  "id": 109,
   "tema": "História",
   "pergunta": "No século XVII, autores como Thomas Hobbes e John Locke inauguraram o contratualismo que defendia:",
   "alternativas": [
@@ -1138,7 +1138,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "110",
+  "id": 110,
   "tema": "História",
   "pergunta": "A Revolução Francesa, em 1789, abalou a Europa e influenciou todo o mundo.  Dentre os princípios consagrados por esta revolução estão:",
   "alternativas": [
@@ -1154,7 +1154,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "111",
+  "id": 111,
   "tema": "História",
   "pergunta": "A chegada da Família Real ao Brasil, em 1808, provocou uma série de transformações na colônia, trasformada em centro do império português.  Era necessário modernizar e embelezar a colônia, são inovações do período:",
   "alternativas": [
@@ -1170,7 +1170,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "112",
+  "id": 112,
   "tema": "História",
   "pergunta": "No dia 7 de setembro de 1822, foi proclamada a independência do Brasil, no entanto, nem todas as regiões da antiga colônia aceitaram a ruptura com Portugal e houve guerra.  A resistência foi particularmente forte no/na/em:",
   "alternativas": [
@@ -1187,7 +1187,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "113",
+  "id": 113,
   "tema": "História",
   "pergunta": "A luta pelo voto feminino começou no final do século XIX e foi reconhecido em 1932 e incorporado à Constituição de 1934.  Este voto, no entanto, era:",
   "alternativas": [
@@ -1203,7 +1203,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "114",
+  "id": 114,
   "tema": "História",
   "pergunta": "Antes da abolição com a Lei Áurea de 1988, houve uma série e leis que anteciparam o fim da escravidão.  Qual a sequência temporal correta das leis abolicionistas brasileiras?",
   "alternativas": [
@@ -1219,7 +1219,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "115",
+  "id": 115,
   "tema": "História",
   "pergunta": "O final do século XVIII e o século XIX foi marcado pelo processo de independência dos países da América.  A maioria das independências foi liderada pelas elites coloniais, sendo a única exceção: ",
   "alternativas": [
@@ -1235,7 +1235,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "126",
+  "id": 126,
   "tema": "Português",
   "pergunta": "Assinale a alternativa cuja frase apresenta concordância verbal correta.",
   "alternativas": [
@@ -1251,7 +1251,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "127",
+  "id": 127,
   "tema": "Português",
   "pergunta": "Assinale a alternativa cuja frase apresenta ambiguidade.",
   "alternativas": [
@@ -1267,7 +1267,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "128",
+  "id": 128,
   "tema": "Português",
   "pergunta": "Assinale a alternativa em que a figura de linguagem denominada sinestesia.",
   "alternativas": [
@@ -1284,7 +1284,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "129",
+  "id": 129,
   "tema": "Português",
   "pergunta": "Assinale a alternativa em que a supressão da(s) vírgula(s) não altera o significado da frase:",
   "alternativas": [
@@ -1300,7 +1300,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "130",
+  "id": 130,
   "tema": "Português",
   "pergunta": "Assinale a alternativa em que o “se” é uma partícula expletiva ou de realce.",
   "alternativas": [
@@ -1316,7 +1316,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "131",
+  "id": 131,
   "tema": "Português",
   "pergunta": "Assinale a alternativa em que a oração destacada exerce a função de sujeito:",
   "alternativas": [
@@ -1332,7 +1332,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "132",
+  "id": 132,
   "tema": "Português",
   "pergunta": "Assinale a opção em que o pronome oblíquo destacado tem valor possessivo.",
   "alternativas": [
@@ -1348,7 +1348,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "133",
+  "id": 133,
   "tema": "Português",
   "pergunta": "Assinale  a alternativa na qual o pronome que exerce a função de predicativo do sujeito.",
   "alternativas": [
@@ -1364,7 +1364,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "134",
+  "id": 134,
   "tema": "Português",
   "pergunta": "Assinale a única alternativa que completa corretamente as lacunas da frase. O rapaz tinha _________ a condição: a luz só seria _________ depois que tudo estivesse _________ e devidamente ___________.",
   "alternativas": [
@@ -1380,7 +1380,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "135",
+  "id": 135,
   "tema": "Português",
   "pergunta": "Assinale a alternativa em que há um verbo defectivo:",
   "alternativas": [
@@ -1483,6 +1483,7 @@
       "pergunta": "Observe o esquema seguinte que mostra a atuação das massas de ar no Brasil:",
       "alternativas": ["A) massa Tropical Continental (mTc).", "B) massa Tropical atlântica (mTa).", "C) massa Equatorial atlântica (mEa).", "D) massa Polar atlântica (mPa).", "E) massa Equatorial continental (mEc)."
       ],
+      "imgResposta": "",
       "imgPergunta": "https://s2-educacao.glbimg.com/uC3bUAybenbu-wJ-0Vtsc2r0HuE=/7x0:627x295/620x295/s.glbimg.com/po/ek/f/original/2014/12/11/massas_de_ar_brasil_am_sul.png",
       "resposta": "A",
       "descricao": "A mTc atua tanto no verão quanto no inverno, atinge o Sul e Centro-Oeste brasileiros e é uma massa quente e seca."
@@ -1493,6 +1494,7 @@
       "pergunta": "Observe a figura a seguir, a qual está representando:",
       "alternativas": ["A) a ilustração gráfica do mecanismo dos dias e das noites.", "B) a configuração esquemática do meridiano de Greenwich.", "C) a ilustração do que constitui uma projeção cartográfica.", "D) o desenho esquemático da influência da latitude sobre o clima.", "E) o esboço da rotação da Terra em torno de seu eixo imaginário."
       ],
+      "imgResposta": "",
       "imgPergunta": "https://atlasescolar.ibge.gov.br/images/atlas/cartografia/projecoes_1_plana.jpg",
       "resposta": "C",
       "descricao": "Trata-se de uma ilustração didática do que é uma projeção cartográfica num plano."
@@ -1564,7 +1566,7 @@
       "descricao": "PARA COMBATER A ACIDEZ UM REMÉDIO DEVE TER PROPRIEDADES DE UMA BASE."
     },
     {
-      "id": "96",
+      "id": 96,
       "tema": "Física",
       "pergunta": "Um experimento muito simples sobre hidrodinâmica consiste em soprar a parte de cima de um papel, como mostra a figura. Quando o homem assopra, o que acontece e por que?",
       "alternativas": [
@@ -1580,7 +1582,7 @@
       "imgPergunta": "https://www.ciensacao.org/fotografia_experimento_mao_na_massa/5049p_flying_2.jpg"
   },
   {
-      "id": "97",
+      "id": 97,
       "tema": "Física",
       "pergunta": "Se o coeficiente de atrito estático entre os grãos de areia de um monte vale 0,60 e o diâmetro (D) desse monte é igual a 10 m, a altura máxima (h) que esse pode atingir é de:",
       "alternativas": [
@@ -1596,7 +1598,7 @@
       "imgPergunta": "https://ibb.co/PcQvW6W"
   },
   {
-      "id": "98",
+      "id": 98,
       "tema": "Física",
       "pergunta": "Uma fonte de calor de 100 W foi utilizada para aquecer 100g de uma substância. De acordo com a sua curva de aquecimento, o calor específico no estado de MENOR agregação das moléculas é:",
       "alternativas": [
@@ -1612,7 +1614,7 @@
       "imgPergunta": "https://ibb.co/RPNx3y9"
   },
   {
-      "id": "99",
+      "id": 99,
       "tema": "Física",
       "pergunta": "A energia elétrica dissipada pelos resistores no circuito, em 1 segundo, é igual a:",
       "alternativas": [
@@ -1628,7 +1630,7 @@
       "imgPergunta": "https://ibb.co/cFqFy6C"
   },
   {
-      "id": "100",
+      "id": 100,
       "tema": "Física",
       "pergunta": "Um recarregador de celular consegue fornecer uma corrente elétrica de 3,0 A para uma bateria, inicialmente descarregada, que tem capacidade de 2100 mAh. Desconsiderando as perdas, essa bateria será carregada, aproximadamente, em quanto tempo?",
       "alternativas": [
@@ -1644,7 +1646,7 @@
       "imgPergunta": "https://api.netshopinformatica.com.br/uploads/content_manager/contents/161/image/celular-carregando-pode-conduzir-descarga-eletrica-em-tempestades.jpg"
     },
   {
-    "id": "116",
+    "id": 116,
     "tema": "História",
     "pergunta": "O Governo Getúlio Vargas, em especial durante o Estado Novo (1937-1945), percebeu a potencialidade do rádio e criou um programa diário cujo objetivo era fazer propaganda do governo e educar a propulação, seu nome era:",
     "alternativas": [
@@ -1660,7 +1662,7 @@
     "imgPergunta": ""
   },
 {
-    "id": "117",
+    "id": 117,
     "tema": "História",
     "pergunta": "O teatro nasceu na Grécia e os helenos se destacaram na tragédia e na comédia.  Qual alternativa apresenta corretamente o nome de três autores de teatro da Grécia Antiga:  ",
     "alternativas": [
@@ -1676,7 +1678,7 @@
     "imgPergunta": ""
 },
 {
-    "id": "118",
+    "id": 118,
     "tema": "História",
     "pergunta": "O século XVI foi marcado pelas reformas religiosas e os conflitos decorrentes delas.  No Sacro Império um acordo foi travado em 1555 estabelecendo uma paz momentânea entre católicos e luteranos.  O nome deste acordo é: ",
     "alternativas": [
@@ -1692,7 +1694,7 @@
     "imgPergunta": ""
 },
 {
-    "id": "119",
+    "id": 119,
     "tema": "História",
     "pergunta": "O território que é hoje o Brasil abrigou no século XVI e XVII as primeiras comunidades protestantes (huguenotes franceses) e judaicas das Américas.  Os grupos se estabeleceram respectivamente:",
     "alternativas": [
@@ -1708,7 +1710,7 @@
     "imgPergunta": ""
 },
 {
-    "id": "120",
+    "id": 120,
     "tema": "História",
     "pergunta": "Com o fim da ditadura do Estado Novo, em 1945, a democracia foi restaurada em nosso país e foi convocada uma assembleia constituinte.  Esta constituição: ",
     "alternativas": [
@@ -1724,7 +1726,7 @@
     "imgPergunta": ""
 },
 {
-  "id": "136",
+  "id": 136,
   "tema": "Português",
   "pergunta": "Movimento poético surgido na década de 1950, revela-se um fruto legítimo da civilização audiovisual, em que à noção de poesia se incorpora, fundamentalmente, o elemento visual. É o:",
   "alternativas": [
@@ -1740,7 +1742,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "137",
+  "id": 137,
   "tema": "Português",
   "pergunta": "A crítica constata, nas metáforas simbolistas de Cruz e Sousa, a obsessão pela cor:",
   "alternativas": [
@@ -1756,7 +1758,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "138",
+  "id": 138,
   "tema": "Português",
   "pergunta": "Interesse pelas zonas profundas da mente e pela loucura; desejo de transcendência e integração cósmica; linguagem vaga, fluida que busca sugerir em vez de nomear. Essas são características que identificam as obras de autores ",
   "alternativas": [
@@ -1772,7 +1774,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "139",
+  "id": 139,
   "tema": "Português",
   "pergunta": "Em 1880, Zola publicou suas teorias sobre o romance experimental em que expunha ideias como esta: “o romance experimental substitui o estudo do homem abstrato e metafísico pelo do homem natural, sujeito a leis físico-químicas e determinado pela influência do meio”.",
   "alternativas": [
@@ -1788,7 +1790,7 @@
   "imgPergunta": ""
 },
 {
-  "id": "140",
+  "id": 140,
   "tema": "Português",
   "pergunta": "O romance realista brasileiro, tal como o conhecemos, focaliza principalmente:",
   "alternativas": [

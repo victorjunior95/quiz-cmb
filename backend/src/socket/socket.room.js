@@ -47,7 +47,6 @@ const connectAnswer = (socket) => (roomId) => {
 
   if (waitingUsers.length === room.users.length) {
 
-    // Aparentemente sem uso - conferir com o time
     socket.to(roomId).emit('showAnswer', room.atualQuestion);
 
     waitingUsers = [];

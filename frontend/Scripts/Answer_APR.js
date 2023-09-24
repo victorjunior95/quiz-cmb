@@ -109,7 +109,6 @@ const main = () => {
   const classificationButton = document.getElementById("botaoClassificacao");
   classificationButton.addEventListener("click", () => {
     clearInterval(totalTimerInterval);
-    console.log("AnswerClass");
     window.location.href = "/pages/Classification_APR.html";
   });
 };

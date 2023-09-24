@@ -12,6 +12,7 @@ const connection = (socket) => {
   socket.on('connectAPR', room.connectAPR(socket));
   socket.on('clearConnections', room.clearConnections(socket));
   socket.on('connectAnswer', room.connectAnswer(socket));
+  socket.on('connectAPRAnswer', room.connectAPRAnswer(socket));
   socket.on('connectAPRClassification', room.connectAPRClassification(socket));
   socket.on('connectClassification', room.connectClassification(socket));
 
