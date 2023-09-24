@@ -46,5 +46,5 @@ module.exports = {
   setTime,
   startGame,
   sendClassification,
-  changeDifficulty
+  changeDifficulty,
 }
