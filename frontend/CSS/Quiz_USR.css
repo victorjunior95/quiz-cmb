@@ -32,7 +32,6 @@
     position: absolute;
     z-index: 3;
     top: 40px; 
-    left: 45%;
 }
 
 .questionTimer {
@@ -59,7 +58,7 @@
 .pergunta {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     flex-direction: column;
     width: 100%;
     height: 100%;

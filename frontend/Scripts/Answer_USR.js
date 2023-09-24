@@ -13,8 +13,9 @@ const showAnswer = (question) => {
   const textTema = document.createElement('h1');
   const textPergunta = document.createElement('text');
   const textDesc = document.createElement('text');
-
-  const textAlternativaCorreta = document.createElement('text')
+  
+  const isCorrect = alternativaSelecionada === resposta;
+  const textAlternativaCorreta = document.createElement('text');
 
   textTema.textContent = tema;
   textTema.className = 'textTema';
@@ -23,9 +24,28 @@ const showAnswer = (question) => {
   textPergunta.id = id;
   textDesc.textContent = descricao;
   textDesc.className = 'textDesc';
+  
+  textAlternativaCorreta.textContent = 'Alternativa Correta:';
+  textAlternativaCorreta.className = 'textAlternativaCorreta';
 
-  textAlternativaCorreta.textContent = ('Alternativa Correta:');
-  textAlternativaCorreta.className = ('textAlternativaCorreta');
+  const divAcertoErro = document.getElementById('divAcertoErro');
+  
+  const answerStatus = document.createElement('div');
+  answerStatus.className = 'answerStatus';
+
+  if (isCorrect) {
+    answerStatus.innerHTML = '&#10004;';
+    answerStatus.style.color = 'white';
+    answerStatus.style.backgroundColor = 'green';
+    answerStatus.style.border = '8px solid white';
+  } else {
+    answerStatus.innerHTML = '&#10006;';
+    answerStatus.style.color = 'white';
+    answerStatus.style.backgroundColor = 'red';
+    answerStatus.style.border = '8px solid white';
+  }
+  
+  divAcertoErro.prepend(answerStatus);
 
   const correctAlternative = alternativas.find(element => element.slice(0, 1) === resposta);
 
@@ -45,10 +65,6 @@ const showAnswer = (question) => {
     divAlternativas.appendChild(textAlternativa);
   }
 
-  // divPergunta.appendChild(textTema);
-  // divPergunta.appendChild(textPergunta);
-  // divAlternativas.appendChild(textDesc);
-
   divAppend.appendChild(divAlternativas);
 
   divPergunta.appendChild(textDesc);
@@ -60,10 +76,9 @@ const showAnswer = (question) => {
     divPergunta.appendChild(imgElement);
   }
 
-  divPergunta.classList.add("divPergunta");
-  divAlternativas.classList.add("divAlternativas");
+  divPergunta.classList.add('divPergunta');
+  divAlternativas.classList.add('divAlternativas');
   divAppend.appendChild(divPergunta);
-
 }
 
 socket.on('receiveQuestion', (question) => {
