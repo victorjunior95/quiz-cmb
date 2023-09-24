@@ -75,10 +75,18 @@ const main = () => {
 
   const nextButton = document.getElementById("botaoAvancar");
 
+  const completedAnswers = JSON.parse(
+    localStorage.getItem("perguntasCompletas")
+  );
+
+  const isLastDifficultyCompleted = !completedAnswers['dificil']?.length
+
+  if(isLastDifficultyCompleted) {
+    nextButton.remove()
+  }
+
   const updateLevelIfTimeOrQuestionsAreEmpty = () => {
-    const completedAnswers = JSON.parse(
-      localStorage.getItem("perguntasCompletas")
-    );
+    
     const currentTime = JSON.parse(localStorage.getItem("currentTime"));
     const isCurrentLevelCompleted = !completedAnswers[currentLevel]?.length;
 
