@@ -160,3 +160,10 @@ img {
 footer {
   width: 100%;
 }
+
+.loading-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
