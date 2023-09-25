@@ -1,4 +1,4 @@
-const BASE_URL = 'https://quiz-cmb-production.up.railway.app';
+const BASE_URL = 'https://quiz-cmb-production-e86e.up.railway.app';
 const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
 const questionTime = 30;
