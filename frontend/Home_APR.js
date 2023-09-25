@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3001');
+const socket = io('https://quiz-cmb-production.up.railway.app');
 localStorage.clear();
 
 const userConnecteds = [];

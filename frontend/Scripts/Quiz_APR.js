@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://quiz-cmb-production.up.railway.app';
 const socket = io(BASE_URL);
 const ROOMID = localStorage.getItem("roomId");
 const questionTime = 30;
@@ -162,7 +162,7 @@ function initTimeQuestion(questionTime) {
   const timerInterval = setInterval(updateTimer, 1000);
 
   // Certifique-se de parar o intervalo quando o tempo acabar ou quando necessário
-  if (remainingTime < 0) {
+  if (remainingTime <= 0) {
     clearInterval(timerInterval);
   }
 };
@@ -194,9 +194,20 @@ function totalTimer(endTime) {
       localStorage.setItem("currentTime", JSON.stringify({ started: true, time: timeInMilliseconds}));
 
       // Verifique se a contagem regressiva chegou a zero
-      if (timeInMilliseconds < 0) {
-        clearInterval(intervalo);
-        counter.innerHTML = "Tempo esgotado!";
+      if (timeInMilliseconds <= 0) {
+        const currentLevel = localStorage.getItem("actualLevel");
+        let newLevel = currentLevel === "facil" ? "media" : "dificil";
+
+        console.log('newLevel', newLevel);
+        localStorage.setItem("actualLevel", newLevel);
+        localStorage.setItem(
+          "currentTime",
+          JSON.stringify({ started: false, time: 0 })
+        );
+
+        counter.innerHTML = '00:00';
+        clearInterval(interval);
+        ocalStorage.setItem("currentTime", JSON.stringify({ started: false, time: 0}));
       }
     }
 
@@ -205,4 +216,6 @@ function totalTimer(endTime) {
 
     // Inicialize a contagem regressiva
     updateCountDown();
+
+    
 };
