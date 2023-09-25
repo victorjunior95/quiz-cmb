@@ -9,12 +9,19 @@ const sendQuestion = (socket) => (question, roomId, questionTime) => {
   socket.emit('receiveTimer', {questionTime, endTime: room.time.endTime});
 }
 
-const receiveAnswer = (socket) => ({ answer, roomId, question, schoolName }) => {
+const receiveAnswer = (socket) => ({ answer, lastAnswer, roomId, question, schoolName }) => {
   socket.to(roomId).emit('schoolAnswered', schoolName);
-
+  
   const isCorrect = answer === question.resposta;
   const room = userUtils.userRead()[roomId];
-  const newPoints = isCorrect ? 10 * room.difficulty : -10;
+
+  let ajustPoint = 0;
+  if (lastAnswer) {
+    const lastAnswerWasCorrect = lastAnswer === question.resposta;
+    ajustPoint = lastAnswerWasCorrect ? -10 * room.difficulty : 10;
+  }
+
+  const newPoints = (isCorrect ? 10 * room.difficulty : -10) + ajustPoint;
 
   const updatedUsers = room.users.map((user) => {
     if (user.schoolName === schoolName) {

@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'quiz-cmb-production.up.railway.app';
 const socket = io(BASE_URL);
 
 const data = JSON.parse(localStorage.getItem("roomData"));
@@ -52,14 +52,15 @@ function createDivQuestion(question, divAppend) {
         getCurrentButton.style.color = "#000";
         getCurrentButton.style.backgroundColor = "#fff"
       })
-      console.log(buttonAlternativa);
+      answerSent = true;
 
       buttonAlternativa.style.color = "#fff";
       buttonAlternativa.style.backgroundColor = "#0AABBA"
 
+      const lastAnswer = localStorage.getItem("alternativaSelecionada");
       localStorage.setItem("alternativaSelecionada", buttonAlternativa.value);
     
-      socket.emit('receiveAnswer', { answer: buttonAlternativa.value, roomId: data.roomId, question, schoolName: data.user });
+      socket.emit('receiveAnswer', { answer: buttonAlternativa.value, lastAnswer: lastAnswer, roomId: data.roomId, question, schoolName: data.user });
     });
 
     divAlternativas.appendChild(buttonAlternativa);
@@ -100,6 +101,7 @@ function initTimeQuestion(questionTime) {
       remainingTime--;
   
       if (remainingTime <= 0) {
+        console.log('Entrou aq')
         clearInterval(questaoTimerInterval);
         const allButtons = document.querySelectorAll('.divAlternativas > button');
         allButtons.forEach(btn => btn.disabled = true);

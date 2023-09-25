@@ -1,6 +1,7 @@
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "quiz-cmb-production.up.railway.app";
 const socket = io(BASE_URL);
 let currentLevel = localStorage.getItem("actualLevel");
+const storageTime = JSON.parse(localStorage.getItem('currentTime'));
 const ROOMID = localStorage.getItem("roomId");
 
 const showAnswer = (question) => {
@@ -76,6 +77,7 @@ socket.on("receiveTimer", () => {
 });
 
 let nextButtonLink = "/pages/Loading_APR.html";
+const classificationLink = "/pages/Classification_APR.html";
 
 const main = () => {
   socket.emit("connectAPRAnswer", ROOMID);
@@ -119,18 +121,14 @@ const main = () => {
   }
 
   nextButton.addEventListener("click", () => {
-    clearInterval(totalTimerInterval);
-    updateLevelIfTimeOrQuestionsAreEmpty();
-    window.location.href = nextButtonLink;
-  });
+    const getCurrentTime = storageTime.time;
 
-  const classificationButton = document.getElementById("botaoClassificacao");
-  classificationButton.addEventListener("click", () => {
-    clearInterval(totalTimerInterval);
-
-    updateLevelIfTimeOrQuestionsAreEmpty();
-
-    window.location.href = "/pages/Classification_APR.html";
+    if (getCurrentTime <= 0) {
+      window.location.href = classificationLink;
+    } else {
+      updateLevelIfTimeOrQuestionsAreEmpty();
+      window.location.href = nextButtonLink;
+    }
   });
 };
 
@@ -163,8 +161,9 @@ function totalTimer() {
       localStorage.setItem("currentTime", JSON.stringify({ started: true, time: timeInMilliseconds}));
 
       // Verifique se a contagem regressiva chegou a zero
-      if (timeInMilliseconds < 0) {
-        clearInterval(intervalo);
+      if (timeInMilliseconds <= 0) {
+        clearInterval(interval);
+        localStorage.setItem("currentTime", JSON.stringify({ started: false, time: 0}));
         counter.innerHTML = "Tempo esgotado!";
       }
     }
