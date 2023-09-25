@@ -5,13 +5,13 @@ const setTime = (socket) => (roomId) => {
   const difficulty = rooms[roomId].difficulty;
   const getTime = {
     1: {
-      time: 1200000
+      time: 600000
     },
     2: {
-      time: 2400000
+      time: 1200000
     },
     3: {
-      time: 1200000
+      time: 600000
     }
   };
 
