@@ -133,6 +133,7 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     const imgElement = document.createElement('img');
     imgElement.src = imagem;
     imgElement.className = 'imgElement';
+    divImagem.className = 'divImagem';
     divImagem.appendChild(divAlternativas);
     divImagem.appendChild(imgElement);
     divPergunta.appendChild(imgElement);
