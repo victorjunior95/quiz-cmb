@@ -97,7 +97,7 @@ const main = () => {
     finalizeQuizTitle.textContent("Parabéns por chegar até o final!")
 
     finalizeQuizTitleDiv.appendChild(finalizeQuizTitle);
-    nextButton.innerHTML = "Classificação geral";
+    nextButton.innerHTML = "Classificação final";
 
     nextButton.addEventListener('click', () => {
       window.location.href = classificationLink;
