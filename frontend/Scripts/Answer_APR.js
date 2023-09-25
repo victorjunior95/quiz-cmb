@@ -83,6 +83,7 @@ const main = () => {
   socket.emit("connectAPRAnswer", ROOMID);
 
   const nextButton = document.getElementById("botaoAvancar");
+  const finalizeQuizTitleDiv = document.getElementById("loading");
 
   const completedAnswers = JSON.parse(
     localStorage.getItem("perguntasCompletas")
@@ -91,7 +92,16 @@ const main = () => {
   const isLastDifficultyCompleted = !completedAnswers['dificil']?.length
 
   if(isLastDifficultyCompleted) {
-    nextButton.remove()
+
+    const finalizeQuizTitle = document.createElement("h1")
+    finalizeQuizTitle.textContent("Parabéns por chegar até o final!")
+
+    finalizeQuizTitleDiv.appendChild(finalizeQuizTitle);
+    nextButton.innerHTML = "Classificação geral";
+
+    nextButton.addEventListener('click', () => {
+      window.location.href = classificationLink;
+    })
   }
 
   const updateLevelIfTimeOrQuestionsAreEmpty = () => {
