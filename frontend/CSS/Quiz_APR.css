@@ -125,12 +125,13 @@ img {
 }
 
 .divBotoes {
-    width: 30%;
+    width: 60%;
     height: 50px;
+    display: flex;    
 }
 
 .botaoAvancar {
-    width: 110px;
+    width: 50%;
     padding: 15px 0;
     border: 3px solid black;
     border-radius: 30px;
@@ -140,10 +141,11 @@ img {
     font-weight: bold;  
     padding: 10px;
     cursor: pointer;
+    margin: 20px;
 }
 
 .botaoResposta {
-    width: 100%;
+    width: 50%;
     height: 100%;
     padding: 15px 0;
     border: none;
@@ -152,6 +154,7 @@ img {
     color: white;
     font-weight: bold;  
     cursor: pointer;
+    margin: 20px;
 }
 
 .botaoResposta:hover {

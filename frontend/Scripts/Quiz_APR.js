@@ -69,9 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
   exibirPergunta(dificuldadeAtual);
   const answer = document.getElementById('botaoResposta');
 
-  socket.on('receiveTimer', ({ questionTime, endTime }) => {
-    initTimeQuestion(questionTime);
+  socket.on('receiveTotalTimer', (endTime) => {
     totalTimer(endTime);
+  });
+
+  socket.on('receiveQuestionTimer', (questionTime) => {
+    initTimeQuestion(questionTime);
   });
   
   // Aparentemente sem uso - conferir com o time
@@ -88,6 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   answer.addEventListener('click', async () => {
     window.location.href = "/pages/Answer_APR.html";
+  });
+
+  const startTimerButton = document.getElementById('startTimerButton');
+  startTimerButton.addEventListener('click', () => {
+    startTimerButton.disabled = true;
+    answer.disabled = false;
+    socket.emit('startQuestionTimer', ROOMID, questionTime);
   });
 });
 

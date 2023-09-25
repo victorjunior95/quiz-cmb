@@ -1,16 +1,16 @@
 const userUtils = require('../utils/users');
 
-const sendQuestion = (socket) => (question, roomId, questionTime) => {
+const sendQuestion = (socket) => (question, roomId) => {
   const room = userUtils.userRead()[roomId];
   room.atualQuestion = question;
   userUtils.userWriteNewData(roomId, room);
   socket.broadcast.to(roomId).emit('receiveQuestion', question);
+  socket.emit('receiveTotalTimer', room.time.endTime);
 }
 
-const startTimer = (socket) => (roomId, questionTime) => {
-  const room = userUtils.userRead()[roomId];
-  socket.to(roomId).emit('receiveTimer', questionTime);
-  socket.emit('receiveTimer', {questionTime, endTime: room.time.endTime});
+const startQuestionTimer = (socket) => (roomId, questionTime) => {
+  socket.to(roomId).emit('receiveQuestionTimer', questionTime);
+  socket.emit('receiveQuestionTimer', questionTime);
 }
 
 const receiveAnswer = (socket) => ({ answer, lastAnswer, roomId, question, schoolName }) => {
@@ -43,5 +43,5 @@ const receiveAnswer = (socket) => ({ answer, lastAnswer, roomId, question, schoo
 module.exports = {
   sendQuestion,
   receiveAnswer,
-  startTimer,
+  startQuestionTimer,
 }
