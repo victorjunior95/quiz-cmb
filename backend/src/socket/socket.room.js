@@ -7,12 +7,17 @@ const createRoom = (socket) => (room) => {
 
 const joinRoom = (socket) => (schoolName, roomId) => {
   const rooms = userUtils.userRead();
+  if(!rooms[roomId]) {
+    socket.emit('roomNotExists');
+    return;
+  }
+
   const users = rooms[roomId].users;
   const user = users.find((user) => user.schoolName === schoolName);
 
   // Aparentemente sem uso - conferir com time
   if (user) {
-    socket.emit('schoolNameNotExists');
+    socket.emit('schoolNameExists');
     return;
   }
 
@@ -42,9 +47,14 @@ const connectAPRClassification = (socket) => (roomId) => {
 
 let waitingAnswerUsers = [];
 const connectAnswer = (socket) => (roomId) => {
-  socket.join(roomId);
   const room = userUtils.userRead()[roomId];
+  if(!room) {
+    socket.emit('roomNotExists');
+    return;
+  }
+
   waitingAnswerUsers.push(roomId);
+  socket.join(roomId);
 
   if (room.users.length === waitingAnswerUsers.length) {
     socket.to(roomId).emit('showAnswer', room.atualQuestion);
@@ -55,6 +65,11 @@ const connectAnswer = (socket) => (roomId) => {
 let waitingUsers = [];
 const connectClassification = (socket) => (roomId) => {
   const room = userUtils.userRead()[roomId];
+  if(!room) {
+    socket.emit('roomNotExists');
+    return;
+  }
+
   waitingUsers.push(roomId);
   socket.join(roomId);
   
@@ -66,10 +81,15 @@ const connectClassification = (socket) => (roomId) => {
 
 let connectedUsers = [];
 const enterRoom = (socket) => (roomId, schoolName) => {
-  const users = userUtils.userRead()[roomId].users;
+  const room = userUtils.userRead()[roomId];
+  if(!room) {
+    socket.emit('roomNotExists');
+    return;
+  }
+
   connectedUsers.push(schoolName);
   socket.join(roomId);
-  if (users.length === connectedUsers.length) {
+  if (room.users.length === connectedUsers.length) {
     socket.to(roomId).emit('allUsersConnected');
     connectedUsers = [];
   }
