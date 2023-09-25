@@ -47,7 +47,6 @@ const connectAnswer = (socket) => (roomId) => {
   waitingUsers.push(roomId);
 
   if (room.users.length) {
-
     socket.to(roomId).emit('showAnswer', room.atualQuestion);
 
     waitingUsers = [];

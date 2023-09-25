@@ -5,6 +5,10 @@ const sendQuestion = (socket) => (question, roomId, questionTime) => {
   room.atualQuestion = question;
   userUtils.userWriteNewData(roomId, room);
   socket.broadcast.to(roomId).emit('receiveQuestion', question);
+}
+
+const startTimer = (socket) => (roomId, questionTime) => {
+  const room = userUtils.userRead()[roomId];
   socket.to(roomId).emit('receiveTimer', questionTime);
   socket.emit('receiveTimer', {questionTime, endTime: room.time.endTime});
 }
@@ -39,4 +43,5 @@ const receiveAnswer = (socket) => ({ answer, lastAnswer, roomId, question, schoo
 module.exports = {
   sendQuestion,
   receiveAnswer,
+  startTimer,
 }
