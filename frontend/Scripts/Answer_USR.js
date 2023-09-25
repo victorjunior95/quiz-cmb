@@ -1,4 +1,4 @@
-const BASE_URL = 'quiz-cmb-production.up.railway.app';
+const BASE_URL = 'https://quiz-cmb-production.up.railway.app';
 const socket = io(BASE_URL);
 const { roomId } = JSON.parse(localStorage.getItem("roomData"));
 const alternativaSelecionada = localStorage.getItem("alternativaSelecionada");
