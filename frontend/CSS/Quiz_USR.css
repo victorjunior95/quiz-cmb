@@ -116,6 +116,12 @@
     cursor: pointer;
 }
 
+.buttonAlternativa:disabled:hover {
+    border: 3px solid #0AABBA;
+    background-color: white;
+    color: black;
+}
+
 .buttonAlternativa:hover {
     background-color: #0AABBA;
     color: white;
