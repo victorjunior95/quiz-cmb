@@ -16,6 +16,12 @@ socket.on('getAnswer', () => {
 
 socket.on('receiveQuestionTimer', (questionTime) => {
   initTimeQuestion(questionTime);
+  const buttons = document.querySelectorAll('.buttonAlternativa');
+  console.log(buttons);
+  buttons.forEach((alternative) => {
+    
+    alternative.disabled = false;
+  });
 })
 
 let questionAtual;
@@ -46,15 +52,10 @@ function createDivQuestion(question, divAppend) {
     buttonAlternativa.className = 'buttonAlternativa';
     buttonAlternativa.textContent = element;
     buttonAlternativa.value = element.slice(0, 1);
+    buttonAlternativa.disabled = true;
 
-    if (document.getElementById('question-time').textContent === '') {
-      buttonAlternativa.disabled = true;
-    } else {
-      buttonAlternativa.disabled = false;
-    }
-  
     buttonAlternativa.addEventListener('click', () => {
-      alternativas.forEach((alternative) => {
+      alternativas.forEach((alternative) => {        
         const getCurrentButton = document.getElementById('alternative-button-' + alternative.slice(0, 1))
         getCurrentButton.style.color = "#000";
         getCurrentButton.style.backgroundColor = "#fff"
