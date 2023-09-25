@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   exibirPergunta(dificuldadeAtual);
   const answer = document.getElementById('botaoResposta');
+  const startTimerButton = document.getElementById('startTimerButton');
 
   socket.on('receiveTotalTimer', (endTime) => {
     totalTimer(endTime);
@@ -93,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = "/pages/Answer_APR.html";
   });
 
-  const startTimerButton = document.getElementById('startTimerButton');
   startTimerButton.addEventListener('click', () => {
     startTimerButton.disabled = true;
     answer.disabled = false;

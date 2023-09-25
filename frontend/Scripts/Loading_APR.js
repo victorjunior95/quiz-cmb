@@ -9,13 +9,13 @@ socket.on('allUsersConnected', () => {
 
 
 const main = () => {
+  socket.emit('connectAPR', ROOMID);
+
   if (changeDifficulty?.hasChangedLastAnswer) {
     socket.emit('changeDifficulty', ROOMID);
     socket.emit('setTime', ROOMID);
-    socket.emit('startGame', ROOMID);
   }
 
-  socket.emit('connectAPR', ROOMID);
   socket.emit('startGame', ROOMID);
 };
 

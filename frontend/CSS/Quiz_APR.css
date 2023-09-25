@@ -50,6 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px
 }
 
 .divPai {
@@ -155,6 +156,11 @@ img {
     font-weight: bold;  
     cursor: pointer;
     margin: 20px;
+}
+
+.botaoResposta:disabled {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: not-allowed;
 }
 
 .botaoResposta:hover {

@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   socket.on('gameStarted', () => {
     window.location.href = "/pages/Quiz_USR.html";
   });
+
+  socket.on('roomNotExists', () => {
+    alert("Não foi possivel encontrar a sala com o código informado!");
+    const sendButton = document.getElementById('sendButton');
+    sendButton.style.display = "";
+
+    const cLoaderContainer = document.getElementById('c-loader-container');
+    cLoaderContainer.style.display = "none";
+  });
+
   const sendButton = document.getElementById('sendButton');
   
   sendButton.addEventListener('click', async () => {
