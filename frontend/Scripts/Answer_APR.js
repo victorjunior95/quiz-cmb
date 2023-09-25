@@ -1,4 +1,4 @@
-const BASE_URL = "quiz-cmb-production.up.railway.app";
+const BASE_URL = "https://quiz-cmb-production.up.railway.app";
 const socket = io(BASE_URL);
 let currentLevel = localStorage.getItem("actualLevel");
 const storageTime = JSON.parse(localStorage.getItem('currentTime'));
@@ -110,6 +110,10 @@ const main = () => {
         "changeDifficulty",
         JSON.stringify({ hasChangedLastAnswer: true })
       );
+
+      window.location.href = classificationLink;
+    } else {
+      window.location.href = nextButtonLink;
     }
   }
 
@@ -120,7 +124,6 @@ const main = () => {
       window.location.href = classificationLink;
     } else {
       updateLevelIfTimeOrQuestionsAreEmpty();
-      window.location.href = nextButtonLink;
     }
   });
 };
