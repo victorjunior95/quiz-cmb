@@ -218,7 +218,7 @@ function totalTimer(endTime) {
 
         counter.innerHTML = '00:00';
         clearInterval(interval);
-        ocalStorage.setItem("currentTime", JSON.stringify({ started: false, time: 0}));
+        localStorage.setItem("currentTime", JSON.stringify({ started: false, time: 0}));
       }
     }
 
