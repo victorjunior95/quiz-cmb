@@ -17,9 +17,7 @@ socket.on('getAnswer', () => {
 socket.on('receiveQuestionTimer', (questionTime) => {
   initTimeQuestion(questionTime);
   const buttons = document.querySelectorAll('.buttonAlternativa');
-  console.log(buttons);
   buttons.forEach((alternative) => {
-    
     alternative.disabled = false;
   });
 })
@@ -109,7 +107,6 @@ function initTimeQuestion(questionTime) {
       remainingTime--;
   
       if (remainingTime <= 0) {
-        console.log('Entrou aq')
         clearInterval(questaoTimerInterval);
         const allButtons = document.querySelectorAll('.divAlternativas > button');
         allButtons.forEach(btn => btn.disabled = true);
