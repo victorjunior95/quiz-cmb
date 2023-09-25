@@ -113,6 +113,7 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
   textPergunta.textContent = pergunta;
   textPergunta.className = 'textPergunta';
   textPergunta.id = id;
+  divAlternativas.className = 'divAlternativas';
 
   for(let index = 0; index < alternativas.length; index++) {
     const element = alternativas[index];
@@ -124,7 +125,6 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
     textAlternativa.className = 'textAlternativa';
 
     divAlternativas.appendChild(textAlternativa);
-    divAlternativas.className = 'divAlternativas';
   }
 
   divPergunta.appendChild(textTema);
