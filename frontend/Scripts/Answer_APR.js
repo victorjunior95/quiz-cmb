@@ -92,15 +92,21 @@ const main = () => {
   const isLastDifficultyCompleted = !completedAnswers['dificil']?.length
 
   if(isLastDifficultyCompleted) {
-
-    const finalizeQuizTitle = document.createElement("h1")
-    finalizeQuizTitle.textContent("Parabéns por chegar até o final!")
-
-    finalizeQuizTitleDiv.appendChild(finalizeQuizTitle);
-    nextButton.innerHTML = "Classificação final";
+    
+    nextButton.innerHTML = "Avançar";
 
     nextButton.addEventListener('click', () => {
-      window.location.href = classificationLink;
+      const divAppend = document.getElementById("page_apr");
+      divAppend.style.display = "none";
+
+      const finalizeQuizTitle = document.createElement("h1")
+      finalizeQuizTitle.textContent = "Parabéns por chegar até o final!"
+      finalizeQuizTitleDiv.appendChild(finalizeQuizTitle);
+
+      nextButton.innerHTML = "Classificação final";
+      nextButton.addEventListener('click', () => {
+        window.location.href = classificationLink;
+      })
     })
   }
 
