@@ -31,7 +31,7 @@ const startGame = (socket) => (roomId) => {
 const sendClassification = (socket) => (roomId, users) => {
   socket.to(roomId).emit('showClassificationUSR', users);
   const rooms = userUtils.userRead();
-  socket.emit('receiveTimer', rooms[roomId].time);
+  socket.emit('receiveTotalTimer', rooms[roomId].time);
 }
 
 const changeDifficulty = (socket) => (roomId) => {

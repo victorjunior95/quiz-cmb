@@ -14,9 +14,10 @@ socket.on('getAnswer', () => {
   window.location.href = "/pages/Answer_USR.html";
 });
 
-socket.on('receiveTimer', (questionTime) => {
+socket.on('receiveQuestionTimer', (questionTime) => {
   initTimeQuestion(questionTime);
 })
+
 let questionAtual;
 let answerSent = false;
 

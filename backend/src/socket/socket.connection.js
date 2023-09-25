@@ -21,10 +21,11 @@ const connection = (socket) => {
   socket.on('startGame', game.startGame(socket));
   socket.on('sendClassification', game.sendClassification(socket));
   socket.on('changeDifficulty', game.changeDifficulty(socket));
-
+  
   // Question events
   socket.on('sendQuestion', question.sendQuestion(socket));
   socket.on('receiveAnswer', question.receiveAnswer(socket));
+  socket.on('startQuestionTimer', question.startQuestionTimer(socket));
 
   // Classification events
   socket.on('requestClassification', classification.requestClassification(socket));

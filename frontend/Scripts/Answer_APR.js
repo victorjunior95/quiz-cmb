@@ -1,4 +1,4 @@
-const BASE_URL = "https://quiz-cmb-production.up.railway.app";
+const BASE_URL = 'https://quiz-cmb-production.up.railway.app';
 const socket = io(BASE_URL);
 let currentLevel = localStorage.getItem("actualLevel");
 const storageTime = JSON.parse(localStorage.getItem('currentTime'));
@@ -67,12 +67,12 @@ const showAnswer = (question) => {
 };  
 
 socket.on("showAnswer", (question) => {
-  document.getElementById("loading").remove();
+  document.getElementById("loading")?.remove();
   showAnswer(question);
   socket.emit("sendQuestion", question, ROOMID);
 });
 
-socket.on("receiveTimer", () => {
+socket.on("receiveTotalTimer", () => {
   totalTimer();
 });
 

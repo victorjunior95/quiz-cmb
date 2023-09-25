@@ -40,26 +40,25 @@ const connectAPRClassification = (socket) => (roomId) => {
   socket.broadcast.to(roomId).emit('getClassification', roomId);
 }
 
-let waitingUsers = [];
+let waitingAnswerUsers = [];
 const connectAnswer = (socket) => (roomId) => {
   socket.join(roomId);
   const room = userUtils.userRead()[roomId];
-  waitingUsers.push(roomId);
+  waitingAnswerUsers.push(roomId);
 
-  if (room.users.length) {
-
+  if (room.users.length === waitingAnswerUsers.length) {
     socket.to(roomId).emit('showAnswer', room.atualQuestion);
-
-    waitingUsers = [];
+    waitingAnswerUsers = [];
   }
 }
 
+let waitingUsers = [];
 const connectClassification = (socket) => (roomId) => {
   const room = userUtils.userRead()[roomId];
   waitingUsers.push(roomId);
   socket.join(roomId);
   
-  if (room.users.length) {
+  if (room.users.length === waitingUsers.length) {
     socket.to(roomId).emit('showClassificationAPR', room.users);
     waitingUsers = [];
   }
@@ -70,7 +69,7 @@ const enterRoom = (socket) => (roomId, schoolName) => {
   const users = userUtils.userRead()[roomId].users;
   connectedUsers.push(schoolName);
   socket.join(roomId);
-  if (users.length) {
+  if (users.length === connectedUsers.length) {
     socket.to(roomId).emit('allUsersConnected');
     connectedUsers = [];
   }

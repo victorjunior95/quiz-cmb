@@ -27,7 +27,7 @@ socket.on('showClassificationAPR', (usersList) => {
   socket.emit('sendClassification', ROOMID, usersList);
 });
 
-socket.on('receiveTimer', ({ endTime }) => {
+socket.on('receiveTotalTimer', ({ endTime }) => {
   totalTimer(endTime);
 });
 
