@@ -4,7 +4,7 @@ const { roomId } = JSON.parse(localStorage.getItem("roomData"));
 
 const showClassification = (usersList) => {
   const schoolList = document.getElementById('schoolList');
-  usersList.forEach((user) => {
+  usersList.sort((a, b) => b?.points - a?.points).forEach((user) => {
     const classificationDiv = document.createElement('div');
     classificationDiv.className = 'classificationDiv';
     const classificationSpan = document.createElement('span');
