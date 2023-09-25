@@ -13,7 +13,7 @@ const showClassification = (usersList) => {
     classificationSpan.id = user.schoolName;
     const classificationPoints = document.createElement('span');
     classificationPoints.className = 'classificationPoints';
-    classificationPoints.textContent = user.points;
+    classificationPoints.textContent = user.points + " Pontos";
     classificationPoints.id = user.points;
     classificationDiv.appendChild(classificationSpan);
     classificationDiv.appendChild(classificationPoints);
