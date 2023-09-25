@@ -46,6 +46,12 @@ function createDivQuestion(question, divAppend) {
     buttonAlternativa.className = 'buttonAlternativa';
     buttonAlternativa.textContent = element;
     buttonAlternativa.value = element.slice(0, 1);
+
+    if (document.getElementById('question-time').textContent === '') {
+      buttonAlternativa.disabled = true;
+    } else {
+      buttonAlternativa.disabled = false;
+    }
   
     buttonAlternativa.addEventListener('click', () => {
       alternativas.forEach((alternative) => {
