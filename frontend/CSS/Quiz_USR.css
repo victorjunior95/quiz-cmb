@@ -38,12 +38,15 @@
 .questionTimer {
     height: 80px;
     width: 80px;
-    background-color: #fff;
-    border: 8px solid #000;
+    background-color: #0AABBA;
+    border: 8px solid white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .enfeiteTela {
@@ -81,7 +84,7 @@
     width: 100%;
     color: black;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-align: justify;
 }

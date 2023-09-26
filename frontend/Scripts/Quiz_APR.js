@@ -129,20 +129,33 @@ function createDivQuestion(id, tema, pergunta, alternativas, imagem, divAppend) 
 
   divPergunta.appendChild(textTema);
   divPergunta.appendChild(textPergunta);
+
+  divPergunta.className = 'divPergunta';
+
+  divPergunta.classList.add("pergunta");
+  divAlternativas.classList.add("alternativas");
+
+  const divAlternativasImagem = document.createElement("div");
+  divAlternativasImagem.className = "divAlternativasImagem";
+
+  divAlternativasImagem.appendChild(divAlternativas);
+
   if (imagem !== "") {
     const imgElement = document.createElement('img');
     imgElement.src = imagem;
     imgElement.className = 'imgElement';
     divImagem.className = 'divImagem';
-    divImagem.appendChild(divAlternativas);
     divImagem.appendChild(imgElement);
-    divPergunta.appendChild(imgElement);
+    divAlternativasImagem.appendChild(divImagem);
+  } else {
+
+    divAlternativas.style.width = "100%";
   }
-  divPergunta.className = 'divPergunta';
-  divPergunta.classList.add("pergunta");
-  divAlternativas.classList.add("alternativas");
+  
+  
   divAppend.appendChild(divPergunta);
-  divAppend.appendChild(divAlternativas);
+  divAppend.appendChild(divAlternativasImagem);
+  // divAppend.appendChild(divAlternativas);
 }
 
 function initTimeQuestion(questionTime) {

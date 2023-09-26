@@ -16,7 +16,7 @@ const showAnswer = (question) => {
   const textDesc = document.createElement("text");
 
   const textRespostaCorreta = document.createElement("text");
-  textRespostaCorreta.textContent = "Resposta correta:";
+  textRespostaCorreta.textContent = "Alternativa correta:";
   textRespostaCorreta.className = "textRespostaCorreta";
 
   textTema.textContent = tema;
@@ -39,13 +39,10 @@ const showAnswer = (question) => {
     textAlternativa.value = correctAlternative.slice(0, 1);
     textAlternativa.className = "textAlternativa";
     textAlternativa.style.listStyleType = "none";
-    textAlternativa.style.backgroundColor = "green";
-    textAlternativa.style.border = "green";
+    textAlternativa.style.backgroundColor = "#0AABBA";
     textAlternativa.style.color = "white";
     divAlternativas.appendChild(textAlternativa);
   }
-
-  divPergunta.appendChild(textTema);
 
   divPergunta.appendChild(textRespostaCorreta);
 
@@ -53,17 +50,24 @@ const showAnswer = (question) => {
     divPergunta.appendChild(divAlternativas);
   }
 
-  divPergunta.appendChild(textDesc);
+  // Crie uma nova div para a descrição e a imagem
+  const divDescricaoImagem = document.createElement("div");
+  divDescricaoImagem.className = "divDescricaoImagem";
 
+  textDesc.textContent = descricao;
+  divDescricaoImagem.appendChild(textDesc);
+  
   if (imgResposta !== "") {
     const imgElement = document.createElement("img");
     imgElement.src = imgResposta;
-    divImagem.appendChild(imgElement);
-    divPergunta.appendChild(imgElement);
+    divDescricaoImagem.appendChild(imgElement);
+    textDesc.style.textAlign = "center";
   }
-
+  
   divPergunta.classList.add("divPergunta");
+  
   divAppend.appendChild(divPergunta);
+  divAppend.appendChild(divDescricaoImagem);
 };  
 
 socket.on("showAnswer", (question) => {
@@ -184,6 +188,7 @@ function totalTimer() {
         clearInterval(interval);
         localStorage.setItem("currentTime", JSON.stringify({ started: false, time: 0}));
         counter.innerHTML = "Tempo esgotado!";
+        counter.style.fontSize = "10px";
       }
     }
 
