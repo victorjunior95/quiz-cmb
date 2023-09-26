@@ -39,8 +39,7 @@ const showAnswer = (question) => {
     textAlternativa.value = correctAlternative.slice(0, 1);
     textAlternativa.className = "textAlternativa";
     textAlternativa.style.listStyleType = "none";
-    textAlternativa.style.backgroundColor = "green";
-    textAlternativa.style.border = "green";
+    textAlternativa.style.backgroundColor = "#0AABBA";
     textAlternativa.style.color = "white";
     divAlternativas.appendChild(textAlternativa);
   }
