@@ -3,26 +3,167 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}  
-
-body {
-    background-color: #0AABBA;
 }
 
-.main-page {
-    
+.divTotal {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 50px;
+    background: white;
+}
+
+.enfeiteTela {
+    top: 0;
     width: 100%;
+    height: 29%;
+    border-radius: 0 0 65px 65px;
+    background-color: #0AABBA;
+    position: absolute;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.divPai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.divPergunta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 45px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    padding: 60px;
     gap: 20px;
 }
 
-.question-container {
-    width: 80%;
+.textTema {
+    color: #0AABBA;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
 }
 
-.timers-container {
+.textPergunta {
+    width: 100%;
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.divAlternativasImagem {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.divAlternativas {
+    width: 800px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.textAlternativa {
+    outline: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;  
+    text-align: left;
+    padding: 20px;
+}
+
+.divImagem {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+}
+
+.divBotoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 100px; 
+}
+
+.botaoResposta {
+    border: none;
+    color: #0AABBA;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+.botaoResposta:disabled {
+    color: rgba(0, 0, 0, 0.5);
+    cursor: not-allowed;
+}
+
+.botaoResposta:hover {
+    color: rgba(0, 0, 0, 0.839);
+}
+
+/* #schoolList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.classificationDiv {
+    width: 120px;
+    height: 120px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 0 0 50% 50%;
+    border: 7px solid rgba(255, 217, 0, 0.978);
+    background-color: #f82727;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    margin-right: 50px;
+    box-shadow: 0px 0px 36px 31px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.classificationSpan {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    position: absolute;
+    margin-left: 8%;
+    margin-top: -3%;
+    border-radius: 50%;
+    display: none;
+} */
+
+/* .timers-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,166 +194,4 @@ body {
     align-items: center;
     gap: 40px;
     font-size: 35px;
-}
-
-.divPai {
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
-    padding: 30px;
-    height: 100%;
-    background-color: #fff ;
-    text-align: left;
-    display: flex;
-    /* justify-content: flex-start; */
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 60px;
-    margin: 30px;
-    border-radius: 30px;
-}
-
-.textTema {
-    color: #0AABBA;
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 35px;
-}
-
-.divPergunta {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.textPergunta {
-    padding: 10px;
-    width: 100%;
-    color: black;
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-.divImagem {
-    display: flex;
-    /* justify-content: space-around; */
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-img {
-    height: 150px;
-    width: 150px;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.divAlternativas {
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.textAlternativa {
-    width: 100%;
-    /* padding: 15px 0; */
-    outline: none;
-    border: 3px solid #0AABBA;
-    border-radius: 30px;
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;  
-    text-align: left;
-    padding: 20px;
-    cursor: pointer;
-}
-
-.divBotoes {
-    width: 60%;
-    height: 50px;
-    display: flex;    
-}
-
-.botaoAvancar {
-    width: 50%;
-    padding: 15px 0;
-    border: 3px solid black;
-    border-radius: 30px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-weight: bold;  
-    padding: 10px;
-    cursor: pointer;
-    margin: 20px;
-}
-
-.botaoResposta {
-    width: 50%;
-    height: 100%;
-    padding: 15px 0;
-    border: none;
-    border-radius: 30px;
-    background-color: #000;
-    color: white;
-    font-weight: bold;  
-    cursor: pointer;
-    margin: 20px;
-}
-
-.botaoResposta:disabled {
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: not-allowed;
-}
-
-.botaoResposta:hover {
-    background-color: rgba(0, 0, 0, 0.839);
-}
-
-footer {
-    bottom: 0;
-    display: flex;
-}
-
-#schoolList {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.classificationDiv {
-    width: 120px;
-    height: 120px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 0 0 50% 50%;
-    border: 7px solid rgba(255, 217, 0, 0.978);
-    background-color: #f82727;
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    margin-right: 50px;
-    box-shadow: 0px 0px 36px 31px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
-}
-
-.classificationSpan {
-    width: 40px;
-    height: 40px;
-    background-color: green;
-    position: absolute;
-    margin-left: 8%;
-    margin-top: -3%;
-    border-radius: 50%;
-    display: none;
-}
+} */

@@ -189,7 +189,7 @@ function totalTimer() {
         clearInterval(interval);
         localStorage.setItem("currentTime", JSON.stringify({ started: false, time: 0}));
         counter.innerHTML = "Tempo esgotado!";
-        counter.style.fontSize = "13px";
+        counter.style.fontSize = "10px";
       }
     }
 

@@ -6,29 +6,35 @@
   <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
   <title>Quiz</title>
   <link rel="stylesheet" href="../CSS/Quiz_APR.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="divPai">
-    <div class="main-page">
-      <div id="page_apr" class="question-container"></div>
-      <div class="timers-container">
-        <div>
-          <p id="counter" class="total-timer"></p>
-        </div>
-        <div>
-          <p id="question-time" class="question-timer"></p>
+  <div class="divTotal">
+    <div class="enfeiteTela"></div>
+    <div class="divPai">
+      <div class="main-page">
+        <div id="page_apr" class="question-container"></div>
+        <div class="timers-container">
+          <div>
+            <p id="counter" class="total-timer"></p>
+          </div>
+          <div>
+            <p id="question-time" class="question-timer"></p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="divBotoes">
-      <button id="startTimerButton" class="botaoResposta">Iniciar o timer</button>
-      <button id="botaoResposta" class="botaoResposta" disabled>Mostrar resposta</button>
-    </div>
-    <footer>
-      <div class="school-list-container">
-        <aside id="schoolList"></aside>
+      <div class="divBotoes">
+        <button id="startTimerButton" class="botaoResposta">Iniciar o timer</button>
+        <button id="botaoResposta" class="botaoResposta" disabled>Mostrar resposta</button>
       </div>
-    </footer>
+      <footer>
+        <div class="school-list-container">
+          <aside id="schoolList"></aside>
+        </div>
+      </footer>
+    </div>
   </div>
   <script src="../Scripts/Quiz_APR.js"></script>
 </body>
