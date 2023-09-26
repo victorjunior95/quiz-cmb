@@ -6,38 +6,59 @@
 } 
 
 .divTotal {
-  width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: flex-start;
-  background-color: #0AABBA;
-  overflow: hidden;
+  align-items: center;
+  align-content: flex-start;
+  flex-direction: column;
   min-height: 100vh;
+  padding: 70px;
+  background: white;
+}
+
+.page_apr {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.enfeiteTela {
+  top: 0;
+  width: 100%;
+  height: 29%;
+  border-radius: 0 0 65px 65px;
+  background-color: #0AABBA;
+  position: absolute;
+  margin-top: 0;
+  z-index: 1;
 }
 
 .question-timer-container {
-  width: 100%;
-  top: 10px;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-}
-
-.question-timer {
-  height: 100px;
-  width: 100px;
-  background-color: #0AABBA;
-  border: 10px solid #fff;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: absolute;
+  z-index: 3;
+  top: 30px; 
+}
+
+.question-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background-color: #0AABBA;
+  border: 8px solid white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 100%;
 }
 
 p#counter {
-  font-size: 20px;
-  color: #fff;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .question-timer > p {
@@ -46,48 +67,44 @@ p#counter {
 }
 
 .divPai {
-  width: 100%;
-  background-color: #fff ;
-  padding: 20px;
-  text-align: left;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 60px;
-  margin: 50px;
-  border-radius: 45px;
-  padding: 50px;
-}
-
-.divPergunta {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex;
-  gap: 20px;
-}
-
-.textTema {
-  color: #0AABBA;
-}
-
-.textRespostaCorreta {
-  font-size: 20px;
-}
-
-.buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.div#page_apr.page_apr {
+  width: 100%;
+}
+
+.divPergunta {
+  width: 1285.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 45px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+  padding: 60px;
+  gap: 20px;
+}
+
+.divDescricaoImagem {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 220px;
 }
 
 .textDesc {
-  width: 100%;
-  color: #0AABBA;
+  width: 700px;
   font-size: 24px;
   font-weight: bold;
-  text-align: justiy;
+  text-align: center;
 }
 
 .divImagem {
@@ -97,26 +114,44 @@ p#counter {
 }
 
 img {
-  height: 200px;
-  width: 200px;
+  height: 350px;
+  width: 350px;
+}
+
+.textTema {
+  color: black;
+}
+
+.textRespostaCorreta {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .divAlternativas {
-  max-width: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .textAlternativa {
-  padding: 15px 0;
+  width: 100%;
   outline: none;
-  border: 3px solid #0AABBA;
-  border-radius: 30px;
+  border-radius: 50px;
   background-color: white;
   color: black;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   font-weight: bold;  
   text-align: left;
-  padding: 20px;
+  padding: 30px;
 }
 
 .buttons-container {
@@ -125,36 +160,16 @@ img {
 }
 
 .botaoAvancar {
-  width: 20%;
-  height: 100%;
-  padding: 15px 0;
   border: none;
-  border-radius: 30px;
-  background-color: #000;
-  color: white;
-  font-weight: bold;  
+  color: #0AABBA;
+  font-weight: bold;
   cursor: pointer;
-  margin-right: 10px;
+  background-color: transparent;
+  margin-top: 20px;
 }
 
 .botaoAvancar:hover {
-  background-color: rgba(0, 0, 0, 0.839);
-}
-
-.botaoClassificacao {
-  width: 20%;
-  height: 100%;
-  padding: 15px 0;
-  border: none;
-  border-radius: 30px;
-  background-color: #000;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.botaoClassificacao:hover {
-  background-color: rgba(0, 0, 0, 0.839);
+  color: #0896a3;
 }
 
 footer {
